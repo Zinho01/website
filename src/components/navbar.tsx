@@ -13,15 +13,15 @@ const Navbar: React.FC = () => {
                     />
                 </div>
                 <div className="space-x-4">
-                    <a href="#" className="text-white px-3 py-2 rounded-md">Home</a>
-                    <a href="#about" className="text-white px-3 py-2 rounded-md">huidaandoening</a>
-                    <a href="#services" className="text-white px-3 py-2 rounded-md">laserotharen</a>
-                    <a href="#contact" className="text-white px-3 py-2 rounded-md">acepunctuur</a>
-                    <a href="#contact" className="text-white px-3 py-2 rounded-md">tarieven</a>
-                    <a href="#contact" className="text-white px-3 py-2 rounded-md">onze kliniek</a>
-                    <a href="#contact" className="text-white px-3 py-2 rounded-md">contact</a>
-                    <a href="#" className="text-white px-3 py-2 rounded-md">shop</a>
-                    <a href="#" className="text-white px-3 py-2 rounded-md"><button>Gratis consult</button></a>
+                    <a href="#" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">Home</a>
+                    <a href="#huidaandoening" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">huidaandoening</a>
+                    <a href="#laserontharen" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">laserotharen</a>
+                    <a href="#acepunctuur" className="text-white hover:text-gray-400  px-3 py-2 rounded-md">acepunctuur</a>
+                    <a href="#tarieven" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">tarieven</a>
+                    <a href="#onze kliniek" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">onze kliniek</a>
+                    <a href="#contact" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">contact</a>
+                    <a href="shop" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">shop</a>
+                    <a href="plan ding" className="text-white hover:text-gray-400 px-3 py-2 rounded-md"><button className=''>Gratis consult</button></a>
                 </div>
             </div>
         </nav>
