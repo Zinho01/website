@@ -1,0 +1,34 @@
+node_modules/
+dist/
+*.local
+.env.local
+.env.*.local
+.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Vue-related cache
+.vuepress/dist/
+.vuepress/.cache/
+
+# Dependency directories
+**/node_modules/
+
+# Build output
+**/dist/
+**/coverage/
+
+# Other
+output/
+*.log
+*.tmp
