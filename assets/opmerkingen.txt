@@ -1,0 +1,79 @@
+Dimamed: homepage/index
+
+1. Navbar is te transparant
+2. Text kleur heeft niet genoeg contrast
+3. Dimamed informatie onder de afbeelding hoort 
+bij de "Over Ons" pagina.
+4. Form nog verder onder de pagina is onnodig
+5. Footer kan wat platter/kleiner
+
+-----------------------------------------------
+
+Over ons pagina
+
+1. Text kleur heeft niet genoeg contrast
+2. Boven de navbar zit een onpassende contact bar
+3. Foto's zijn niet mooi geplaatst
+4. Foto's hebben geen max height/width
+5. Link in images
+6. Form staat weer onder de pagina voor geen
+goede reden.
+
+-----------------------------------------------
+
+Diensten
+
+1. Text kleur heeft niet genoeg contrast
+2. Verschillende services zijn in een lange,
+ongeorganiseerde lijst gesmeten.
+3. Form staat weer onder aan de pagina
+
+-----------------------------------------------
+
+Thuiszorg WMO
+
+1. Text kleur heeft niet genoeg contrast
+2. De overgang van de afbeeldingen is erg pal
+en niet dynamiek genoeg.
+
+-----------------------------------------------
+
+Dagbesteding 
+
+1. Text kleur heeft niet genoeg contrast
+2. Tafel kan wat netter/duidelijker
+3. Willekeurige water afbeelding die geen text
+bezit.
+
+-----------------------------------------------
+
+Wijkverpleging
+
+1. Text kleur heeft niet genoeg contrast
+2. De overgang van de afbeeldingen is erg pal
+en niet dynamiek genoeg.
+
+-----------------------------------------------
+
+Psychosociale hulpverlening
+
+1. Text kleur heeft niet genoeg contrast
+2. De overgang van de afbeeldingen is erg pal
+en niet dynamiek genoeg.
+3. Uitleg over Jeugs & Gezinszorg is een beetje
+simpel en kan netter.
+
+-----------------------------------------------
+
+Contact
+
+1. Afbeelding hoort niet je muis over te nemen.
+2. Leaflet? Verplaats met recentere Google Maps.
+3. Tafels kunnen wat netter/duidelijker
+4. Nog een form, deze keer een andere.
+
+-----------------------------------------------
+
+Afspraak maken
+
+1. Text kleur heeft niet genoeg contrast
