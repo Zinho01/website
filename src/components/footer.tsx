@@ -19,8 +19,8 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold">Contact</h2>
             <ul className="mt-2 space-y-2">
-              <li>📞 <a href="tel:0752232113" className="hover:text-gray-400">0752 232 113</a></li>
-              <li>📧 <a href="mailto:beauty.salon@gmail.com" className="hover:text-gray-400">beauty.salon@gmail.com</a></li>
+              <li>📞 <a href="tel:0752232113" className="hover:text-gray-400">06 20801001</a></li>
+              <li>📧 <a href="mailto:beauty.salon@gmail.com" className="hover:text-gray-400">info.thebeautyclinic@gmail.com</a></li>
               <li>📍 Amsterdam</li>
             </ul>
           </div>
@@ -28,8 +28,8 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold">Openingstijden</h2>
             <ul className="mt-2 space-y-2">
-              <li>🕒 Maandag - Zaterdag: <span className="font-semibold">10:00 - 19:00</span></li>
-              <li>🕒 Zondag: <span className="font-semibold">Gesloten</span></li>
+              <li>🕒 Dinsdag - Zaterdag: <span className="font-semibold">10:00 - 19:00</span></li>
+              <li>🕒 Maandag - Zondag: <span className="font-semibold">Gesloten</span></li>
             </ul>
           </div>
 
@@ -39,7 +39,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Meer content van ons op:</h3>
 
           <div className="flex space-x-4 mt-4">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/thebeautyclinicamsterdam/" target="_blank" rel="noopener noreferrer">
               <Instagram className="w-8 h-8 text-white hover:text-gray-400 transition-colors duration-300" />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
