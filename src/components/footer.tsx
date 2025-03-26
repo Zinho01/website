@@ -21,7 +21,7 @@ const Footer = () => {
             <ul className="mt-2 space-y-2">
               <li>📞 <a href="tel:0752232113" className="hover:text-gray-400">06 20801001</a></li>
               <li>📧 <a href="mailto:beauty.salon@gmail.com" className="hover:text-gray-400">info.thebeautyclinic@gmail.com</a></li>
-              <li>📍 Amsterdam</li>
+              <li>📍 Bos en Lommerweg 257, Amsterdam, Netherlands</li>
             </ul>
           </div>
 
