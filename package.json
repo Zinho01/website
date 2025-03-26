@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
+    "@mui/icons-material": "^6.4.8",
+    "@mui/material": "^6.4.8",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.483.0",
     "react": "^18.3.1",
