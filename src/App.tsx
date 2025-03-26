@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import foto1 from './assets/foto1.png';
@@ -8,26 +7,22 @@ import skincare2 from './assets/skincare2.jpg';
 import banner1 from './assets/skincare.jpg';
 import banner2 from './assets/skincare2.jpg';
 import banner3 from './assets/skincare.jpg';
+import banner4 from './assets/skincare2.jpg';
 
-const banners = [banner1, banner2, banner3];
+const banners = [
+  { image: banner1, title: "Glow with our skincare treatments", description: "Discover the secret to glowing skin with our professional treatments." },
+  { image: banner2, title: "Rejuvenate your skin", description: "Feel rejuvenated with our exclusive facial therapies." },
+  { image: banner3, title: "Ultimate Skincare Experience", description: "Experience luxurious skincare services for the perfect glow." },
+  { image: banner4, title: "Beauty starts here", description: "Transform your skin with our specialized care." }
+];
 
 const App = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? banners.length - 1 : prevIndex - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+  const handleScroll = (direction: 'left' | 'right') => {
+    const cardContainer = document.getElementById("carousel-container") as HTMLElement | null;
+    if (cardContainer) {
+      const scrollAmount = direction === 'left' ? -300 : 300;
+      cardContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -68,37 +63,51 @@ const App = () => {
           </div>
         </div>
 
-        {/* ✅ Fixed Carousel */}
         <div className='text-orange-200 bg-orange-200 p-8'>
           <p className='text-black flex items-center justify-center font-bold mb-6'>behandelingen</p>
           <div className="relative w-full max-w-4xl mx-auto">
-            <div className="overflow-hidden rounded-lg relative h-64">
+            <div
+              id="carousel-container"
+              className="flex gap-6 overflow-hidden py-4"
+              style={{
+                display: 'flex',
+                scrollBehavior: 'smooth',
+                justifyContent: 'start',
+              }}
+            >
               {banners.map((banner, index) => (
-                <img
+                <div
                   key={index}
-                  src={banner}
-                  alt={`Banner ${index + 1}`}
-                  className={`absolute w-full h-64 object-cover transition-opacity duration-1000 ${
-                    index === currentIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
+                  className="flex-none w-80 h-64 bg-white rounded-lg shadow-lg overflow-hidden"
+                >
+                  <img
+                    src={banner.image}
+                    alt={`Banner ${index + 1}`}
+                    className="w-full h-32 object-cover rounded-t-lg"
+                  />
+                  <div className="p-4">
+                    <h2 className="font-semibold text-xl text-black">{banner.title}</h2>
+                    <p className="text-sm text-gray-600 mt-2">{banner.description}</p>
+                  </div>
+                </div>
               ))}
             </div>
+
+            {/* Scroll Buttons */}
             <button
-              onClick={prevSlide}
+              onClick={() => handleScroll('left')}
               className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
             >
               ◀
             </button>
             <button
-              onClick={nextSlide}
+              onClick={() => handleScroll('right')}
               className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
             >
               ▶
             </button>
           </div>
         </div>
-
       </main>
       <Footer />
     </div>
