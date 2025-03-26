@@ -14,6 +14,30 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/huid', function () {
+    return view('huid');  
+});
+
+Route::get('/acu', function () {
+    return view('acu');  
+});
+
+Route::get('/tarieven', function () {
+    return view('tarieven');  
+});
+
+Route::get('/about', function () {
+    return view('about');  
+});
+
+Route::get('/contact', function () {
+    return view('contact');  
+});
+
+Route::get('/shop', function () {
+    return view('shop');  
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
