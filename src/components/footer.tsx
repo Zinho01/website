@@ -9,18 +9,22 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold">Beauty</h2>
             <ul className="mt-2 space-y-2">
-              <li><a href="/salon" className="hover:text-gray-400">Salon</a></li>
-              <li><a href="/despre" className="hover:text-gray-400">Despre</a></li>
-              <li><a href="/preturi" className="hover:text-gray-400">Prețuri</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">Contact</a></li>
+              <li><a href="/salon" className="hover:text-gray-400">home</a></li>
+              <li><a href="/despre" className="hover:text-gray-400">Huidaandoening</a></li>
+              <li><a href="./pages/Laserontharen.tsx" className="hover:text-gray-400">Laserontharen</a></li>
+              <li><a href="/contact" className="hover:text-gray-400">acepunctuur</a></li>
+              <li><a href="/contact" className="hover:text-gray-400">tarieven</a></li>
+              <li><a href="/contact" className="hover:text-gray-400">onze kliniek</a></li>
+              <li><a href="/contact" className="hover:text-gray-400">contact</a></li>
+              <li><a href="/contact" className="hover:text-gray-400">shop</a></li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold">Contact</h2>
             <ul className="mt-2 space-y-2">
-              <li>📞 <a href="tel:0752232113" className="hover:text-gray-400">06 20801001</a></li>
-              <li>📧 <a href="mailto:beauty.salon@gmail.com" className="hover:text-gray-400">info.thebeautyclinic@gmail.com</a></li>
+              <li>📞 <a href="tel:0752232113">06 20801001</a></li>
+              <li>📧 <a href="mailto:beauty.salon@gmail.com">info.thebeautyclinic@gmail.com</a></li>
               <li>📍 Bos en Lommerweg 257, Amsterdam, Netherlands</li>
             </ul>
           </div>
