@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 
 import foto1 from './assets/foto1.png';
 import Laserontharen from "./pages/Laserontharen";
+import acupunctuur from "./pages/acupunctuur";
 
 import Skincare1 from './assets/skincare.jpg';
 import skincare2 from './assets/skincare2.jpg';
@@ -13,6 +14,8 @@ import banner2 from './assets/skincare2.jpg';
 import banner3 from './assets/skincare.jpg';
 import banner4 from './assets/skincare2.jpg';
 
+
+{ /* carousel info and changeable if less banners are wanted*/ }
 const banners = [
   { image: banner1, title: "Glow with our skincare treatments", description: "Discover the secret to glowing skin with our professional treatments." },
   { image: banner2, title: "Rejuvenate your skin", description: "Feel rejuvenated with our exclusive facial therapies." },
@@ -118,6 +121,11 @@ const App = () => {
             </>
           } />
           
+          <Route path="/laserontharen" element={<Laserontharen />} />
+          <Route path="/acupunctuur" element={< acupunctuur />} />
+          <Route path="/laserontharen" element={<Laserontharen />} />
+          <Route path="/laserontharen" element={<Laserontharen />} />
+          <Route path="/laserontharen" element={<Laserontharen />} />
           <Route path="/laserontharen" element={<Laserontharen />} />
         </Routes>
       </main>
