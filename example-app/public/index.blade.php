@@ -11,5 +11,11 @@
     <div id="root"></div>
     <!-- Include the React app -->
     <script src="{{ mix('js/app.js') }}"></script>
+
+    <?php 
+    //IMPOSRTANT: The @ symbol may be used to escape Blade directives (since it shares the curly braces with JS)
+    // @@if()
+    // vs
+    // @if() ?>
 </body>
 </html>
