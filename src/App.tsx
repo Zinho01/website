@@ -3,9 +3,6 @@ import Footer from './components/footer';
 import Navbar from './components/navbar';
 
 import foto1 from './assets/foto1.png';
-import Laserontharen from "./pages/Laserontharen";
-import acupunctuur from "./pages/acupunctuur";
-
 import Skincare1 from './assets/skincare.jpg';
 import skincare2 from './assets/skincare2.jpg';
 
@@ -13,6 +10,15 @@ import banner1 from './assets/skincare.jpg';
 import banner2 from './assets/skincare2.jpg';
 import banner3 from './assets/skincare.jpg';
 import banner4 from './assets/skincare2.jpg';
+
+import Laserontharen from "./pages/Laserontharen";
+import Acupunctuur from "./pages/acupunctuur";
+import Tarieven from "./pages/tarieven";
+import Shop from "./pages/shop";
+import Contact from "./pages/contact";
+import OnzeKliniek from "./pages/onze-kliniek";
+import Huidaandoening from "./pages/huidaandoening";
+
 
 
 { /* carousel info and changeable if less banners are wanted*/ }
@@ -120,13 +126,13 @@ const App = () => {
               </div>
             </>
           } />
-          
+          <Route path="/huidnaandoening" element={<Huidaandoening />} />
           <Route path="/laserontharen" element={<Laserontharen />} />
-          <Route path="/acupunctuur" element={< acupunctuur />} />
-          <Route path="/laserontharen" element={<Laserontharen />} />
-          <Route path="/laserontharen" element={<Laserontharen />} />
-          <Route path="/laserontharen" element={<Laserontharen />} />
-          <Route path="/laserontharen" element={<Laserontharen />} />
+          <Route path="/acupunctuur" element={< Acupunctuur />} />
+          <Route path="/tarieven" element={<Tarieven />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/onze-kliniek" element={<OnzeKliniek />} />
         </Routes>
       </main>
       <Footer />

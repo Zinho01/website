@@ -12,7 +12,7 @@ const Footer = () => {
               <li><a href="/salon" className="hover:text-gray-400">home</a></li>
               <li><a href="/despre" className="hover:text-gray-400">Huidaandoening</a></li>
               <li><a href="./pages/Laserontharen.tsx" className="hover:text-gray-400">Laserontharen</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">acepunctuur</a></li>
+              <li><a href="/contact" className="hover:text-gray-400">acupunctuur</a></li>
               <li><a href="/contact" className="hover:text-gray-400">tarieven</a></li>
               <li><a href="/contact" className="hover:text-gray-400">onze kliniek</a></li>
               <li><a href="/contact" className="hover:text-gray-400">contact</a></li>
