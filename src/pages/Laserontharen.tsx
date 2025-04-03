@@ -40,15 +40,37 @@ const Laserontharen: React.FC = () => {
           Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
         </p>
 
-        <div className="bg-neutral-800 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold text-gray-300 mb-4">Waarom kiezen voor laserontharing?</h2>
-          <ul className="text-gray-400 space-y-2 text-left">
-            <li>✔️ Langdurig resultaat</li>
-            <li>✔️ Veilig en effectief</li>
-            <li>✔️ Geschikt voor verschillende huidtypes</li>
-            <li>✔️ Geen ingegroeide haartjes</li>
-          </ul>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {/* Laser Ontharing */}
+  <div className="bg-neutral-800 p-6 rounded-lg shadow-lg">
+    <h2 className="text-2xl font-semibold text-gray-300 mb-4">Laser Ontharing: Efficiënte en Langdurige Oplossing</h2>
+    <p className="text-gray-400 mb-4">
+      Laserontharing is een moderne techniek voor permanente haarverwijdering. Door middel van geconcentreerd licht wordt het pigment in de haarzakjes verhit, waardoor deze beschadigen en de haargroei stopt. Deze methode is snel, effectief en vrijwel pijnloos, met langdurige resultaten.
+    </p>
+    <ul className="text-gray-400 space-y-2 text-left">
+      <li>✔️ Geschikt voor gezicht en lichaam</li>
+      <li>✔️ Voor de meeste huid- en haartypes</li>
+      <li>✔️ Veilig</li>
+      <li>✔️ Voor een lange periode</li>
+    </ul>
+    <p className="text-gray-400 mt-4">Kies voor laserontharing en geniet van een gladde, haartvrije huid zonder terugkerende haargroei!</p>
+  </div>
+
+  {/* Elektrische Epilatie */}
+  <div className="bg-neutral-800 p-6 rounded-lg shadow-lg">
+    <h2 className="text-2xl font-semibold text-gray-300 mb-4">Elektrische Epilatie: De Duurzame Oplossing voor Haarverwijdering</h2>
+    <p className="text-gray-400 mb-4">
+      Elektrische epilatie biedt een langdurige oplossing voor ongewenst haar. Door middel van een fijne naald wordt een stroompuls toegediend die het haarzakje permanent vernietigt. Deze techniek is geschikt voor alle huidtypes en haarkleuren, en zorgt voor een gladde huid zonder terugkerende haargroei. Veilig, effectief en langdurig resultaat!
+    </p>
+    <ul className="text-gray-400 space-y-2 text-left">
+      <li>✔️ Permanente haarverwijdering</li>
+      <li>✔️ Geschikt voor gezicht en lichaam</li>
+      <li>✔️ Voor alle huid- en haartypes</li>
+      <li>✔️ Veilig en professioneel uitgevoerd</li>
+    </ul>
+    <p className="text-gray-400 mt-4">Ervaar de voordelen van elektrische epilatie en zeg voorgoed vaarwel tegen haargroei!</p>
+  </div>
+</div>
 
         <div className="mt-10">
           <h2 className="text-3xl font-bold mb-4 text-gray-300">Prijslijst</h2>
