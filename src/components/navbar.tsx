@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
                     <Link to="/" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">Home</Link>
                     <Link to="/huidaandoening" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">huidaandoening</Link>
                     <Link to="/laserontharen" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">laserontharen</Link>
-                    <Link to="/acepunctuur" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">acupunctuur</Link>
+                    <Link to="/acupunctuur" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">acupunctuur</Link>
                     <Link to="/tarieven" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">tarieven</Link>
                     <Link to="/onze kliniek" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">onze kliniek</Link>
                     <Link to="/contact" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">contact</Link>
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
                 <Link to="/" className="block hover:text-gray-400 px-3 py-2 rounded-md">Home</Link>
                 <Link to="/huidaandoening" className="block hover:text-gray-400 px-3 py-2 rounded-md">huidaandoening</Link>
                 <Link to="/laserontharen" className="block hover:text-gray-400 px-3 py-2 rounded-md">laserontharen</Link>
-                <Link to="/acepunctuur" className="block hover:text-gray-400 px-3 py-2 rounded-md">acupunctuur</Link>
+                <Link to="/acupunctuur" className="block hover:text-gray-400 px-3 py-2 rounded-md">acupunctuur</Link>
                 <Link to="/tarieven" className="block hover:text-gray-400 px-3 py-2 rounded-md">tarieven</Link>
                 <Link to="/onze kliniek" className="block hover:text-gray-400 px-3 py-2 rounded-md">onze kliniek</Link>
                 <Link to="/contact" className="block hover:text-gray-400 px-3 py-2 rounded-md">contact</Link>
