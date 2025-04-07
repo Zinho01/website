@@ -56,14 +56,20 @@ const App = () => {
         <Routes>
           <Route path="/" element={
             <>
-              <div className="flex items-center justify-between">
-                <div className="max-w-md">
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-4">
+                <div className="max-w-md text-center sm:text-left">
                   <h1 className="text-orange-200 text-2xl font-bold mb-2">The Beauty Clinic</h1>
-                  <p className="text-white mb-4">Tekst over de beauty clinic. Hier kun je informatie vinden over onze behandelingen en diensten.</p>
-                  <a href="#over-ons" className="text-orange-200 hover:underline font-medium">Lees meer over ons</a>
-                  <p className="text-white mt-4">Hier nog wat extra tekst over de beauty clinic, onze missie en waarom wij de beste keuze zijn.</p>
+                  <p className="text-white mb-4">
+                    Tekst over de beauty clinic. Hier kun je informatie vinden over onze behandelingen en diensten.
+                  </p>
+                  <a href="#over-ons" className="text-orange-200 hover:underline font-medium">
+                    Lees meer over ons
+                  </a>
+                  <p className="text-white mt-4">
+                    Hier nog wat extra tekst over de beauty clinic, onze missie en waarom wij de beste keuze zijn.
+                  </p>
                 </div>
-                <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
+                <img src={foto1} alt="foto-1" className="w-full sm:w-1/3 h-auto rounded-lg mt-4 sm:mt-0" />
               </div>
 
               <div className='text-orange-200 bg-orange-200 p-8'>
@@ -74,14 +80,18 @@ const App = () => {
                 <div className="flex flex-col sm:flex-row items-center gap-6">
                   <img src={Skincare1} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5" />
                   <div className="text-white space-y-4 text-center sm:text-left">
-                    <h1 className="font-bold text-lg sm:text-xl">Tekst over hoe en wat alles werkt met een skincare behandeling</h1>
+                    <h1 className="font-bold text-lg sm:text-xl">
+                      Tekst over hoe en wat alles werkt met een skincare behandeling
+                    </h1>
                     <p>Extra tekst</p>
                     <p>Extra tekst</p>
-                    <button className="bg-orange-200 rounded px-4 py-2 text-black font-semibold">Plan een afspraak</button>
+                    <button className="bg-orange-200 rounded px-4 py-2 text-black font-semibold">
+                      Plan een afspraak
+                    </button>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-3/3">
+                <div className="flex flex-col sm:flex-row items-center gap-6 w-full">
                   <div className="text-white w-full sm:w-1/3 text-center sm:text-left">
                     <p>Extra informatie over de behandeling en hoe het werkt.</p>
                     <p>Meer details en voordelen van skincare.</p>
@@ -92,11 +102,11 @@ const App = () => {
 
               <div className='text-orange-200 bg-orange-200 p-8'>
                 <p className='text-black flex items-center justify-center font-bold mb-6'>Behandelingen</p>
-                <div className="relative w-full max-w-4xl mx-auto px-4 overflow-hidden">
+                <div className="relative w-full max-w-4xl mx-auto px-4 overflow-x-auto sm:overflow-hidden">
                   <div
                     ref={carouselRef}
-                    className="flex gap-4 sm:gap-6 overflow-x-hidden py-4"
-                    style={{ scrollBehavior: 'smooth' }}
+                    className="flex gap-4 sm:gap-6 py-4"
+                    style={{ scrollBehavior: 'smooth', minWidth: '100%' }}
                   >
                     {banners.map((banner, index) => (
                       <div
@@ -117,13 +127,13 @@ const App = () => {
                   </div>
                   <button
                     onClick={() => handleScroll('left')}
-                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
+                    className="hidden sm:block absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
                   >
                     ◀
                   </button>
                   <button
                     onClick={() => handleScroll('right')}
-                    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
+                    className="hidden sm:block absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
                   >
                     ▶
                   </button>
