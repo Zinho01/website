@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Footer from './components/footer';
 import Navbar from './components/navbar';
@@ -19,9 +20,7 @@ import Contact from "./pages/contact";
 import OnzeKliniek from "./pages/onze-kliniek";
 import Huidaandoening from "./pages/huidaandoening";
 
-
-
-{ /* carousel info and changeable if less banners are wanted*/ }
+// Carousel banners
 const banners = [
   { image: banner1, title: "Glow with our skincare treatments", description: "Discover the secret to glowing skin with our professional treatments." },
   { image: banner2, title: "Rejuvenate your skin", description: "Feel rejuvenated with our exclusive facial therapies." },
@@ -29,12 +28,24 @@ const banners = [
   { image: banner4, title: "Beauty starts here", description: "Transform your skin with our specialized care." }
 ];
 
+// auto scroll function
 const App = () => {
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current) {
+        carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const handleScroll = (direction: 'left' | 'right') => {
-    const cardContainer = document.getElementById("carousel-container") as HTMLElement | null;
-    if (cardContainer) {
+    if (carouselRef.current) {
       const scrollAmount = direction === 'left' ? -300 : 300;
-      cardContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
@@ -81,10 +92,10 @@ const App = () => {
 
               <div className='text-orange-200 bg-orange-200 p-8'>
                 <p className='text-black flex items-center justify-center font-bold mb-6'>Behandelingen</p>
-                <div className="relative w-full max-w-4xl mx-auto px-4">
+                <div className="relative w-full max-w-4xl mx-auto px-4 overflow-hidden">
                   <div
-                    id="carousel-container"
-                    className="flex gap-4 sm:gap-6 overflow-x-auto py-4 scrollbar-hide"
+                    ref={carouselRef}
+                    className="flex gap-4 sm:gap-6 overflow-x-hidden py-4"
                     style={{ scrollBehavior: 'smooth' }}
                   >
                     {banners.map((banner, index) => (
@@ -106,13 +117,13 @@ const App = () => {
                   </div>
                   <button
                     onClick={() => handleScroll('left')}
-                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 block"
+                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
                   >
                     ◀
                   </button>
                   <button
                     onClick={() => handleScroll('right')}
-                    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 block"
+                    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
                   >
                     ▶
                   </button>
@@ -128,7 +139,7 @@ const App = () => {
           } />
           <Route path="/huidnaandoening" element={<Huidaandoening />} />
           <Route path="/laserontharen" element={<Laserontharen />} />
-          <Route path="/acupunctuur" element={< Acupunctuur />} />
+          <Route path="/acupunctuur" element={<Acupunctuur />} />
           <Route path="/tarieven" element={<Tarieven />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
