@@ -45,7 +45,9 @@ const Laserontharen: React.FC = () => {
   <div className="bg-neutral-800 p-6 rounded-lg shadow-lg">
     <h2 className="text-2xl font-semibold text-gray-300 mb-4">Laser Ontharing: Efficiënte en Langdurige Oplossing</h2>
     <p className="text-gray-400 mb-4">
-      Laserontharing is een moderne techniek voor permanente haarverwijdering. Door middel van geconcentreerd licht wordt het pigment in de haarzakjes verhit, waardoor deze beschadigen en de haargroei stopt. Deze methode is snel, effectief en vrijwel pijnloos, met langdurige resultaten.
+    Laserontharing – Voor een zijdezachte huid, blijvend glad
+    Ben je klaar met scheren, waxen of epileren? Kies voor laserontharing! Met geavanceerde technologie verwijderen we ongewenste haartjes veilig, snel en langdurig. Geschikt voor alle huidtypes en vrijwel elk lichaamsdeel.
+    Effectief en duurzaam resultaat. Boek een vrijblijvende intake en ervaar het zelf met een gratis testbehandeling!
     </p>
     <ul className="text-gray-400 space-y-2 text-left">
       <li>✔️ Geschikt voor gezicht en lichaam</li>

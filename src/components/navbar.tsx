@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
                     <Link to="/laserontharen" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">laserontharen</Link>
                     <Link to="/acupunctuur" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">acupunctuur</Link>
                     <Link to="/tarieven" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">tarieven</Link>
-                    <Link to="/onze kliniek" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">onze kliniek</Link>
+                    <Link to="/onze-kliniek" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">onze kliniek</Link>
                     <Link to="/contact" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">contact</Link>
                     <Link to="/shop" className="text-white hover:text-gray-400 px-3 py-2 rounded-md">shop</Link>
                     <Link to="/apointment">

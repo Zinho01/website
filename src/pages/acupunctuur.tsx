@@ -70,6 +70,27 @@ const Acupunctuur: React.FC = () => {
           <img src={acupunctuur2} alt="foto-acupunctuur" className="w-full max-w-sm mx-auto mt-5 rounded-lg" />
         </div>
       </div>
+
+            <div className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg text-left mt-10">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4">
+          Tuina: Traditionele Chinese Massage voor Herstel en Balans
+        </h2>
+        <p className="text-gray-400 text-sm sm:text-base mb-4">
+          Tuina is een eeuwenoude Chinese massagetechniek die zich richt op het herstellen van de 
+          energiebalans (Qi) in het lichaam. Door gebruik te maken van specifieke handgrepen, druktechnieken 
+          en rek- en strekoefeningen, helpt Tuina bij het opheffen van blokkades in de energiestroom.
+        </p>
+        <p className="text-gray-400 text-sm sm:text-base mb-4">
+          De massage wordt ingezet bij onder andere lichamelijke klachten zoals spierpijn, spanning, 
+          vermoeidheid en gewrichtsproblemen. Het verbetert de bloedcirculatie, bevordert ontspanning en 
+          activeert het zelfherstellend vermogen van het lichaam.
+        </p>
+        <p className="text-gray-400 text-sm sm:text-base mb-4">
+          Tuina wordt vaak gecombineerd met andere therapieën uit de Traditionele Chinese Geneeskunde, zoals 
+          acupunctuur en kruidenbehandelingen. Samen zorgen ze voor een holistische aanpak van jouw 
+          gezondheid en welzijn.
+        </p>
+      </div>
     </div>
   );
 };

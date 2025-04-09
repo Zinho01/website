@@ -60,7 +60,7 @@ const App = () => {
                 <div className="max-w-md">
                   <h1 className="text-orange-200 text-2xl font-bold mb-2">The Beauty Clinic</h1>
                   <p className="text-white mb-4">Tekst over de beauty clinic. Hier kun je informatie vinden over onze behandelingen en diensten.</p>
-                  <a href="#over-ons" className="text-orange-200 hover:underline font-medium">Lees meer over ons</a>
+                  <a href="../onze-kliniek" className="text-orange-200 hover:underline font-medium">Lees meer over ons</a>
                   <p className="text-white mt-4">Hier nog wat extra tekst over de beauty clinic, onze missie en waarom wij de beste keuze zijn.</p>
                 </div>
                 <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
