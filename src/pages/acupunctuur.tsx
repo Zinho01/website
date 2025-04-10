@@ -8,7 +8,7 @@ const Acupunctuur: React.FC = () => {
     <div className="bg-black text-white min-h-screen p-4 sm:p-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1 
-          className="text-3xl sm:text-4xl font-bold mb-4 text-gray-200" 
+          className="text-3xl sm:text-4xl font-bold mb-4 text-orange-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -18,78 +18,69 @@ const Acupunctuur: React.FC = () => {
         <p className="text-base sm:text-lg text-gray-400 mb-6">
           Acupunctuur brengt lichaam en geest in balans en biedt natuurlijke verlichting voor uiteenlopende klachten.
         </p>
-        <div className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg text-left">
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-4">Wat kan acupunctuur voor je betekenen?</h2>
+
+        <div className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg text-center">
+          <h2 className="text-xl sm:text-2xl font-semibold text-orange-200 mb-4">
+            Wat kan acupunctuur voor je betekenen?
+          </h2>
           <ul className="text-gray-400 space-y-2 text-sm sm:text-base">
-            <li>✔️ Pijnklachten: rugpijn, nek- en schouderpijn, hoofdpijn en spierpijn</li>
-            <li>✔️ Stress en emotionele klachten: stress, angst, depressie, slapeloosheid</li>
-            <li>✔️ Spijsverteringsproblemen: buikpijn, constipatie, maagklachten</li>
-            <li>✔️ Hormonale en vruchtbaarheidsproblemen: PMS, onregelmatige menstruatie, menopauze</li>
-            <li>✔️ Allergieën: astma, bronchitis, verkoudheid en griep</li>
-            <li>✔️ Chronische aandoeningen: fibromyalgie, CVS, reuma</li>
-            <li>✔️ Verslavingen en gedragsproblemen: roken, verslavingen</li>
-            <li>✔️ Andere klachten: hoge bloeddruk, bepaalde huidproblemen</li>
+            <li><span className="text-orange-200">✔️</span> Pijnklachten: rugpijn, nek- en schouderpijn, hoofdpijn en spierpijn</li>
+            <li><span className="text-orange-200">✔️</span> Stress en emotionele klachten: stress, angst, depressie, slapeloosheid</li>
+            <li><span className="text-orange-200">✔️</span> Spijsverteringsproblemen: buikpijn, constipatie, maagklachten</li>
+            <li><span className="text-orange-200">✔️</span> Hormonale en vruchtbaarheidsproblemen: PMS, onregelmatige menstruatie, menopauze</li>
+            <li><span className="text-orange-200">✔️</span> Allergieën: astma, bronchitis, verkoudheid en griep</li>
+            <li><span className="text-orange-200">✔️</span> Chronische aandoeningen: fibromyalgie, CVS, reuma</li>
+            <li><span className="text-orange-200">✔️</span> Verslavingen en gedragsproblemen: roken, verslavingen</li>
+            <li><span className="text-orange-200">✔️</span> Andere klachten: hoge bloeddruk, bepaalde huidproblemen</li>
           </ul>
         </div>
+
         <a href="/apointment" className="inline-block mt-6">
           <img src={acupunctuur} alt="foto-acupunctuur" className="w-full max-w-sm mx-auto mb-5 rounded-lg" />
           <motion.button 
-            className="bg-neutral-500 hover:bg-gray-400 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition duration-300"
-            whileHover={{ scale: 1.05 }}
-          >
+            className="bg-neutral-500 hover:bg-orange-200 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition duration-300" whileHover={{ scale: 1.05 }}>
             Boek een Gratis Consult
           </motion.button>
         </a>
-        <div className="bg-neutral-900 p-4 sm:p-6 rounded-lg shadow-lg text-left mt-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4">
+
+        <div className="bg-neutral-900 p-4 sm:p-6 rounded-lg shadow-lg text-center mt-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-orange-200 mb-4">
             Acupunctuur: Een Holistische Benadering voor Jouw Gezondheid
           </h2>
           <p className="text-gray-400 mb-4 text-sm sm:text-base">
             Acupunctuur is een eeuwenoude therapie die het lichaam en de geest in balans brengt door het 
-            stimuleren van specifieke punten op de huid met dunne naalden. Deze behandeling kan een 
-            breed scala aan gezondheidsproblemen aanpakken en is een krachtige manier om zowel 
-            fysieke als emotionele klachten te verlichten. Hier zijn enkele van de vele voordelen van 
-            acupunctuur:
+            stimuleren van specifieke punten op de huid met dunne naalden...
           </p>
           <ul className="text-gray-400 space-y-2 text-sm sm:text-base">
-            <li>✔️ Pijnverlichting en Spierklachten</li>
-            <li>✔️ Stress, Angst en Slaapproblemen</li>
-            <li>✔️ Verbetering van de Spijsvertering</li>
-            <li>✔️ Versterking van het Immuunsysteem</li>
-            <li>✔️ Hormonale Balans en Vruchtbaarheid</li>
-            <li>✔️ Gezonde Bloedcirculatie en Ontgifting</li>
-            <li>✔️ Versterken van Mentale en Fysieke Energie</li>
+            <li><span className="text-orange-200">✔️</span> Pijnverlichting en Spierklachten</li>
+            <li><span className="text-orange-200">✔️</span> Stress, Angst en Slaapproblemen</li>
+            <li><span className="text-orange-200">✔️</span> Verbetering van de Spijsvertering</li>
+            <li><span className="text-orange-200">✔️</span> Versterking van het Immuunsysteem</li>
+            <li><span className="text-orange-200">✔️</span> Hormonale Balans en Vruchtbaarheid</li>
+            <li><span className="text-orange-200">✔️</span> Gezonde Bloedcirculatie en Ontgifting</li>
+            <li><span className="text-orange-200">✔️</span> Versterken van Mentale en Fysieke Energie</li>
           </ul>
           <p className="text-gray-400 mt-4 text-sm sm:text-base">
-            Acupunctuur is dus veel meer dan alleen een manier om pijn te verlichten. Het is een 
-            holistische benadering die het hele lichaam en de geest ten goede komt, door de oorzaken van 
-            klachten aan te pakken en niet enkel de symptomen te verlichten. Of je nu fysieke pijn hebt, 
-            last hebt van emotionele stress of gewoon je algehele welzijn wilt verbeteren, acupunctuur 
-            kan een krachtige en effectieve oplossing zijn.
+            Acupunctuur is dus veel meer dan alleen een manier om pijn te verlichten...
           </p>
           <img src={acupunctuur2} alt="foto-acupunctuur" className="w-full max-w-sm mx-auto mt-5 rounded-lg" />
         </div>
-      </div>
 
-      <div className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg text-left mt-10">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4">
-          Tuina: Traditionele Chinese Massage voor Herstel en Balans
-        </h2>
-        <p className="text-gray-400 text-sm sm:text-base mb-4">
-          Tuina is een eeuwenoude Chinese massagetechniek die zich richt op het herstellen van de 
-          energiebalans (Qi) in het lichaam. Door gebruik te maken van specifieke handgrepen, druktechnieken 
-          en rek- en strekoefeningen, helpt Tuina bij het opheffen van blokkades in de energiestroom.
-        </p>
-        <p className="text-gray-400 text-sm sm:text-base mb-4">
-          De massage wordt ingezet bij onder andere lichamelijke klachten zoals spierpijn, spanning, 
-          vermoeidheid en gewrichtsproblemen. Het verbetert de bloedcirculatie, bevordert ontspanning en 
-          activeert het zelfherstellend vermogen van het lichaam.
-        </p>
-        <p className="text-gray-400 text-sm sm:text-base mb-4">
-          Tuina wordt vaak gecombineerd met andere therapieën uit de Traditionele Chinese Geneeskunde, zoals 
-          acupunctuur en kruidenbehandelingen. Samen zorgen ze voor een holistische aanpak van jouw 
-          gezondheid en welzijn.
-        </p>
+        <div className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg text-center mt-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-orange-200 mb-4">
+            Tuina: Traditionele Chinese Massage voor Herstel en Balans
+          </h2>
+          <p className="text-gray-400 text-sm sm:text-base mb-4">
+            Tuina is een eeuwenoude Chinese massagetechniek die zich richt op het herstellen van de 
+            energiebalans (Qi) in het lichaam...
+          </p>
+          <p className="text-gray-400 text-sm sm:text-base mb-4">
+            De massage wordt ingezet bij onder andere lichamelijke klachten zoals spierpijn...
+          </p>
+          <p className="text-gray-400 text-sm sm:text-base mb-4">
+            Tuina wordt vaak gecombineerd met andere therapieën uit de Traditionele Chinese Geneeskunde...
+          </p>
+        </div>
       </div>
     </div>
   );

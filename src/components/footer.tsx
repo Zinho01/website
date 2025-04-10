@@ -9,14 +9,14 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold">Beauty</h2>
             <ul className="mt-2 space-y-2">
-              <li><a href="/salon" className="hover:text-gray-400">home</a></li>
-              <li><a href="/despre" className="hover:text-gray-400">Huidaandoening</a></li>
-              <li><a href="./pages/Laserontharen.tsx" className="hover:text-gray-400">Laserontharen</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">acupunctuur</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">tarieven</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">onze kliniek</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">contact</a></li>
-              <li><a href="/contact" className="hover:text-gray-400">shop</a></li>
+              <li><a href="/" className="hover:text-orange-200">home</a></li>
+              <li><a href="/huidaandoening" className="hover:text-orange-200">Huidaandoening</a></li>
+              <li><a href="/Laserontharen" className="hover:text-orange-200">Laserontharen</a></li>
+              <li><a href="/acupunctuur" className="hover:text-orange-200">acupunctuur</a></li>
+              <li><a href="/tarieven" className="hover:text-orange-200">tarieven</a></li>
+              <li><a href="/onze-kliniek" className="hover:text-orange-200">onze kliniek</a></li>
+              <li><a href="/contact" className="hover:text-orange-200">contact</a></li>
+              <li><a href="/shop" className="hover:text-orange-200">shop</a></li>
             </ul>
           </div>
 
@@ -54,19 +54,13 @@ const Footer = () => {
           <div className="w-full flex justify-center mt-4">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.547570205918!2d4.847961576183594!3d52.37862324668761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e366256123a1%3A0x73bef98d38d17bab!2sThe%20Beauty%20Clinic!5e0!3m2!1snl!2snl!4v1742824306408!5m2!1snl!2snl"
-              className="w-full max-w-md md:max-w-lg h-48 sm:h-56 md:h-64 border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full max-w-md md:max-w-lg h-48 sm:h-56 md:h-64 border-0"allowFullScreen loading="lazy"referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
 
           <a 
             href="https://www.google.com/maps/place/The+Beauty+Clinic/@52.3786232,4.8479616,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5e366256123a1:0x73bef98d38d17bab!8m2!3d52.37862!4d4.8505365!16s%2Fg%2F11rggp46s1?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:underline mt-2"
-          >
+            target="_blank" rel="noopener noreferrer"className="text-blue-400 hover:underline mt-2">
             View larger map
           </a>
         </div>
