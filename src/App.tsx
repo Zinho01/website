@@ -141,7 +141,7 @@ const App = () => {
               </div>
             </>
           } />
-          <Route path="/huidnaandoening" element={<Huidaandoening />} />
+          <Route path="/huidaandoening" element={<Huidaandoening />} />
           <Route path="/laserontharen" element={<Laserontharen />} />
           <Route path="/acupunctuur" element={<Acupunctuur />} />
           <Route path="/tarieven" element={<Tarieven />} />
