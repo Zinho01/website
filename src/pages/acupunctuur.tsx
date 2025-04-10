@@ -71,7 +71,7 @@ const Acupunctuur: React.FC = () => {
         </div>
       </div>
 
-            <div className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg text-left mt-10">
+      <div className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg text-left mt-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-200 mb-4">
           Tuina: Traditionele Chinese Massage voor Herstel en Balans
         </h2>
