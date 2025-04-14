@@ -19,6 +19,7 @@ import Shop from "./pages/shop";
 import Contact from "./pages/contact";
 import OnzeKliniek from "./pages/onze-kliniek";
 import Huidaandoening from "./pages/huidaandoening";
+import { motion } from 'framer-motion';
 
 // Carousel banners
 const banners = [
@@ -28,7 +29,6 @@ const banners = [
   { image: banner4, title: "Beauty starts here", description: "Transform your skin with our specialized care." }
 ];
 
-// auto scroll function
 const App = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
@@ -93,10 +93,10 @@ const App = () => {
               <div className='text-orange-200 bg-orange-200 p-8'>
                 <p className='text-black flex items-center justify-center font-bold mb-6'>Behandelingen</p>
                 <div className="relative w-full max-w-4xl mx-auto px-4">
-                  {/* Ensure no horizontal scroll here */}
+
                   <div
                     ref={carouselRef}
-                    className="flex gap-4 sm:gap-6 py-4 overflow-x-hidden" // Added overflow-x-hidden here
+                    className="flex gap-4 sm:gap-6 py-4 overflow-x-hidden"
                     style={{ scrollBehavior: 'smooth' }}
                   >
                     {banners.map((banner, index) => (
@@ -135,6 +135,32 @@ const App = () => {
               </div>
 
               <p className='text-white flex align-center justify-center font-bold'>Reviews</p>
+
+          <div className="bg-black text-white min-h-screen p-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h1 
+              className="text-4xl font-bold mb-4 text-gray-200"initial={{ opacity: 0, y: -20 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.5 }}
+            >Laserontharing
+            </motion.h1>
+            
+            <p className="text-lg text-gray-400 mb-6">
+              Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
+            </p>
+            <div className="bg-orange-200 p-6 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Gratis Huidanalyse</h2>
+              <p className="text-neutral-800 text-left">
+                Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. 
+                Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
+              </p>
+              <a href="/apointment" className="inline-block mt-6">
+              <motion.button 
+                className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300"whileHover={{ scale: 1.05 }}>
+                Boek een Gratis Consult
+              </motion.button>
+            </a>
+            </div>
+          </div>
+        </div>
 
               <div className='text-orange-200 bg-orange-200 p-8'>
                 <p>e</p>
