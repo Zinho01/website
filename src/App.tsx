@@ -20,8 +20,8 @@ import Contact from "./pages/contact";
 import OnzeKliniek from "./pages/onze-kliniek";
 import Huidaandoening from "./pages/huidaandoening";
 import { motion } from 'framer-motion';
+import ReviewCard from './components/ReviewCard';
 
-// Carousel banners
 const banners = [
   { image: banner1, title: "Glow with our skincare treatments", description: "Discover the secret to glowing skin with our professional treatments." },
   { image: banner2, title: "Rejuvenate your skin", description: "Feel rejuvenated with our exclusive facial therapies." },
@@ -66,9 +66,7 @@ const App = () => {
                 <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
               </div>
 
-              <div className='text-orange-200 bg-orange-200 p-8'>
-                <p>e</p>
-              </div>
+              <div className='text-orange-200 bg-orange-200 p-8'><p>e</p></div>
 
               <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4 sm:px-8">
                 <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -93,22 +91,14 @@ const App = () => {
               <div className='text-orange-200 bg-orange-200 p-8'>
                 <p className='text-black flex items-center justify-center font-bold mb-6'>Behandelingen</p>
                 <div className="relative w-full max-w-4xl mx-auto px-4">
-
                   <div
                     ref={carouselRef}
                     className="flex gap-4 sm:gap-6 py-4 overflow-x-hidden"
                     style={{ scrollBehavior: 'smooth' }}
                   >
                     {banners.map((banner, index) => (
-                      <div
-                        key={index}
-                        className="flex-none w-64 sm:w-80 h-64 bg-white rounded-lg shadow-lg overflow-hidden"
-                      >
-                        <img
-                          src={banner.image}
-                          alt={`Banner ${index + 1}`}
-                          className="w-full h-32 object-cover rounded-t-lg"
-                        />
+                      <div key={index} className="flex-none w-64 sm:w-80 h-64 bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src={banner.image} alt={`Banner ${index + 1}`} className="w-full h-32 object-cover rounded-t-lg" />
                         <div className="p-4">
                           <h2 className="font-semibold text-lg sm:text-xl text-black">{banner.title}</h2>
                           <p className="text-sm text-gray-600 mt-2">{banner.description}</p>
@@ -116,55 +106,68 @@ const App = () => {
                       </div>
                     ))}
                   </div>
-                  {/* Left Scroll Button */}
-                  <button
-                    onClick={() => handleScroll('left')}
-                    className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
-                  >
-                    ◀
-                  </button>
-
-                  {/* Right Scroll Button */}
-                  <button
-                    onClick={() => handleScroll('right')}
-                    className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
-                  >
-                    ▶
-                  </button>
+                  <button onClick={() => handleScroll('left')} className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10">◀</button>
+                  <button onClick={() => handleScroll('right')} className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10">▶</button>
                 </div>
               </div>
 
-              <p className='text-white flex align-center justify-center font-bold'>Reviews</p>
-
-          <div className="bg-black text-white min-h-screen p-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h1 
-              className="text-4xl font-bold mb-4 text-gray-200"initial={{ opacity: 0, y: -20 }}animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.5 }}
-            >Laserontharing
-            </motion.h1>
-            
-            <p className="text-lg text-gray-400 mb-6">
-              Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
-            </p>
-            <div className="bg-orange-200 p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Gratis Huidanalyse</h2>
-              <p className="text-neutral-800 text-left">
-                Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. 
-                Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
-              </p>
-              <a href="/apointment" className="inline-block mt-6">
-              <motion.button 
-                className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300"whileHover={{ scale: 1.05 }}>
-                Boek een Gratis Consult
-              </motion.button>
-            </a>
-            </div>
-          </div>
-        </div>
-
-              <div className='text-orange-200 bg-orange-200 p-8'>
-                <p>e</p>
+              <p className='text-white flex justify-center font-bold text-xl mt-12'>Reviews</p>
+              <div className="flex flex-wrap justify-center gap-6 p-8 bg-black">
+                <ReviewCard
+                  name="Ava Summers"
+                  avatarUrl="https://i.pravatar.cc/150?img=32"
+                  rating={5}
+                  review="Absolutely love this product! Great quality and fast delivery."
+                  date="April 10, 2025"
+                />
+                <ReviewCard
+                  name="Mark Johnson"
+                  avatarUrl="https://i.pravatar.cc/150?img=33"
+                  rating={4}
+                  review="Great service, very friendly staff and clean clinic."
+                  date="April 8, 2025"
+                />
+                <ReviewCard
+                  name="Lana Rivera"
+                  avatarUrl="https://i.pravatar.cc/150?img=48"
+                  rating={5}
+                  review="The laser treatment changed my life! Highly recommend it!"
+                  date="April 2, 2025"
+                />
               </div>
+
+              <div className="bg-black text-white min-h-screen p-6">
+                <div className="max-w-4xl mx-auto text-center">
+                  <motion.h1
+                    className="text-4xl font-bold mb-4 text-gray-200"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    Laserontharing
+                  </motion.h1>
+                  <p className="text-lg text-gray-400 mb-6">
+                    Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
+                  </p>
+                  <div className="bg-orange-200 p-6 rounded-lg shadow-lg">
+                    <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Gratis Huidanalyse</h2>
+                    <p className="text-neutral-800 text-left">
+                      Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. 
+                      Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
+                    </p>
+                    <a href="/apointment" className="inline-block mt-6">
+                      <motion.button
+                        className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        Boek een Gratis Consult
+                      </motion.button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className='text-orange-200 bg-orange-200 p-8'><p>e</p></div>
             </>
           } />
           <Route path="/huidaandoening" element={<Huidaandoening />} />
