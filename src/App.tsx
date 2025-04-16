@@ -128,25 +128,22 @@ const App = () => {
               <p className='text-white flex justify-center font-bold text-xl mt-12'>Reviews</p>
               <div className="flex flex-wrap justify-center gap-6 p-8 bg-black">
                 <ReviewCard
-                  name="Ava Summers"
-                  avatarUrl="https://i.pravatar.cc/150?img=32"
+                  name="-John Doe"
                   rating={5}
-                  review="Absolutely love this product! Great quality and fast delivery."
-                  date="April 10, 2025"
+                  review="Zorgzame en vriendelijke hulp! Je hebt een eindresultaat bereikt. Goed advies en kennis is super! Top!"
+                  date="een jaar geleden"
                 />
                 <ReviewCard
-                  name="Mark Johnson"
-                  avatarUrl="https://i.pravatar.cc/150?img=33"
-                  rating={4}
-                  review="Great service, very friendly staff and clean clinic."
-                  date="April 8, 2025"
+                  name="Serhat Pehlivan"
+                  rating={5}
+                  review="Ik ben op de plaatsen in Zaandam geweest, de plaatsen in Amsterdam zijn ook erg schoon en mooi. Medewerkers hebben altijd willen doen wat het beste voor mij is, tegen de meest betaalbare prijs. Ik ben dankbaar."
+                  date="2 jaar geleden"
                 />
                 <ReviewCard
-                  name="Lana Rivera"
-                  avatarUrl="https://i.pravatar.cc/150?img=48"
+                  name="Melike Al-Zeh Şahin"
                   rating={5}
-                  review="The laser treatment changed my life! Highly recommend it!"
-                  date="April 2, 2025"
+                  review=""
+                  date="een jaar geleden"
                 />
               </div>
 
@@ -166,9 +163,7 @@ const App = () => {
                     </p>
                     <a href="/apointment" className="inline-block mt-6">
                       <motion.button
-                        className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300"
-                        whileHover={{ scale: 1.05 }}
-                      >
+                        className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300" whileHover={{ scale: 1.05 }}>
                         Boek een Gratis Consult
                       </motion.button>
                     </a>
