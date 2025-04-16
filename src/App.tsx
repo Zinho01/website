@@ -59,9 +59,13 @@ const App = () => {
               <div className="flex items-center justify-between">
                 <div className="max-w-md">
                   <h1 className="text-orange-200 text-2xl font-bold mb-2">The Beauty Clinic</h1>
-                  <p className="text-white mb-4">Tekst over de beauty clinic. Hier kun je informatie vinden over onze behandelingen en diensten.</p>
+                  <p className="text-white mb-4">
+                    Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen. Wij bieden hoogwaardige behandelingen zoals gezichtsverzorging, huidverjonging en permanente make-up, uitgevoerd door ervaren specialisten.
+                  </p>
                   <a href="../onze-kliniek" className="text-orange-200 hover:underline font-medium">Lees meer over ons</a>
-                  <p className="text-white mt-4">Hier nog wat extra tekst over de beauty clinic, onze missie en waarom wij de beste keuze zijn.</p>
+                  <p className="text-white mt-4">
+                    Onze missie is om jouw natuurlijke schoonheid te versterken met persoonlijke aandacht en de nieuwste technologieën. Kies voor professionaliteit, kwaliteit en een warme sfeer – kies voor The Beauty Clinic.
+                  </p>
                 </div>
                 <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
               </div>
@@ -69,24 +73,34 @@ const App = () => {
               <div className='text-orange-200 bg-orange-200 p-8'><p>e</p></div>
 
               <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4 sm:px-8">
-                <div className="flex flex-col sm:flex-row items-center gap-6">
-                  <img src={Skincare1} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5" />
-                  <div className="text-white space-y-4 text-center sm:text-left">
-                    <h1 className="font-bold text-lg sm:text-xl">Tekst over hoe en wat alles werkt met een skincare behandeling</h1>
-                    <p>Extra tekst</p>
-                    <p>Extra tekst</p>
-                    <button className="bg-orange-200 rounded px-4 py-2 text-black font-semibold">Plan een afspraak</button>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-3/3">
-                  <div className="text-white w-full sm:w-1/3 text-center sm:text-left">
-                    <p>Extra informatie over de behandeling en hoe het werkt.</p>
-                    <p>Meer details en voordelen van skincare.</p>
-                  </div>
-                  <img src={skincare2} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5 mb-5" />
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <img src={Skincare1} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5" />
+                <div className="text-white space-y-4 text-center sm:text-left">
+                  <h1 className="font-bold text-lg sm:text-xl">Ontdek de kracht van professionele skincare behandelingen</h1>
+                  <p>
+                    Bij The Beauty Clinic staat huidverbetering centraal. Onze skincare behandelingen zijn gericht op het herstellen, voeden en verjongen van de huid — volledig afgestemd op jouw huidtype en wensen.
+                  </p>
+                  <p>
+                    Of je nu last hebt van acne, een doffe huid of beginnende tekenen van huidveroudering, wij bieden op maat gemaakte oplossingen met resultaatgerichte producten en technieken.
+                  </p>
+                  <a href="../appointment"><button className="bg-orange-200 rounded px-4 py-2 text-black font-semibold mt-5">Plan een afspraak</button></a>
+                  
                 </div>
               </div>
+
+              <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-3/3">
+                <div className="text-white w-full sm:w-1/3 text-center sm:text-left">
+                  <p>
+                    Tijdens een intake bekijken we jouw huid grondig en stellen we een persoonlijk behandelplan op. Denk aan reiniging, exfoliatie, hydratatie en het stimuleren van collageenproductie.
+                  </p>
+                  <p>
+                    Skincare bij The Beauty Clinic betekent investeren in een gezonde, stralende huid – met professionele begeleiding en voelbaar resultaat na elke behandeling.
+                  </p>
+                </div>
+                <img src={skincare2} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5 mb-5" />
+              </div>
+            </div>
+
 
               <div className='text-orange-200 bg-orange-200 p-8'>
                 <p className='text-black flex items-center justify-center font-bold mb-6'>Behandelingen</p>
@@ -139,12 +153,7 @@ const App = () => {
               <div className="bg-black text-white min-h-screen p-6">
                 <div className="max-w-4xl mx-auto text-center">
                   <motion.h1
-                    className="text-4xl font-bold mb-4 text-gray-200"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    Laserontharing
+                    className="text-4xl font-bold mb-4 text-gray-200" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} >Laserontharing
                   </motion.h1>
                   <p className="text-lg text-gray-400 mb-6">
                     Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
