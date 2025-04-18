@@ -1,72 +1,73 @@
 {
-    "Armen": {
-      "Armen boven": 100,
-      "Armen onder": 100,
-      "Armen totaal": 175
+  "Armen": {
+    "Armen boven": 100,
+    "Armen onder": 100,
+    "Armen totaal": 175
+  },
+  "Bovenrug & Nek": {
+    "Nek": 100,
+    "Schouders": 150,
+    "Rugtotaal": 200
+  },
+  "Benen": {
+    "Benen boven": 200,
+    "Benen onder": 175,
+    "Knieën": 50,
+    "Benen volledig": 350,
+    "Handen": 50,
+    "Vingers": 50
+  },
+  "Bikini": {
+    "Bikinilijn": 100,
+    "Bikini totaal": 150,
+    "Bilnaad": 95,
+    "Billen (incl. Bilnaad)": 200
+  },
+  "Bovenlichaam": {
+    "Borst": 100,
+    "Buik": 200,
+    "Borst en Buik": 200
+  },
+  "Gezicht": {
+    "Wenkbrauw (stukje tussen in je wenkbrauwen)": 25,
+    "Boven-Lip": 40,
+    "Kin": 50,
+    "Wangen": 50,
+    "Bakkenbaarden": 50,
+    "Neus": 25,
+    "Oorschelpen": 50,
+    "Gelaat": 100,
+    "Hals": 50,
+    "Navel": 75,
+    "Oksel": 95,
+    "Tepelhof": 50,
+    "Tenen": 50
+  },
+  "Pakketten": {
+    "Pakket 1": {
+      "Prijs": 350,
+      "Inbegrepen": [
+        "Boven lip",
+        "Benen",
+        "Oksels",
+        "Bikinilijn"
+      ]
     },
-    "Bovenrug & Nek": {
-      "Nek": 100,
-      "Rugtotaal": 200,
-      "Schouders": 150
+    "Pakket 2": {
+      "Prijs": 275,
+      "Inbegrepen": [
+        "Benen onder",
+        "Oksels",
+        "Bikinilijn"
+      ]
     },
-    "Benen": {
-      "Handen": 50,
-      "Vingers": 50,
-      "Benen boven": 200,
-      "Benen onder": 175,
-      "Benen volledig": 350
-    },
-    "Bikini": {
-      "Bikini totaal": 150,
-      "Bikinilijn": 175,
-      "Billen (incl. Bilnaad)": 200,
-      "Bilnaad": 95
-    },
-    "Bovenlichaam": {
-      "Borst": 100,
-      "Borst en Buik": 200,
-      "Buik": 200
-    },
-    "Gezicht": {
-      "Boven-Lip": 40,
-      "Navel": 75,
-      "Oksel": 95,
-      "Tepelhof": 50,
-      "Bakkenbaarden": 50,
-      "Gelaat": 100,
-      "Hals": 50,
-      "Kin": 50,
-      "Neus": 25,
-      "Oorschelpen": 50,
-      "Tenen": 50,
-      "Wangen": 50,
-      "Wenkbrauw (stukje tussen in je wenkbrauwen)": 25
-    },
-    "Pakketten": {
-      "Pakket 1": {
-        "Prijs": 350,
-        "Inbegrepen": [
-          "Boven lip",
-          "Benen",
-          "Oksels",
-          "Bikinilijn"
-        ]
-      },
-      "Pakket 2": {
-        "Prijs": 275,
-        "Inbegrepen": [
-          "Benen onder",
-          "Oksels",
-          "Bikinilijn"
-        ]
-      },
-      "Pakket 3": {
-        "Prijs": 175,
-        "Inbegrepen": [
-          "Boven-Lip",
-          "Oksels",
-          "Bikini"
-        ]
-      }
+    "Pakket 3": {
+      "Prijs": 175,
+      "Inbegrepen": [
+        "Boven-Lip",
+        "Oksels",
+        "Bikini"
+      ]
     }
   }
+}
