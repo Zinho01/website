@@ -74,24 +74,24 @@ const OnzeKliniek: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-10">
-          <h2 className="text-3xl font-bold mb-4 text-gray-300">Waarom Kiezen voor Onze Kliniek?</h2>
-          <ul className="list-disc text-gray-400 text-left space-y-2">
-            <li>✔️ Professionele zorg met gecertificeerde specialisten</li>
-            <li>✔️ De nieuwste technologieën en behandelingsmethoden</li>
-            <li>✔️ Aandacht voor jouw comfort en welzijn</li>
-            <li>✔️ Resultaatgerichte benadering voor langdurige tevredenheid</li>
-          </ul>
-        </div>
+          <div className="mt-10 border border-gray-600 rounded-xl p-6 bg-neutral-800 shadow-lg">
+            <h2 className="text-3xl font-bold mb-4 text-gray-300">Waarom Kiezen voor Onze Kliniek?</h2>
+            <ul className="list-disc text-gray-400 text-left space-y-2">
+              <li>✔️ Professionele zorg met gecertificeerde specialisten</li>
+              <li>✔️ De nieuwste technologieën en behandelingsmethoden</li>
+              <li>✔️ Aandacht voor jouw comfort en welzijn</li>
+              <li>✔️ Resultaatgerichte benadering voor langdurige tevredenheid</li>
+            </ul>
+          </div>
 
-        <a href="/afspraak" className="inline-block mt-6">
-          <motion.button
-            className="bg-neutral-500 hover:bg-gray-400 text-white px-6 py-3 rounded-lg transition duration-300"
-            whileHover={{ scale: 1.05 }}
-          >
-            Maak een Afspraak
-          </motion.button>
-        </a>
+          <a href="/afspraak" className="inline-block mt-6">
+            <motion.button
+              className="bg-neutral-500 hover:bg-gray-400 text-white px-6 py-3 rounded-lg transition duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
+              Maak een Afspraak
+            </motion.button>
+          </a>
       </div>
     </div>
   );
