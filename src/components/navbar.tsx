@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
                     <Link to="/onze-kliniek" className="text-white hover:text-orange-200 px-3 py-2 rounded-md">onze kliniek</Link>
                     <Link to="/contact" className="text-white hover:text-orange-200 px-3 py-2 rounded-md">contact</Link>
                     <Link to="/shop" className="text-white hover:text-orange-200 px-3 py-2 rounded-md">shop</Link>
-                    <Link to="/apointment">
+                    <Link to="/contact">
                         <button className="bg-neutral-500 hover:bg-orange-200 text-white px-4 py-2 rounded-md transition-colors duration-300">Gratis consult</button>
                     </Link>
                 </div>
@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
                 <Link to="/onze kliniek" className="block hover:text-orange-200 px-3 py-2 rounded-md">onze kliniek</Link>
                 <Link to="/contact" className="block hover:text-orange-200 px-3 py-2 rounded-md">contact</Link>
                 <Link to="/shop" className="block hover:text-orange-200 px-3 py-2 rounded-md">shop</Link>
-                <Link to="/apointment"><button className="bg-gray-500 hover:text-orange-200 text-white px-4 py-2 rounded-md transition-colors duration-300 w-full text-center">Gratis consult</button>
+                <Link to="/contact"><button className="bg-gray-500 hover:text-orange-200 text-white px-4 py-2 rounded-md transition-colors duration-300 w-full text-center">Gratis consult</button>
                 </Link>
             </motion.div>
         </nav>

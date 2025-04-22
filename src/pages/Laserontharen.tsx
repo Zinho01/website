@@ -122,7 +122,7 @@ const Laserontharen: React.FC = () => {
           </div>
         </div>
 
-        <a href="/apointment" className="inline-block mt-6">
+        <a href="/contact" className="inline-block mt-6">
           <motion.button
             className="bg-neutral-500 hover:bg-gray-400 text-white px-6 py-3 rounded-lg transition duration-300"
             whileHover={{ scale: 1.05 }}
