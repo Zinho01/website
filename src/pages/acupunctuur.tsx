@@ -35,7 +35,7 @@ const Acupunctuur: React.FC = () => {
           </ul>
         </div>
 
-        <a href="/apointment" className="inline-block mt-6">
+        <a href="/contact" className="inline-block mt-6">
           <img src={acupunctuur} alt="foto-acupunctuur" className="w-full max-w-sm mx-auto mb-5 rounded-lg" />
           <motion.button 
             className="bg-neutral-500 hover:bg-orange-200 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition duration-300" whileHover={{ scale: 1.05 }}>
