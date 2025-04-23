@@ -30,4 +30,5 @@
         <p className="text-gray-800">{review}</p>
         </div>
     );
+
 export default ReviewCard;
