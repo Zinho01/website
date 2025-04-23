@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
                 <Link to="/laserontharen" className="block hover:text-orange-200 px-3 py-2 rounded-md">laserontharen</Link>
                 <Link to="/acupunctuur" className="block hover:text-orange-200 px-3 py-2 rounded-md">acupunctuur</Link>
                 <Link to="/tarieven" className="block hover:text-orange-200 px-3 py-2 rounded-md">tarieven</Link>
-                <Link to="/onze kliniek" className="block hover:text-orange-200 px-3 py-2 rounded-md">onze kliniek</Link>
+                <Link to="/onze-kliniek" className="block hover:text-orange-200 px-3 py-2 rounded-md">onze kliniek</Link>
                 <Link to="/contact" className="block hover:text-orange-200 px-3 py-2 rounded-md">contact</Link>
                 <Link to="/shop" className="block hover:text-orange-200 px-3 py-2 rounded-md">shop</Link>
                 <Link to="/contact"><button className="bg-gray-500 hover:text-orange-200 text-white px-4 py-2 rounded-md transition-colors duration-300 w-full text-center">Gratis consult</button>
