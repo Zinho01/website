@@ -23,10 +23,10 @@ import { motion } from 'framer-motion';
 import ReviewCard from './components/ReviewCard';
 
 const banners = [
-  { image: banner1, title: "Glow with our skincare treatments", description: "Discover the secret to glowing skin with our professional treatments." },
-  { image: banner2, title: "Rejuvenate your skin", description: "Feel rejuvenated with our exclusive facial therapies." },
-  { image: banner3, title: "Ultimate Skincare Experience", description: "Experience luxurious skincare services for the perfect glow." },
-  { image: banner4, title: "Beauty starts here", description: "Transform your skin with our specialized care." }
+  { image: banner1, title: "Acupunctuur", description: "Acupunctuur brengt lichaam en geest in balans en biedt natuurlijke verlichting voor uiteenlopende klachten." },
+  { image: banner2, title: "Laserontharen", description: "Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei." },
+  { image: banner3, title: "Huidbehandelingen", description: "Experience luxurious skincare services for the perfect glow." },
+  { image: banner4, title: "Harsen/Waxen", description: "Transform your skin with our specialized care." }
 ];
 
 const App = () => {

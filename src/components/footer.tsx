@@ -68,7 +68,7 @@ const Footer = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
+          </div>v  
 
           <a 
             href="https://www.google.com/maps/place/The+Beauty+Clinic/@52.3786232,4.8479616,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5e366256123a1:0x73bef98d38d17bab!8m2!3d52.37862!4d4.8505365!16s%2Fg%2F11rggp46s1?entry=ttu"
