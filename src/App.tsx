@@ -25,8 +25,8 @@ import ReviewCard from './components/ReviewCard';
 const banners = [
   { image: banner1, title: "Acupunctuur", description: "Acupunctuur brengt lichaam en geest in balans en biedt natuurlijke verlichting voor uiteenlopende klachten." },
   { image: banner2, title: "Laserontharen", description: "Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei." },
-  { image: banner3, title: "Huidbehandelingen", description: "Experience luxurious skincare services for the perfect glow." },
-  { image: banner4, title: "Harsen/Waxen", description: "Transform your skin with our specialized care." }
+  { image: banner3, title: "Huidbehandelingen", description: " voedt de huid en pakt onzuiverheden of huidveroudering aan. Je huid voelt daarna fris, gezond en stralend aan." },
+  { image: banner4, title: "Harsen/Waxen", description: "Harsen verwijdert haar met de wortel, voor een gladde huid en een langdurig resultaat." }
 ];
 
 const App = () => {
