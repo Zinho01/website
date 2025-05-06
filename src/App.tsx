@@ -161,7 +161,7 @@ const App = () => {
                       Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. 
                       Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
                     </p>
-                    <a href="/contact" className="inline-block mt-6">
+                    <a href="https://the-beauty-clinic-3.salonized.com/widget_bookings/new" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
                       <motion.button
                         className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300" whileHover={{ scale: 1.05 }}>
                         Boek een Gratis Consult
