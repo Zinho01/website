@@ -40,15 +40,15 @@ const Tarievenlijst: React.FC = () => {
     {
       categorie: "Traditionele behandelingen",
       items: [
-        ["Acupunctuur (30 min)", "50"],
+        ["Acupunctuur (30 min)", "€50"],
         ["Oor acupunctuur (30 min)", "€50"],
         ["Tuina massage (30 min)", "€50"],
-        ["Laser therapie (30 min) ", "€50"],
-        ["Hijama (30 min) ", "€50"],
-        ["Cupping(dry) (30 min) ", "€50"],
-        ["Cupping(wet) (30 min) ", "€50"],
-        ["Electrostimulatie (30 min) ", "€50"],
-        ["Kruidenbehandeling (30 min) ", "€50"],
+        ["Laser therapie (30 min)", "€50"],
+        ["Hijama (30 min)", "€50"],
+        ["Cupping (dry) (30 min)", "€50"],
+        ["Cupping (wet) (30 min)", "€50"],
+        ["Electrostimulatie (30 min)", "€50"],
+        ["Kruidenbehandeling (30 min)", "€50"],
       ],
     },
     {
@@ -72,10 +72,10 @@ const Tarievenlijst: React.FC = () => {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen p-6">
-      <div className="max-w-4xl mx-auto">
+    <div className="bg-black text-white min-h-screen px-4 py-6 sm:px-6 md:px-8">
+      <div className="max-w-3xl mx-auto">
         <motion.h1
-          className="text-4xl font-bold mb-6 text-center text-gray-200"
+          className="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -86,19 +86,22 @@ const Tarievenlijst: React.FC = () => {
         {behandelingen.map((groep, i) => (
           <motion.div
             key={i}
-            className="bg-neutral-800 p-6 rounded-lg shadow-lg mb-6"
+            className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
-            <h2 className="text-2xl font-semibold text-gray-300 mb-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-4">
               {groep.categorie}
             </h2>
             <ul className="divide-y divide-gray-700">
               {groep.items.map(([naam, prijs], j) => (
-                <li key={j} className="flex justify-between py-2 text-gray-400">
-                  <span>{naam}</span>
-                  <span>{prijs}</span>
+                <li
+                  key={j}
+                  className="flex flex-wrap justify-between py-2 text-sm sm:text-base text-gray-400"
+                >
+                  <span className="w-2/3">{naam}</span>
+                  <span className="w-1/3 text-right">{prijs}</span>
                 </li>
               ))}
             </ul>
@@ -112,7 +115,7 @@ const Tarievenlijst: React.FC = () => {
             rel="noopener noreferrer"
           >
             <motion.button
-              className="bg-neutral-500 hover:bg-gray-400 text-white px-6 py-3 rounded-lg transition duration-300"
+              className="bg-neutral-500 hover:bg-gray-400 text-white px-6 py-3 rounded-lg transition duration-300 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
             >
               Boek een Afspraak
