@@ -40,10 +40,15 @@ const Tarievenlijst: React.FC = () => {
     {
       categorie: "Traditionele behandelingen",
       items: [
-        ["Acupunctuur", "€60"],
-        ["Tuina massage", "€55 - €80"],
-        ["Hijama", "€60"],
-        ["Cupping", "€35"],
+        ["Acupunctuur (30 min)", "50"],
+        ["Oor acupunctuur (30 min)", "€50"],
+        ["Tuina massage (30 min)", "€50"],
+        ["Laser therapie (30 min) ", "€50"],
+        ["Hijama (30 min) ", "€50"],
+        ["Cupping(dry) (30 min) ", "€50"],
+        ["Cupping(wet) (30 min) ", "€50"],
+        ["Electrostimulatie (30 min) ", "€50"],
+        ["Kruidenbehandeling (30 min) ", "€50"],
       ],
     },
     {
