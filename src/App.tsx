@@ -128,7 +128,7 @@ const App = () => {
               <p className='text-white flex justify-center font-bold text-xl mt-12'>Reviews</p>
               <div className="flex flex-wrap justify-center gap-6 p-8 bg-black">
                 <ReviewCard
-                  name="-John Doe"
+                  name="John Doe"
                   rating={5}
                   review="Zorgzame en vriendelijke hulp! Je hebt een eindresultaat bereikt. Goed advies en kennis is super! Top!"
                   date="een jaar geleden"
