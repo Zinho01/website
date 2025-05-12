@@ -14,9 +14,41 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/home', function () {
+    return Inertia::render('home');
+})->middleware(['auth', 'verified'])->name('home');
+
+Route::get('/acupunctuur', function () {
+    return Inertia::render('acupunctuur');
+})->name('acupunctuur');
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+
+Route::get('/home', function () {
+    return Inertia::render('home');
+})->name('home');
+
+Route::get('/lazerontharen', function () {
+    return Inertia::render('lazerontharen');
+})->name('lazerontharen');
+
+Route::get('/shop', function () {
+    return Inertia::render('shop');
+})->name('shop');
+
+Route::get('/tarieven', function () {
+    return Inertia::render('tarieven');
+})->name('tarieven');
+
+Route::get('/huidaandoeningen', function () {
+    return Inertia::render('huidaandoeningen');
+})->name('huidaandoeningen');
+
+Route::get('/onze-kliniek', function () {
+    return Inertia::render('onze-kliniek');
+})->name('onze-kliniek');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
