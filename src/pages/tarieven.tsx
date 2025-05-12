@@ -1,75 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Tarievenlijst: React.FC = () => {
-  const behandelingen = [
-    {
-      categorie: "Huidbehandelingen",
-      items: [
-        ["Dermapen", "€120"],
-        ["Microdermabrasie", "€75"],
-        ["Peeling", "€70"],
-        ["Facial", "€55"],
-        ["Acne behandeling", "€65"],
-      ],
-    },
-    {
-      categorie: "Coagulatie behandeling",
-      items: [["Verwijderen van huidoneffenheden", "Vanaf €45"]],
-    },
-    {
-      categorie: "Harsen / Waxen",
-      items: [
-        ["Bovenlip", "€10"],
-        ["Kin", "€10"],
-        ["Oksels", "€17"],
-        ["Bikinilijn", "€25"],
-        ["Onderbenen", "€30"],
-        ["Volledige benen", "€45"],
-      ],
-    },
-    {
-      categorie: "Epileren & Verven",
-      items: [
-        ["Epileren met touw", "€15"],
-        ["Epileren met pincet", "€12"],
-        ["Wenkbrauwen verven", "€12"],
-        ["Wimpers verven", "€14"],
-      ],
-    },
-    {
-      categorie: "Traditionele behandelingen",
-      items: [
-        ["Acupunctuur (30 min)", "€50"],
-        ["Oor acupunctuur (30 min)", "€50"],
-        ["Tuina massage (30 min)", "€50"],
-        ["Laser therapie (30 min)", "€50"],
-        ["Hijama (30 min)", "€50"],
-        ["Cupping (dry) (30 min)", "€50"],
-        ["Cupping (wet) (30 min)", "€50"],
-        ["Electrostimulatie (30 min)", "€50"],
-        ["Kruidenbehandeling (30 min)", "€50"],
-      ],
-    },
-    {
-      categorie: "Massage",
-      items: [
-        ["Ontspanningsmassage", "€60"],
-        ["Rug/nek/schouder massage", "€35"],
-        ["Voetreflexmassage", "€45"],
-      ],
-    },
-    {
-      categorie: "Ontharing",
-      items: [
-        ["Laser ontharing bovenlip", "€40"],
-        ["Laser ontharing oksels", "€60"],
-        ["Laser ontharing bikinilijn", "€70"],
-        ["Laser ontharing onderbenen", "€100"],
-        ["Elektrische epilatie (15 min)", "€35"],
-      ],
-    },
-  ];
+  const [behandelingen, setBehandelingen] = useState<any[]>([]);
+
+  // Fetching JSON data
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/Tarieven.json");
+        const data = await response.json();
+        setBehandelingen(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-black text-white min-h-screen px-4 py-6 sm:px-6 md:px-8">
@@ -83,30 +31,59 @@ const Tarievenlijst: React.FC = () => {
           Tarievenlijst Behandelingen
         </motion.h1>
 
-        {behandelingen.map((groep, i) => (
-          <motion.div
-            key={i}
-            className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-          >
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-4">
-              {groep.categorie}
-            </h2>
-            <ul className="divide-y divide-gray-700">
-              {groep.items.map(([naam, prijs], j) => (
-                <li
-                  key={j}
-                  className="flex flex-wrap justify-between py-2 text-sm sm:text-base text-gray-400"
-                >
-                  <span className="w-2/3">{naam}</span>
-                  <span className="w-1/3 text-right">{prijs}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
+        {/* Check if behandelingen is loaded */}
+        {behandelingen.length === 0 ? (
+          <div className="text-center text-gray-400">Loading...</div>
+        ) : (
+          behandelingen.map((groep, i) => (
+            <motion.div
+              key={i}
+              className="bg-neutral-800 p-4 sm:p-6 rounded-lg shadow-lg mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <h2 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-4">
+                {groep.categorie}
+              </h2>
+
+              {/* Render the items in the main categorie if they exist */}
+              {groep.items && groep.items.length > 0 && (
+                <ul className="divide-y divide-gray-700">
+                  {groep.items.map((item: { name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; price: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; time: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; }, k: React.Key | null | undefined) => (
+                    <li key={k} className="flex flex-wrap justify-between py-2 text-sm sm:text-base text-gray-400">
+                      <span className="w-2/3">{item.name}</span>
+                      <span className="w-1/3 text-right">{item.price}</span>
+                      <span className="w-full text-right text-xs text-gray-500">{item.time}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Check if subcategorie is defined and loop through it */}
+              {groep.subcategorie && groep.subcategorie.length > 0 ? (
+                groep.subcategorie.map((subcat: { name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; items: any[]; }, j: React.Key | null | undefined) => (
+                  <div key={j} className="mb-4">
+                    <h3 className="text-lg font-semibold text-gray-400">{subcat.name}</h3>
+
+                    <ul className="divide-y divide-gray-700">
+                      {/* Loop through items of each subcategory */}
+                      {subcat.items.map((item, k) => (
+                        <li key={k} className="flex flex-wrap justify-between py-2 text-sm sm:text-base text-gray-400">
+                          <span className="w-2/3">{item.name}</span>
+                          <span className="w-1/3 text-right">{item.price}</span>
+                          <span className="w-full text-right text-xs text-gray-500">{item.time}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              ) : (
+                <div className="text-gray-500">No subcategories available</div>
+              )}
+            </motion.div>
+          ))
+        )}
 
         <div className="text-center mt-8">
           <a
