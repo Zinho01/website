@@ -79,7 +79,7 @@ const Tarievenlijst: React.FC = () => {
                   </div>
                 ))
               ) : (
-                <div className="text-gray-500">No subcategories available</div>
+                <div className="text-gray-500"></div>
               )}
             </motion.div>
           ))
