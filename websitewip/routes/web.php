@@ -15,39 +15,36 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return Inertia::render('home');
-})->middleware(['auth', 'verified'])->name('home');
+    return Inertia::render('Home');
+})->name('home');
+// ->middleware(['auth', 'verified']) --Taken out for now, place before the route if you want to use it
 
-Route::get('/acupunctuur', function () {
-    return Inertia::render('acupunctuur');
-})->name('acupunctuur');
+Route::get('/acupuntuur', function () {
+    return Inertia::render('Acupuntuur');
+})->name('acupuntuur');
 
 Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
 
-Route::get('/home', function () {
-    return Inertia::render('home');
-})->name('home');
-
-Route::get('/lazerontharen', function () {
-    return Inertia::render('lazerontharen');
-})->name('lazerontharen');
+Route::get('/lazerontharing', function () {
+    return Inertia::render('Lazerontharing');
+})->name('lazerontharing');
 
 Route::get('/shop', function () {
-    return Inertia::render('shop');
+    return Inertia::render('Shop');
 })->name('shop');
 
 Route::get('/tarieven', function () {
-    return Inertia::render('tarieven');
+    return Inertia::render('Tarieven');
 })->name('tarieven');
 
 Route::get('/huidaandoeningen', function () {
-    return Inertia::render('huidaandoeningen');
+    return Inertia::render('Huidaandoeningen');
 })->name('huidaandoeningen');
 
 Route::get('/onze-kliniek', function () {
-    return Inertia::render('onze-kliniek');
+    return Inertia::render('Onze-kliniek');
 })->name('onze-kliniek');
 
 Route::middleware('auth')->group(function () {
