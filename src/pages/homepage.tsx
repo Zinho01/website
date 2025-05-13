@@ -8,6 +8,7 @@ import banner1 from '../assets/skincare.jpg';
 import banner2 from '../assets/skincare2.jpg';
 import banner3 from '../assets/skincare.jpg';
 import banner4 from '../assets/skincare2.jpg';
+import flower from '../assets/gold-flwr.png';
 
 import ReviewCard from '../components/ReviewCard';
 
@@ -151,40 +152,54 @@ const Homepage = () => {
         <ReviewCard name="Melike Al-Zeh Şahin" rating={5} review="" date="een jaar geleden" />
       </div>
 
-      <div className="bg-black text-white min-h-screen p-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h1
-            className="text-4xl font-bold mb-4 text-gray-200"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Laserontharing
-          </motion.h1>
-          <p className="text-lg text-gray-400 mb-6">
-            Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
-          </p>
-          <div className="bg-orange-200 p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Gratis Huidanalyse</h2>
-            <p className="text-neutral-800 text-left">
-              Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
-            </p>
-            <a
-              href="https://the-beauty-clinic-3.salonized.com/widget_bookings/new"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6"
-            >
-              <motion.button
-                className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                Boek een Gratis Consult
-              </motion.button>
-            </a>
-          </div>
-        </div>
-      </div>
+<div className="bg-black text-white min-h-screen p-6 relative overflow-hidden">
+  <img 
+    src={flower} 
+    alt="golden flower left" 
+    className="absolute top-1/2 left-4 w-64 opacity-20 transform -translate-y-1/2 pointer-events-none z-0"
+    style={{ filter: 'blur(0.3px)' }}
+  />
+  <img 
+    src={flower} 
+    alt="golden flower right" 
+    className="absolute top-1/2 right-4 w-64 opacity-20 transform -translate-y-1/2 pointer-events-none z-0"
+    style={{ filter: 'blur(0.3px)' }}
+  />
+
+  {/* Foreground Content */}
+  <div className="relative z-10 max-w-4xl mx-auto text-center">
+    <motion.h1
+      className="text-4xl font-bold mb-4 text-gray-200"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      Laserontharing
+    </motion.h1>
+    <p className="text-lg text-gray-400 mb-6">
+      Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
+    </p>
+    <div className="bg-orange-200 p-6 rounded-lg shadow-lg">
+      <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Gratis Huidanalyse</h2>
+      <p className="text-neutral-800 text-left">
+         Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
+      </p>
+      <a
+        href="https://the-beauty-clinic-3.salonized.com/widget_bookings/new"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-6"
+      >
+        <motion.button
+          className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300"
+          whileHover={{ scale: 1.05 }}
+        >
+          Boek een Gratis Consult
+        </motion.button>
+      </a>
+    </div>
+  </div>
+</div>
 
       <div className="text-orange-200 bg-orange-200 p-8">
         <p>e</p>
