@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import foto1 from '../assets/foto1.png';
 import Skincare1 from '../assets/skincare.jpg';
 import skincare2 from '../assets/skincare2.jpg';
-import banner1 from '../assets/skincare.jpg';
-import banner2 from '../assets/skincare2.jpg';
-import banner3 from '../assets/skincare.jpg';
-import banner4 from '../assets/skincare2.jpg';
+import banner1 from '../assets/acupunctuur1.png';
+import banner2 from '../assets/Laser-ontharen.jpg';
+import banner3 from '../assets/huidbehandeling.jpg';
+import banner4 from '../assets/waxen.jpg';
 import flower from '../assets/gold-flwr.png';
 
 import ReviewCard from '../components/ReviewCard';
