@@ -11,24 +11,8 @@ const Huidaandoening: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Laserontharing
+          Huidaandoeningen
         </motion.h1>
-        <p className="text-lg text-gray-400 mb-6">
-          Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
-        </p>
-
-        {/* Laserontharing info */}
-        <div className="bg-neutral-800 p-6 rounded-lg shadow-lg mb-8">
-          <h2 className="text-2xl font-semibold text-gray-300 mb-4">
-            Waarom kiezen voor laserontharing?
-          </h2>
-          <ul className="text-gray-400 space-y-2 text-left">
-            <li>✔️ Langdurig resultaat</li>
-            <li>✔️ Veilig en effectief</li>
-            <li>✔️ Geschikt voor verschillende huidtypes</li>
-            <li>✔️ Geen ingegroeide haartjes</li>
-          </ul>
-        </div>
 
         {/* Behandelingen */}
         <div className="bg-neutral-800 p-6 rounded-lg shadow-lg mb-8 text-left">
