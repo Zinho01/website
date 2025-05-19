@@ -23,7 +23,7 @@ const Tarievenlijst: React.FC = () => {
     <div className="bg-black text-white min-h-screen px-4 py-6 sm:px-6 md:px-8">
       <div className="max-w-3xl mx-auto">
         <motion.h1
-          className="text-3xl sm:text-4xl font-bold mb-6 text-center text-gray-200"
+          className="text-3xl sm:text-4xl font-bold mb-6 text-center text-orange-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,7 +43,7 @@ const Tarievenlijst: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
             >
-              <h2 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-orange-200 mb-4">
                 {groep.categorie}
               </h2>
 

@@ -21,7 +21,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className="bg-neutral-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto mt-10 mb-5">
       <motion.h2
-        className="text-2xl font-semibold text-gray-200 mb-4 text-center"
+        className="text-2xl font-semibold text-orange-200 mb-4 text-center"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}

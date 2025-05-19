@@ -29,7 +29,7 @@ const Laserontharen: React.FC = () => {
     <div className="bg-black text-white min-h-screen p-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1
-          className="text-4xl font-bold mb-4 text-gray-200"
+          className="text-4xl font-bold mb-4 text-orange-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,7 +43,7 @@ const Laserontharen: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
   {/* Laser Ontharing */}
   <div className="bg-neutral-800 p-6 rounded-lg shadow-lg">
-    <h2 className="text-2xl font-semibold text-gray-300 mb-4">Laser Ontharing: Efficiënte en Langdurige Oplossing</h2>
+    <h2 className="text-2xl font-semibold text-orange-200 mb-4">Laser Ontharing: Efficiënte en Langdurige Oplossing</h2>
     <p className="text-gray-400 mb-4">
     Laserontharing – Voor een zijdezachte huid, blijvend glad
     Ben je klaar met scheren, waxen of epileren? Kies voor laserontharing! Met geavanceerde technologie verwijderen we ongewenste haartjes veilig, snel en langdurig. Geschikt voor alle huidtypes en vrijwel elk lichaamsdeel.
@@ -60,7 +60,7 @@ const Laserontharen: React.FC = () => {
 
   {/* Elektrische Epilatie */}
   <div className="bg-neutral-800 p-6 rounded-lg shadow-lg">
-    <h2 className="text-2xl font-semibold text-gray-300 mb-4">Elektrische Epilatie: De Duurzame Oplossing voor Haarverwijdering</h2>
+    <h2 className="text-2xl font-semibold text-orange-200 mb-4">Elektrische Epilatie: De Duurzame Oplossing voor Haarverwijdering</h2>
     <p className="text-gray-400 mb-4">
       Elektrische epilatie biedt een langdurige oplossing voor ongewenst haar. Door middel van een fijne naald wordt een stroompuls toegediend die het haarzakje permanent vernietigt. Deze techniek is geschikt voor alle huidtypes en haarkleuren, en zorgt voor een gladde huid zonder terugkerende haargroei. Veilig, effectief en langdurig resultaat!
     </p>
@@ -75,7 +75,7 @@ const Laserontharen: React.FC = () => {
 </div>
 
         <div className="mt-10">
-          <h2 className="text-3xl font-bold mb-4 text-gray-300">Prijslijst</h2>
+          <h2 className="text-3xl font-bold mb-4 text-orange-200">Prijslijst</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {Object.entries(pricingData).map(([category, items]) => (
               <motion.div
@@ -85,13 +85,13 @@ const Laserontharen: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <h3 className="text-xl font-semibold text-gray-300 border-b pb-2 mb-3">{category}</h3>
+                <h3 className="text-xl font-semibold text-orange-200 border-b pb-2 mb-3">{category}</h3>
                 <ul className="text-gray-400 space-y-2">
                   {/* case for the pakketen data en een tweede case voor de data van de pakketen */}
                   {category === "Pakketten" ? (
                     Object.entries(items).map(([pakketNaam, details]) => (
                       <li key={pakketNaam} className="mb-4">
-                        <span className="font-bold text-gray-200">{pakketNaam}</span> - 
+                        <span className="font-bold text-orange-200">{pakketNaam}</span> - 
                         <span className="text-green-400">
                           €{typeof details === "object" && "Prijs" in details ? details.Prijs : details}
                         </span>
