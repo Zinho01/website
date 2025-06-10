@@ -8,7 +8,6 @@ import banner1 from '../assets/acupunctuur1.png';
 import banner2 from '../assets/Laser-ontharen.jpg';
 import banner3 from '../assets/huidbehandeling.jpg';
 import banner4 from '../assets/waxen.jpg';
-import flower from '../assets/gold-flwr.png';
 
 import ReviewCard from '../components/ReviewCard';
 
@@ -58,29 +57,29 @@ const Homepage = () => {
     <>
       <div className="flex items-center justify-between">
         <div className="max-w-md">
-          <h1 className="text-orange-200 text-2xl font-bold mb-2">The Beauty Clinic</h1>
-          <p className="text-white mb-4">
+          <h1 className="text-neutral-900 text-2xl font-bold mb-2">The Beauty Clinic</h1>
+          <p className="text-black mb-4">
             Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen. Wij bieden hoogwaardige behandelingen zoals gezichtsverzorging, huidverjonging en permanente make-up, uitgevoerd door ervaren specialisten.
           </p>
-          <a href="../onze-kliniek" className="text-orange-200 hover:underline font-medium">
+          <a href="../onze-kliniek" className="text-neutral-900 hover:underline font-medium">
             Lees meer over ons
           </a>
-          <p className="text-white mt-4">
+          <p className="text-black mt-4">
             Onze missie is om jouw natuurlijke schoonheid te versterken met persoonlijke aandacht en de nieuwste technologieën. Kies voor professionaliteit, kwaliteit en een warme sfeer – kies voor The Beauty Clinic.
           </p>
         </div>
         <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
       </div>
 
-      <div className="text-orange-200 bg-orange-200 p-8">
+      <div className="text-neutral-50 bg-neutral-50 p-8">
         <p>e</p>
       </div>
 
       <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4 sm:px-8">
         <div className="flex flex-col sm:flex-row items-center gap-6">
           <img src={Skincare1} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5" />
-          <div className="text-white space-y-4 text-center sm:text-left">
-            <h1 className="font-bold text-lg sm:text-xl">Ontdek de kracht van professionele skincare behandelingen</h1>
+          <div className="text-black space-y-4 text-center sm:text-left">
+            <h1 className="font-bold text-lg sm:text-xl text-neutral-900">Ontdek de kracht van professionele skincare behandelingen</h1>
             <p>
               Bij The Beauty Clinic staat huidverbetering centraal. Onze skincare behandelingen zijn gericht op het herstellen, voeden en verjongen van de huid — volledig afgestemd op jouw huidtype en wensen.
             </p>
@@ -88,13 +87,13 @@ const Homepage = () => {
               Of je nu last hebt van acne, een doffe huid of beginnende tekenen van huidveroudering, wij bieden op maat gemaakte oplossingen met resultaatgerichte producten en technieken.
             </p>
             <a href="../contact">
-              <button className="bg-orange-200 rounded px-4 py-2 text-black font-semibold mt-5">Plan een afspraak</button>
+              <button className="bg-pink-200 hover:bg-pink-300 rounded px-4 py-2 text-black font-semibold mt-5">Plan een afspraak</button>
             </a>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-3/3">
-          <div className="text-white w-full sm:w-1/3 text-center sm:text-left">
+          <div className="text-black w-full sm:w-1/3 text-center sm:text-left">
             <p>
               Tijdens een intake bekijken we jouw huid grondig en stellen we een persoonlijk behandelplan op. Denk aan reiniging, exfoliatie, hydratatie en het stimuleren van collageenproductie.
             </p>
@@ -106,12 +105,12 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="text-orange-200 bg-orange-200 p-8">
+      <div className="text-orange-200 bg-white p-8">
         <p className="text-black flex items-center justify-center font-bold mb-6">Behandelingen</p>
         <div className="relative w-full max-w-4xl mx-auto px-4">
           <div ref={carouselRef} className="flex gap-4 sm:gap-6 py-4 overflow-x-hidden" style={{ scrollBehavior: 'smooth' }}>
             {banners.map((banner, index) => (
-              <div key={index} className="flex-none w-64 sm:w-80 h-64 bg-white rounded-lg shadow-lg overflow-hidden">
+              <div key={index} className="flex-none w-64 sm:w-80 h-64 bg-zinc-200 rounded-lg shadow-lg overflow-hidden">
                 <img src={banner.image} alt={`Banner ${index + 1}`} className="w-full h-32 object-cover rounded-t-lg" />
                 <div className="p-4">
                   <h2 className="font-semibold text-lg sm:text-xl text-black">{banner.title}</h2>
@@ -136,9 +135,9 @@ const Homepage = () => {
       </div>
 
       <p className="text-white flex justify-center font-bold text-xl mt-12">Reviews</p>
-      <div className="flex flex-wrap justify-center gap-6 p-8 bg-black">
+      <div className="flex flex-wrap justify-center gap-6 p-8 bg-zinc-200">
         <ReviewCard
-          name="John Doe"
+          name="Maria van der Meer"
           rating={5}
           review="Zorgzame en vriendelijke hulp! Je hebt een eindresultaat bereikt. Goed advies en kennis is super! Top!"
           date="een jaar geleden"
@@ -152,34 +151,21 @@ const Homepage = () => {
         <ReviewCard name="Melike Al-Zeh Şahin" rating={5} review="" date="een jaar geleden" />
       </div>
 
-<div className="bg-black text-white min-h-screen p-6 relative overflow-hidden">
-  <img 
-    src={flower} 
-    alt="golden flower left" 
-    className="absolute top-1/2 left-4 w-64 opacity-20 transform -translate-y-1/2 pointer-events-none z-0"
-    style={{ filter: 'blur(0.3px)' }}
-  />
-  <img 
-    src={flower} 
-    alt="golden flower right" 
-    className="absolute top-1/2 right-4 w-64 opacity-20 transform -translate-y-1/2 pointer-events-none z-0"
-    style={{ filter: 'blur(0.3px)' }}
-  />
-
+<div className="bg-white text-black min-h-screen p-6 relative overflow-hidden">
   {/* Foreground Content */}
   <div className="relative z-10 max-w-4xl mx-auto text-center">
     <motion.h1
-      className="text-4xl font-bold mb-4 text-gray-200"
+      className="text-4xl font-bold mb-4 text-neutral-900"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       Laserontharing
     </motion.h1>
-    <p className="text-lg text-gray-400 mb-6">
+    <p className="text-lg text-neutral-900 mb-6">
       Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
     </p>
-    <div className="bg-orange-200 p-6 rounded-lg shadow-lg">
+    <div className="bg-zinc-200 p-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Gratis Huidanalyse</h2>
       <p className="text-neutral-800 text-left">
         Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
@@ -191,7 +177,7 @@ const Homepage = () => {
         className="inline-block mt-6"
       >
         <motion.button
-          className="bg-neutral-800 hover:bg-neutral-700 text-white px-6 py-3 rounded-lg transition duration-300"
+          className="bg-pink-200 hover:bg-pink-300 text-black px-6 py-3 rounded-lg transition duration-300"
           whileHover={{ scale: 1.05 }}
         >
           Boek een Gratis Consult
@@ -201,7 +187,7 @@ const Homepage = () => {
   </div>
 </div>
 
-      <div className="text-orange-200 bg-orange-200 p-8">
+      <div className="text-zinc-200 bg-zinc-200 p-8">
         <p>e</p>
       </div>
     </>

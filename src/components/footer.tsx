@@ -2,35 +2,35 @@ import { FaInstagram, FaFacebookF } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 text-white py-4  text-sm">
+    <footer className="bg-zinc-200 text-black py-4 text-sm">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
           
           <div>
-            <h2 className="text-base font-semibold">Beauty</h2>
+            <h2 className="text-base font-semibold text-neutral-900">The Beauty Clinic</h2>
             <ul className="mt-1 space-y-1">
-              <li><a href="/" className="hover:text-orange-200">home</a></li>
-              <li><a href="/huidaandoening" className="hover:text-orange-200">Huidaandoening</a></li>
-              <li><a href="/Laserontharen" className="hover:text-orange-200">Laserontharen</a></li>
-              <li><a href="/acupunctuur" className="hover:text-orange-200">acupunctuur</a></li>
-              <li><a href="/tarieven" className="hover:text-orange-200">tarieven</a></li>
-              <li><a href="/onze-kliniek" className="hover:text-orange-200">onze kliniek</a></li>
-              <li><a href="/contact" className="hover:text-orange-200">contact</a></li>
-              <li><a href="/shop" className="hover:text-orange-200">shop</a></li>
+              <li><a href="/" className="hover:text-grey-300">home</a></li>
+              <li><a href="/huidaandoening" className="hover:text-grey-300">Huidaandoening</a></li>
+              <li><a href="/Laserontharen" className="hover:text-grey-300">Laserontharen</a></li>
+              <li><a href="/acupunctuur" className="hover:text-grey-300">acupunctuur</a></li>
+              <li><a href="/tarieven" className="hover:text-grey-300">tarieven</a></li>
+              <li><a href="/onze-kliniek" className="hover:text-grey-300">onze kliniek</a></li>
+              <li><a href="/contact" className="hover:text-grey-300">contact</a></li>
+              <li><a href="/shop" className="hover:text-grey-300">shop</a></li>
             </ul>
           </div>
 
           <div>
-            <h2 className="text-base font-semibold">Contact</h2>
+            <h2 className="text-base font-semibold text-neutral-900">Contact</h2>
             <ul className="mt-1 space-y-1">
-              <li>📞 <a href="tel:0752232113">06 20801001</a></li>
-              <li>📧 <a href="mailto:beauty.salon@gmail.com">info.thebeautyclinic@gmail.com</a></li>
+              <li>📞 <a href="tel:06 20801001" className="hover:text-pink-300">06 20801001</a></li>
+              <li>📧 <a href="mailto:info.thebeautyclinic@gmail.com" className="hover:text-pink-300">info.thebeautyclinic@gmail.com</a></li>
               <li>📍 Bos en Lommerweg 257, Amsterdam</li>
             </ul>
           </div>
 
           <div>
-            <h2 className="text-base font-semibold">Openingstijden</h2>
+            <h2 className="text-base font-semibold text-neutral-900">Openingstijden</h2>
             <ul className="mt-1 space-y-1">
               <li>🕒 Dinsdag - Zaterdag: <span className="font-semibold">10:00 - 19:00</span></li>
               <li>🕒 Maandag - Zondag: <span className="font-semibold">Gesloten</span></li>
@@ -39,14 +39,14 @@ const Footer = () => {
         </div>
 
         <div className="mt-6 flex flex-col items-center">
-          <h3 className="text-base font-semibold">Volg ons op:</h3>
+          <h3 className="text-base font-semibold text-neutral-900">Volg ons op:</h3>
 
           <div className="flex space-x-4 mt-3">
             <a
               href="https://www.instagram.com/thebeautyclinicamsterdam/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-200"
+              className="hover:text-pink-300"
             >
               <FaInstagram size={20} />
             </a>
@@ -54,7 +54,7 @@ const Footer = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-200"
+              className="hover:text-pink-300"
             >
               <FaFacebookF size={20} />
             </a>
@@ -68,19 +68,19 @@ const Footer = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>v  
+          </div>
 
           <a 
             href="https://www.google.com/maps/place/The+Beauty+Clinic/@52.3786232,4.8479616,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5e366256123a1:0x73bef98d38d17bab!8m2!3d52.37862!4d4.8505365!16s%2Fg%2F11rggp46s1?entry=ttu"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 hover:underline mt-2"
+            className="text-neutral-900 hover:underline mt-2"
           >
             Bekijk grotere kaart
           </a>
         </div>
 
-        <div className="text-center mt-6">
+        <div className="text-center mt-6 text-neutral-900">
           <p>&copy; 2025 The Beauty Clinic. All Rights Reserved.</p>
         </div>
       </div>

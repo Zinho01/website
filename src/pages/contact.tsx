@@ -19,9 +19,10 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-neutral-900 text-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto mt-10 mb-5">
+    <main className="bg-zinc-100 text-black min-h-screen p-4 sm:p-6">
+    <div className="bg-zinc-200 text-neutral-900 p-6 rounded-lg shadow-lg max-w-2xl mx-auto mt-10 mb-5">
       <motion.h2
-        className="text-2xl font-semibold text-orange-200 mb-4 text-center"
+        className="text-2xl font-semibold text-pink-300 mb-4 text-center"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
@@ -35,7 +36,7 @@ const ContactForm: React.FC = () => {
           placeholder="Naam"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 rounded-lg bg-neutral-800 text-gray-200 placeholder-gray-500 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="w-full p-3 rounded-lg bg-white text-neutral-900 placeholder-neutral-500 border border-neutral-400 focus:outline-none focus:ring-2 focus:ring-pink-300"
           required
         />
         <input
@@ -44,7 +45,7 @@ const ContactForm: React.FC = () => {
           placeholder="E-mailadres"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-3 rounded-lg bg-neutral-800 text-gray-200 placeholder-gray-500 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="w-full p-3 rounded-lg bg-white text-neutral-900 placeholder-neutral-500 border border-neutral-400 focus:outline-none focus:ring-2 focus:ring-pink-300"
           required
         />
         <textarea
@@ -53,18 +54,19 @@ const ContactForm: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           rows={4}
-          className="w-full p-3 rounded-lg bg-neutral-800 text-gray-200 placeholder-gray-500 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="w-full p-3 rounded-lg bg-white text-neutral-900 placeholder-neutral-500 border border-neutral-400 focus:outline-none focus:ring-2 focus:ring-pink-300"
           required
         />
         <motion.button
           type="submit"
-          className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition duration-300 w-full"
+          className="bg-neutral-900 hover:bg-pink-300 text-white px-6 py-3 rounded-lg transition duration-300 w-full"
           whileHover={{ scale: 1.03 }}
         >
           Verstuur via WhatsApp
         </motion.button>
       </form>
     </div>
+    </main>
   );
 };
 
