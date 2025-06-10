@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <h2 className="text-base font-semibold text-neutral-900">Openingstijden</h2>
             <ul className="mt-1 space-y-1">
-              <li>🕒 Dinsdag - Zaterdag: <span className="font-semibold">10:00 - 19:00</span></li>
+              <li>🕒 Dinsdag - Zaterdag: <span className="font-semibold">10:00 - 18:00</span></li>
               <li>🕒 Maandag - Zondag: <span className="font-semibold">Gesloten</span></li>
             </ul>
           </div>
