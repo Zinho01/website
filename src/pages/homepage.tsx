@@ -137,7 +137,7 @@ const Homepage = () => {
       <p className="text-white flex justify-center font-bold text-xl mt-12">Reviews</p>
       <div className="flex flex-wrap justify-center gap-6 p-8 bg-zinc-200">
         <ReviewCard
-          name="Maria van der Meer"
+          name="Sarah"
           rating={5}
           review="Zorgzame en vriendelijke hulp! Je hebt een eindresultaat bereikt. Goed advies en kennis is super! Top!"
           date="een jaar geleden"
@@ -148,7 +148,11 @@ const Homepage = () => {
           review="Ik ben op de plaatsen in Zaandam geweest, de plaatsen in Amsterdam zijn ook erg schoon en mooi. Medewerkers hebben altijd willen doen wat het beste voor mij is, tegen de meest betaalbare prijs. Ik ben dankbaar."
           date="2 jaar geleden"
         />
-        <ReviewCard name="Melike Al-Zeh Şahin" rating={5} review="" date="een jaar geleden" />
+        <ReviewCard
+        name="Melike Al-Zeh Şahin"
+          rating={5}
+          review=""
+          date="een jaar geleden" />
       </div>
 
 <div className="bg-white text-black min-h-screen p-6 relative overflow-hidden">
