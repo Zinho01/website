@@ -1,4 +1,4 @@
-import { FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
             <h2 className="text-base font-semibold text-neutral-900">Contact</h2>
             <ul className="mt-1 space-y-1">
               <li>📞 <a href="tel:06 20801001" className="hover:text-pink-300">06 20801001</a></li>
-              <li>📧 <a href="mailto:info.thebeautyclinic@gmail.com" className="hover:text-pink-300">info.thebeautyclinic@gmail.com</a></li>
+              <li>📧 <a href="mailto:info.thebeautyclinic@gmail.com" className="hover:text-pink-300">info@thebeautyclinic.nl</a></li>
               <li>📍 Bos en Lommerweg 257, Amsterdam</li>
             </ul>
           </div>
@@ -49,14 +49,6 @@ const Footer = () => {
               className="hover:text-pink-300"
             >
               <FaInstagram size={20} />
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-pink-300"
-            >
-              <FaFacebookF size={20} />
             </a>
           </div>
 
