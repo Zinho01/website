@@ -9,6 +9,17 @@ import banner2 from '../assets/Laser-ontharen.jpg';
 import banner3 from '../assets/huidbehandeling.jpg';
 import banner4 from '../assets/waxen.jpg';
 
+import logo1 from '../assets/anbos-logo.jpg';
+import logo2 from '../assets/KAB.png';
+import logo3 from '../assets/Skin-logo.jpg';
+import logo4 from '../assets/zhong.jpg';
+
+import logo5 from '../assets/mediotopics.jpg';
+import logo6 from '../assets/mesoestetic-logo.png';
+import logo7 from '../assets/NeodermaLogo .png';
+import logo8 from '../assets/rc_logo_new.png';
+import logo9 from '../assets/casmara-black-logo.png';
+
 import ReviewCard from '../components/ReviewCard';
 
 const banners = [
@@ -151,7 +162,7 @@ const Homepage = () => {
         <ReviewCard
         name="Melike Al-Zeh Şahin"
           rating={5}
-          review=""
+          review="" 
           date="een jaar geleden" />
       </div>
 
@@ -191,9 +202,22 @@ const Homepage = () => {
   </div>
 </div>
 
-      <div className="text-zinc-200 bg-zinc-200 p-8">
-        <p>e</p>
-      </div>
+<div className="bg-zinc-100 py-10 px-6 overflow-x-auto">
+  <h2 className="text-center text-2xl font-semibold text-zinc-800 mb-6">
+    Aangesloten bij & Merken waarmee we werken
+  </h2>
+  <div className="max-w-6xl mx-auto flex gap-4 items-center justify-center flex-wrap md:flex-nowrap">
+    <img src={logo1} alt="Anbos Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo2} alt="KAB Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo3} alt="Skin Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo4} alt="Zhong Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo5} alt="Meditopic Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo6} alt="Mesoestetic Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo7} alt="Neoderma Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo8} alt="R-Ceutical Logo" className="max-h-12 object-contain mx-auto" />
+    <img src={logo9} alt="Casmara Logo" className="max-h-12 object-contain mx-auto" />
+  </div>
+</div>
     </>
   );
 };
