@@ -14,7 +14,7 @@ import Huidaandoening from './pages/huidaandoening';
 
 const App = () => {
   return (
-    <div className="bg-zinc-200 min-h-screen">
+    <div className="bg-zinc-100 min-h-screen">
       <Navbar />
       <main>
         <Routes>
