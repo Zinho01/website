@@ -253,3 +253,4 @@ _NCrunch*
 **/.vs/
 **/obj/
 .vite/
+.env 

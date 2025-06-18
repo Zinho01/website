@@ -82,7 +82,7 @@ const Homepage = () => {
         <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
       </div>
 
-      <div className="text-neutral-50 bg-neutral-50 p-8">
+      <div className="text-white bg-white p-8">
         <p>e</p>
       </div>
 
