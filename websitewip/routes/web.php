@@ -12,45 +12,39 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name('welcome');
 
-Route::get('/home', function () {
-    return Inertia::render('Home');
-})->name('home');
-// ->middleware(['auth', 'verified']) --Taken out for now, place before the route if you want to use it
+// Routes that can be grouped with common structure, simply add the name of a new page to the array if needed
+$staticPages = [
+    'home' => 'Home',
+    'acupuntuur' => 'Acupuntuur',
+    'contact' => 'Contact',
+    'lazerontharing' => 'Lazerontharing',
+    'shop' => 'Shop',
+    'tarieven' => 'Tarieven',
+    'huidaandoeningen' => 'Huidaandoeningen',
+    'onze-kliniek' => 'OnzeKliniek',
+];
 
-Route::get('/acupuntuur', function () {
-    return Inertia::render('Acupuntuur');
-})->name('acupuntuur');
+// Automatically registers routes
+foreach ($staticPages as $uri => $component) {
+    Route::get("/{$uri}", fn() => Inertia::render($component))->name($uri);
+}
 
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-})->name('contact');
+// Dashboard is seperate as it requires authentication
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/lazerontharing', function () {
-    return Inertia::render('Lazerontharing');
-})->name('lazerontharing');
-
-Route::get('/shop', function () {
-    return Inertia::render('Shop');
-})->name('shop');
-
-Route::get('/tarieven', function () {
-    return Inertia::render('Tarieven');
-})->name('tarieven');
-
-Route::get('/huidaandoeningen', function () {
-    return Inertia::render('Huidaandoeningen');
-})->name('huidaandoeningen');
-
-Route::get('/onze-kliniek', function () {
-    return Inertia::render('Onze-kliniek');
-})->name('onze-kliniek');
-
-Route::middleware('auth')->group(function () {
+// Group routes that require authentication
+Route::middleware('auth')->group(function () {  
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::fallback(function () { // This route will catch all undefined routes and redirect to a NotFound page
+    return Inertia::render('NotFound'); // Make sure NotFound.jsx exists and hasn't been deleted/replaced by accident
 });
 
 require __DIR__.'/auth.php';
