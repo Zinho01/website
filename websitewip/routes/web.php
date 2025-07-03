@@ -24,19 +24,16 @@ $staticPages = [
     'tarieven' => 'Tarieven',
     'huidaandoeningen' => 'Huidaandoeningen',
     'onze-kliniek' => 'OnzeKliniek',
-];
+]; 
 
-// Automatically registers routes
 foreach ($staticPages as $uri => $component) {
     Route::get("/{$uri}", fn() => Inertia::render($component))->name($uri);
 }
 
-// Dashboard is seperate as it requires authentication
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Group routes that require authentication
 Route::middleware('auth')->group(function () {  
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -44,7 +41,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::fallback(function () { // This route will catch all undefined routes and redirect to a NotFound page
-    return Inertia::render('NotFound'); // Make sure NotFound.jsx exists and hasn't been deleted/replaced by accident
+    return Inertia::render('NotFound'); // Make sure NotFound.tsx exists and hasn't been deleted/replaced by accident
 });
 
 require __DIR__.'/auth.php';
