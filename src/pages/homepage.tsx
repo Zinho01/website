@@ -86,7 +86,7 @@ const banners = [
   },
 ];
 
-const ITEM_WIDTH = 340; // must match the card width in px
+const ITEM_WIDTH = 340;
 
 const Homepage = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -216,14 +216,15 @@ const Homepage = () => {
         />
       </div>
 
-      <div className="flex items-center justify-center py-12 bg-black gap-8 flex-wrap">
+        <p className='flex items-center justify-center'>wij werken samen met:</p>
+      <div className="flex items-center justify-center py-12 bg-white gap-8 flex-wrap">
         <img src={logo1} alt="logo1" className="w-16" />
         <img src={logo2} alt="logo2" className="w-16" />
         <img src={logo3} alt="logo3" className="w-16" />
         <img src={logo4} alt="logo4" className="w-16" />
       </div>
 
-      <div className="flex items-center justify-center py-12 bg-black gap-8 flex-wrap">
+      <div className="flex items-center justify-center py-12 bg-white gap-8 flex-wrap">
         <img src={logo5} alt="logo5" className="w-20" />
         <img src={logo6} alt="logo6" className="w-20" />
         <img src={logo7} alt="logo7" className="w-20" />
