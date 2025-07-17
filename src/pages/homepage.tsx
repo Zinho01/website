@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 import foto1 from '../assets/foto1.png';
 import Skincare1 from '../assets/skincare.jpg';
@@ -8,6 +7,13 @@ import banner1 from '../assets/acupunctuur1.png';
 import banner2 from '../assets/Laser-ontharen.jpg';
 import banner3 from '../assets/huidbehandeling.jpg';
 import banner4 from '../assets/waxen.jpg';
+import banner5 from '../assets/elektrisch-epilatie.jpg';
+import banner6 from '../assets/camouflage therapie.jpg';
+import banner7 from '../assets/intake.jpg';
+import banner8 from '../assets/touw epileren.jpg';
+import banner9 from '../assets/acne.jpg';
+import banner10 from '../assets/massage.jpg';
+import banner11 from '../assets/detox.jpg';
 
 import logo1 from '../assets/anbos-logo.jpg';
 import logo2 from '../assets/KAB.png';
@@ -26,40 +32,68 @@ const banners = [
   {
     image: banner1,
     title: 'Acupunctuur',
-    description: 'Acupunctuur brengt lichaam en geest in balans en biedt natuurlijke verlichting voor uiteenlopende klachten.',
+    description: 'Traditionele Chinese geneeskunde voor een holistische benadering van gezondheid en welzijn.',
   },
   {
     image: banner2,
     title: 'Laserontharen',
-    description: 'Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.',
+    description: 'Efficiënte en langdurige oplossing voor ongewenste haargroei.',
   },
   {
     image: banner3,
     title: 'Huidbehandelingen',
-    description: ' voedt de huid en pakt onzuiverheden of huidveroudering aan. Je huid voelt daarna fris, gezond en stralend aan.',
+    description: 'Verzorgende gezichtsbehandelingen voor een stralende huid.',
   },
   {
     image: banner4,
-    title: 'Harsen/Waxen',
-    description: 'Harsen verwijdert haar met de wortel, voor een gladde huid en een langdurig resultaat.',
+    title: 'Waxen',
+    description: 'Snelle en effectieve haarverwijdering met wax voor een gladde huid.',
+  },
+  {
+    image: banner5,
+    title: 'Elektrische Epilatie',
+    description: 'Permanente haarverwijdering met geavanceerde technologie voor langdurige resultaten.',
+  },
+  {
+    image: banner6,
+    title: 'Camouflagetherapie',
+    description: 'Verberg littekens en huidoneffenheden met onze gespecialiseerde camouflagetherapie.',
+  },
+  {
+    image: banner7,
+    title: 'Intakegesprek',
+    description: 'Persoonlijke consultaties om jouw specifieke behoeften te begrijpen en een behandelplan op maat te maken.',
+  },
+  {
+    image: banner8,
+    title: 'Touw-epileren',
+    description: 'Natuurlijke en effectieve methode voor haarverwijdering met touwtechniek.',
+  },
+  {
+    image: banner9,
+    title: 'Acne Behandelingen',
+    description: 'Gerichte behandelingen voor acne en huidproblemen, gericht op het verbeteren van de huidconditie.',
+  },
+  {
+    image: banner10,
+    title: 'Massages',
+    description: 'Ontspannende en therapeutische massages voor een betere doorbloeding en ontspanning.',
+  },
+  {
+    image: banner11,
+    title: 'Detox',
+    description: 'Reinigingsbehandelingen om het lichaam te ontgiften en de algehele gezondheid te verbeteren.',
   },
 ];
 
-const Homepage = () => {
-  const carouselRef = useRef<HTMLDivElement | null>(null);
+const ITEM_WIDTH = 340; // must match the card width in px
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (carouselRef.current) {
-        carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-      }
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+const Homepage = () => {
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = (direction: 'left' | 'right') => {
     if (carouselRef.current) {
-      const scrollAmount = direction === 'left' ? -300 : 300;
+      const scrollAmount = direction === 'left' ? -ITEM_WIDTH : ITEM_WIDTH;
       carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
@@ -116,13 +150,26 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="text-orange-200 bg-white p-8">
+      {/* -- Carousel section: only this part updated -- */}
+      <div className="text-orange-200 bg-white p-8 relative">
         <p className="text-black flex items-center justify-center font-bold mb-6">Behandelingen</p>
-        <div className="relative w-full max-w-4xl mx-auto px-4">
-          <div ref={carouselRef} className="flex gap-4 sm:gap-6 py-4 overflow-x-hidden" style={{ scrollBehavior: 'smooth' }}>
+
+        <div className="relative w-full max-w-6xl mx-auto px-4">
+          <div
+            ref={carouselRef}
+            className="flex gap-4 py-4 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
+            style={{ scrollSnapType: 'x mandatory' }}
+          >
             {banners.map((banner, index) => (
-              <div key={index} className="flex-none w-64 sm:w-80 h-64 bg-zinc-200 rounded-lg shadow-lg overflow-hidden">
-                <img src={banner.image} alt={`Banner ${index + 1}`} className="w-full h-32 object-cover rounded-t-lg" />
+              <div
+                key={index}
+                className="flex-none w-[320px] sm:w-[340px] h-64 bg-zinc-200 rounded-lg shadow-lg overflow-hidden snap-start"
+              >
+                <img
+                  src={banner.image}
+                  alt={banner.title}
+                  className="w-full h-32 object-cover rounded-t-lg"
+                />
                 <div className="p-4">
                   <h2 className="font-semibold text-lg sm:text-xl text-black">{banner.title}</h2>
                   <p className="text-sm text-gray-600 mt-2">{banner.description}</p>
@@ -130,16 +177,19 @@ const Homepage = () => {
               </div>
             ))}
           </div>
+
           <button
-            onClick={() => handleScroll('left')}
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
-          >
+              onClick={() => handleScroll('left')}
+              className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 hover:bg-opacity-75 transition"
+              aria-label="Scroll left"
+            >
             ◀
           </button>
           <button
             onClick={() => handleScroll('right')}
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10"
-          >
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 hover:bg-opacity-75 transition"
+            aria-label="Scroll right"
+            >
             ▶
           </button>
         </div>
@@ -160,64 +210,27 @@ const Homepage = () => {
           date="2 jaar geleden"
         />
         <ReviewCard
-        name="Melike Al-Zeh Şahin"
+          name="Melike Al-Zeh Şahin"
           rating={5}
-          review="" 
-          date="een jaar geleden" />
+          review="Hele fijne kliniek! Personeel is heel vriendelijk, erg behulpzaam en professioneel! Een aanrader!"
+          date="3 jaar geleden"
+        />
       </div>
 
-<div className="bg-white text-black min-h-screen p-6 relative overflow-hidden">
-  {/* Foreground Content */}
-  <div className="relative z-10 max-w-4xl mx-auto text-center">
-    <motion.h1
-      className="text-4xl font-bold mb-4 text-neutral-900"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      Laserontharing
-    </motion.h1>
-    <p className="text-lg text-neutral-900 mb-6">
-      Ontdek de voordelen van professionele laserontharing en geniet van een gladde huid zonder ongewenste haargroei.
-    </p>
-    <div className="bg-zinc-200 p-6 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-semibold text-neutral-800 mb-4">Gratis Huidanalyse</h2>
-      <p className="text-neutral-800 text-left">
-        Voor we starten met de laserbehandeling, bieden we een gratis huidanalyse aan om jouw huidtype en behoeften nauwkeurig in kaart te brengen. Tijdens dit consult krijg je persoonlijk advies en beantwoorden we al je vragen. Zo zorgen we voor een veilige en effectieve behandeling die perfect bij jou past.
-      </p>
-      <a
-        href="https://the-beauty-clinic-3.salonized.com/widget_bookings/new"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mt-6"
-      >
-        <motion.button
-          className="bg-pink-200 hover:bg-pink-300 text-black px-6 py-3 rounded-lg transition duration-300"
-          whileHover={{ scale: 1.05 }}
-        >
-          Boek een Gratis Consult
-        </motion.button>
-      </a>
-    </div>
-  </div>
-</div>
+      <div className="flex items-center justify-center py-12 bg-black gap-8 flex-wrap">
+        <img src={logo1} alt="logo1" className="w-16" />
+        <img src={logo2} alt="logo2" className="w-16" />
+        <img src={logo3} alt="logo3" className="w-16" />
+        <img src={logo4} alt="logo4" className="w-16" />
+      </div>
 
-<div className="bg-zinc-100 py-10 px-6 overflow-x-auto">
-  <h2 className="text-center text-2xl font-semibold text-zinc-800 mb-6">
-    Aangesloten bij & Merken waarmee we werken
-  </h2>
-  <div className="max-w-6xl mx-auto flex gap-4 items-center justify-center flex-wrap md:flex-nowrap">
-    <img src={logo1} alt="Anbos Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo2} alt="KAB Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo3} alt="Skin Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo4} alt="Zhong Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo5} alt="Meditopic Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo6} alt="Mesoestetic Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo7} alt="Neoderma Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo8} alt="R-Ceutical Logo" className="max-h-12 object-contain mx-auto" />
-    <img src={logo9} alt="Casmara Logo" className="max-h-12 object-contain mx-auto" />
-  </div>
-</div>
+      <div className="flex items-center justify-center py-12 bg-black gap-8 flex-wrap">
+        <img src={logo5} alt="logo5" className="w-20" />
+        <img src={logo6} alt="logo6" className="w-20" />
+        <img src={logo7} alt="logo7" className="w-20" />
+        <img src={logo8} alt="logo8" className="w-20" />
+        <img src={logo9} alt="logo9" className="w-20" />
+      </div>
     </>
   );
 };
