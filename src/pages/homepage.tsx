@@ -150,7 +150,6 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* -- Carousel section: only this part updated -- */}
       <div className="text-orange-200 bg-white p-8 relative">
         <p className="text-black flex items-center justify-center font-bold mb-6">Behandelingen</p>
 
