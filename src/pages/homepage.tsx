@@ -113,7 +113,7 @@ const Homepage = () => {
       Onze missie is om jouw natuurlijke schoonheid te versterken.
     </p>
   </div>
-  <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
+  <img src={foto1} alt="woman" className="w-1/3 h-auto" />
 </div>
 
       <div className="text-white bg-white p-8">
@@ -122,7 +122,7 @@ const Homepage = () => {
 
       <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4 sm:px-8">
         <div className="flex flex-col sm:flex-row items-center gap-6">
-          <img src={Skincare1} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5" />
+          <img src={Skincare1} alt="skincare foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5" />
           <div className="text-black space-y-4 text-center sm:text-left">
             <h1 className="font-bold text-lg sm:text-xl text-neutral-900">Ontdek de kracht van professionele skincare behandelingen</h1>
             <p>
@@ -146,7 +146,7 @@ const Homepage = () => {
               Skincare bij The Beauty Clinic betekent investeren in een gezonde, stralende huid – met professionele begeleiding en voelbaar resultaat na elke behandeling.
             </p>
           </div>
-          <img src={skincare2} alt="test-foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5 mb-5" />
+          <img src={skincare2} alt="skincare foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5 mb-5" />
         </div>
       </div>
 
@@ -215,8 +215,13 @@ const Homepage = () => {
           date="3 jaar geleden"
         />
       </div>
+      <div>
+        <p className='flex items-center justify-center'>FAQ</p>
 
         <p className='flex items-center justify-center'>wij werken samen met:</p>
+      </div>
+
+
       <div className="flex items-center justify-center py-12 bg-white gap-8 flex-wrap">
         <img src={logo1} alt="logo1" className="w-16" />
         <img src={logo2} alt="logo2" className="w-16" />
