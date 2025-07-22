@@ -1,4 +1,5 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import foto1 from '../assets/foto1.png';
 import Skincare1 from '../assets/skincare.jpg';
@@ -97,6 +98,7 @@ const Homepage = () => {
       carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <>
@@ -216,12 +218,70 @@ const Homepage = () => {
         />
       </div>
       <div>
-        <p className='flex items-center justify-center'>FAQ</p>
+        <p className='flex items-center justify-center'>FAQ</p><div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-3xl mx-auto mt-10 mb-10">
+  <h2 className="text-2xl sm:text-3xl font-bold text-pink-300 text-center mb-6">
+    Veelgestelde Vragen (FAQ)
+  </h2>
+
+  <div className="space-y-4">
+    {[
+      {
+        question: "Hoe werkt laserontharing en is het permanent?",
+        answer:
+          "Laserontharing gebruikt geconcentreerd licht om haarzakjes te vernietigen. Dit zorgt voor langdurige haarvermindering. Na meerdere sessies kunnen veel mensen genieten van een vrijwel haarvrije huid.",
+      },
+      {
+        question: "Wat houdt een huidbehandeling precies in?",
+        answer:
+          "Onze huidbehandelingen bestaan uit reiniging, exfoliatie, maskers en verzorging, aangepast aan jouw huidtype. Ze helpen bij huidverbetering, hydratatie en een stralende teint.",
+      },
+      {
+        question: "Is waxen pijnlijk en hoe lang blijft het resultaat zichtbaar?",
+        answer:
+          "Waxen kan even gevoelig zijn, vooral bij de eerste keer. Het resultaat blijft gemiddeld 3-5 weken zichtbaar, afhankelijk van je haargroei.",
+      },
+      {
+        question: "Wat is camouflagetherapie en waarvoor wordt het gebruikt?",
+        answer:
+          "Camouflagetherapie wordt gebruikt om littekens, pigmentvlekken of huidoneffenheden te verbergen met speciale huidkleurige producten die lang blijven zitten.",
+      },
+      {
+        question: "Waarom is een intakegesprek belangrijk vóór een behandeling?",
+        answer:
+          "Tijdens het intakegesprek bespreken we je wensen, medische achtergrond en huidtype. Zo stellen we een persoonlijk behandelplan op dat veilig en effectief is.",
+      },
+    ].map((faq, index) => (
+      <div key={index} className="border-b border-zinc-200 pb-2">
+        <button
+          onClick={() =>
+            setActiveIndex(activeIndex === index ? null : index)
+          }
+          className="w-full text-left flex justify-between items-center text-neutral-900 font-medium focus:outline-none"
+        >
+          <span>{faq.question}</span>
+          <span className="text-pink-300">
+            {activeIndex === index ? "−" : "+"}
+          </span>
+        </button>
+
+        {activeIndex === index && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            transition={{ duration: 0.3 }}
+            className="text-sm sm:text-base text-black mt-2"
+          >
+            {faq.answer}
+          </motion.div>
+        )}
+      </div>
+    ))}
+  </div>
+  </div>
+
 
         <p className='flex items-center justify-center'>wij werken samen met:</p>
       </div>
-
-
       <div className="flex items-center justify-center py-12 bg-white gap-8 flex-wrap">
         <img src={logo1} alt="logo1" className="w-16" />
         <img src={logo2} alt="logo2" className="w-16" />
