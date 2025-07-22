@@ -104,13 +104,13 @@ const Homepage = () => {
   <div className="max-w-md mx-auto">
     <h1 className="text-neutral-900 text-2xl font-bold mb-2">The Beauty Clinic</h1>
     <p className="text-black mb-4">
-      Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen...
+      Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen
     </p>
     <a href="../onze-kliniek" className="text-neutral-900 hover:underline font-medium">
       Lees meer over ons
     </a>
     <p className="text-black mt-4">
-      Onze missie is om jouw natuurlijke schoonheid te versterken...
+      Onze missie is om jouw natuurlijke schoonheid te versterken.
     </p>
   </div>
   <img src={foto1} alt="foto-1" className="w-1/3 h-auto" />
