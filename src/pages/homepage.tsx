@@ -108,7 +108,7 @@ const Homepage = () => {
     <p className="text-black mb-4">
       Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen
     </p>
-    <a href="../onze-kliniek" className="text-neutral-900 hover:underline font-medium">
+    <a href="../onze-kliniek" className="text-red-200 hover:underline font-medium">
       Lees meer over ons
     </a>
     <p className="text-black mt-4">
@@ -218,7 +218,7 @@ const Homepage = () => {
         />
       </div>
       <div>
-        <p className='flex items-center justify-center'>FAQ</p><div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-3xl mx-auto mt-10 mb-10">
+      <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-3xl mx-auto mt-10 mb-10">
   <h2 className="text-2xl sm:text-3xl font-bold text-pink-300 text-center mb-6">
     Veelgestelde Vragen (FAQ)
   </h2>
