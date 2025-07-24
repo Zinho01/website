@@ -108,7 +108,7 @@ const Homepage = () => {
     <p className="text-black mb-4">
       Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen
     </p>
-    <a href="../onze-kliniek" className="text-neutral-900 hover:underline font-medium">
+    <a href="../onze-kliniek" className="text-red-200 hover:underline font-medium">
       Lees meer over ons
     </a>
     <p className="text-black mt-4">
