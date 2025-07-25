@@ -9,14 +9,14 @@ const Footer = () => {
           <div>
             <h2 className="text-base font-semibold text-neutral-900">The Beauty Clinic</h2>
             <ul className="mt-1 space-y-1">
-              <li><a href="/" className="hover:text-grey-300">home</a></li>
-              <li><a href="/huidaandoening" className="hover:text-grey-300">Huidaandoening</a></li>
-              <li><a href="/Laserontharen" className="hover:text-grey-300">Laserontharen</a></li>
-              <li><a href="/acupunctuur" className="hover:text-grey-300">acupunctuur</a></li>
-              <li><a href="/tarieven" className="hover:text-grey-300">tarieven</a></li>
-              <li><a href="/onze-kliniek" className="hover:text-grey-300">onze kliniek</a></li>
-              <li><a href="/contact" className="hover:text-grey-300">contact</a></li>
-              <li><a href="/shop" className="hover:text-grey-300">shop</a></li>
+              <li><a href="/" className="hover:text-pink-300">home</a></li>
+              <li><a href="/huidaandoening" className="hover:text-pink-300">Huidaandoening</a></li>
+              <li><a href="/Laserontharen" className="hover:text-pink-300">Laserontharen</a></li>
+              <li><a href="/acupunctuur" className="hover:text-pink-300">acupunctuur</a></li>
+              <li><a href="/tarieven" className="hover:text-pink-300">tarieven</a></li>
+              <li><a href="/onze-kliniek" className="hover:text-pink-300">onze kliniek</a></li>
+              <li><a href="/contact" className="hover:text-pink-300">contact</a></li>
+              <li><a href="/shop" className="hover:text-pink-300">shop</a></li>
             </ul>
           </div>
 
