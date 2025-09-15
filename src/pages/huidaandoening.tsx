@@ -24,7 +24,7 @@ const Huidaandoening: React.FC = () => {
               <strong className="text-pink-200">Acne behandeling:</strong> Intensieve reiniging die ontstekingen vermindert en de huid herstelt. Voorkomt toekomstige uitbraken.
             </li>
             <li>
-              <strong className="text-pink-200">Pigment behandeling:</strong> Vervaagt pigmentvlekken en egaliseert de teint. Geschikt bij zonneschade en melasma.
+              <strong className="text-pink-200">Pigment behandeling:</strong> Vervaagt pigmentvlekken en egaliseert de tint. Geschikt bij zonneschade en melasma.
             </li>
             <li>
               <strong className="text-pink-200">Micro dermabrasie:</strong> Mechanische peeling die dode huidcellen verwijdert. Verbetert structuur en laat de huid stralen.

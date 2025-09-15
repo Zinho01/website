@@ -233,7 +233,7 @@ const Homepage = () => {
       {
         question: "Wat houdt een huidbehandeling precies in?",
         answer:
-          "Onze huidbehandelingen bestaan uit reiniging, exfoliatie, maskers en verzorging, aangepast aan jouw huidtype. Ze helpen bij huidverbetering, hydratatie en een stralende teint.",
+          "Onze huidbehandelingen bestaan uit reiniging, exfoliatie, maskers en verzorging, aangepast aan jouw huidtype. Ze helpen bij huidverbetering, hydratatie en een stralende tint.",
       },
       {
         question: "Is waxen pijnlijk en hoe lang blijft het resultaat zichtbaar?",

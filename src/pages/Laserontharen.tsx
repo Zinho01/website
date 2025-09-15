@@ -47,7 +47,7 @@ const Laserontharen: React.FC = () => {
               Laser Ontharing: Efficiënte en Langdurige Oplossing
             </h2>
             <p className="text-black mb-4">
-              Laserontharing – Voor een zijdezachte huid, blijvend glad
+              Laserontharing – Voor een zijdezachte huid, blijvend glad.
               Ben je klaar met scheren, waxen of epileren? Kies voor laserontharing! Met geavanceerde technologie verwijderen we ongewenste haartjes veilig, snel en langdurig. Geschikt voor alle huidtypes en vrijwel elk lichaamsdeel.
               Effectief en duurzaam resultaat. Boek een vrijblijvende intake en ervaar het zelf met een gratis testbehandeling!
             </p>
@@ -58,7 +58,7 @@ const Laserontharen: React.FC = () => {
               <li>✔️ Voor een lange periode</li>
             </ul>
             <p className="text-black mt-4">
-              Kies voor laserontharing en geniet van een gladde, haartvrije huid zonder terugkerende haargroei!
+              Kies voor laserontharing en geniet van een gladde, haarvrije huid zonder terugkerende haargroei!
             </p>
           </div>
 
