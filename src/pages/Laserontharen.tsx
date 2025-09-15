@@ -29,7 +29,7 @@ const Laserontharen: React.FC = () => {
     <div className="bg-zinc-100 text-black min-h-screen p-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1
-          className="text-4xl font-bold mb-4 text-pink-300"
+          className="text-4xl font-bold mb-4 text-pink-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,7 +43,7 @@ const Laserontharen: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Laser Ontharing */}
           <div className="bg-white p-6 rounded-lg shadow-lg text-left">
-            <h2 className="text-2xl font-semibold text-pink-300 mb-4">
+            <h2 className="text-2xl font-semibold text-pink-200 mb-4">
               Laser Ontharing: Efficiënte en Langdurige Oplossing
             </h2>
             <p className="text-black mb-4">
@@ -83,7 +83,7 @@ const Laserontharen: React.FC = () => {
         </div>
 
         <div className="mt-10">
-          <h2 className="text-3xl font-bold mb-4 text-pink-300">Prijslijst</h2>
+          <h2 className="text-3xl font-bold mb-4 text-pink-200">Prijslijst</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {Object.entries(pricingData).map(([category, items]) => (
               <motion.div
@@ -93,14 +93,14 @@ const Laserontharen: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <h3 className="text-xl font-semibold text-pink-300 border-b border-pink-300 pb-2 mb-3">
+                <h3 className="text-xl font-semibold text-pink-200 border-b border-pink-200 pb-2 mb-3">
                   {category}
                 </h3>
                 <ul className="text-black space-y-2">
                   {category === "Pakketten" ? (
                     Object.entries(items).map(([pakketNaam, details]) => (
                       <li key={pakketNaam} className="mb-4">
-                        <span className="font-bold text-pink-300">{pakketNaam}</span> -{" "}
+                        <span className="font-bold text-pink-200">{pakketNaam}</span> -{" "}
                         <span className="text-green-600">
                           €{typeof details === "object" && "Prijs" in details ? details.Prijs : details}
                         </span>
@@ -138,7 +138,7 @@ const Laserontharen: React.FC = () => {
           className="inline-block mt-6"
         >
           <motion.button
-            className="bg-neutral-900 hover:bg-pink-300 text-white px-6 py-3 rounded-lg transition duration-300"
+            className="bg-neutral-900 hover:bg-pink-200 text-white px-6 py-3 rounded-lg transition duration-300"
             whileHover={{ scale: 1.05 }}
           >
             Boek een Gratis Consult

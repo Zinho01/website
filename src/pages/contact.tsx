@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
     <main className="bg-zinc-100 text-black min-h-screen p-4 sm:p-6">
       <div className="bg-zinc-200 text-neutral-900 p-6 rounded-lg shadow-lg max-w-2xl mx-auto mt-10 mb-5">
         <motion.h2
-          className="text-2xl font-semibold text-pink-300 mb-4 text-center"
+          className="text-2xl font-semibold text-pink-200 mb-4 text-center"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}

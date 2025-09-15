@@ -259,7 +259,7 @@ const Homepage = () => {
           className="w-full text-left flex justify-between items-center text-neutral-900 font-medium focus:outline-none"
         >
           <span>{faq.question}</span>
-          <span className="text-pink-300">
+          <span className="text-pink-200">
             {activeIndex === index ? "−" : "+"}
           </span>
         </button>

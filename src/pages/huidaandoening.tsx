@@ -6,7 +6,7 @@ const Huidaandoening: React.FC = () => {
     <div className="bg-zinc-100 text-black min-h-screen p-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1
-          className="text-4xl font-bold mb-4 text-pink-300"
+          className="text-4xl font-bold mb-4 text-pink-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -21,31 +21,31 @@ const Huidaandoening: React.FC = () => {
           </h2>
           <ul className="text-black space-y-4">
             <li>
-              <strong className="text-pink-300">Acne behandeling:</strong> Intensieve reiniging die ontstekingen vermindert en de huid herstelt. Voorkomt toekomstige uitbraken.
+              <strong className="text-pink-200">Acne behandeling:</strong> Intensieve reiniging die ontstekingen vermindert en de huid herstelt. Voorkomt toekomstige uitbraken.
             </li>
             <li>
-              <strong className="text-pink-300">Pigment behandeling:</strong> Vervaagt pigmentvlekken en egaliseert de teint. Geschikt bij zonneschade en melasma.
+              <strong className="text-pink-200">Pigment behandeling:</strong> Vervaagt pigmentvlekken en egaliseert de teint. Geschikt bij zonneschade en melasma.
             </li>
             <li>
-              <strong className="text-pink-300">Micro dermabrasie:</strong> Mechanische peeling die dode huidcellen verwijdert. Verbetert structuur en laat de huid stralen.
+              <strong className="text-pink-200">Micro dermabrasie:</strong> Mechanische peeling die dode huidcellen verwijdert. Verbetert structuur en laat de huid stralen.
             </li>
             <li>
-              <strong className="text-pink-300">Dermapen:</strong> Microneedling stimuleert collageen en elastine. Vermindert littekens, lijntjes en poriën.
+              <strong className="text-pink-200">Dermapen:</strong> Microneedling stimuleert collageen en elastine. Vermindert littekens, lijntjes en poriën.
             </li>
             <li>
-              <strong className="text-pink-300">Bio Peeling:</strong> Natuurlijke kruidenpeeling zonder huidbeschadiging. Stimuleert celvernieuwing en pakt huidproblemen aan.
+              <strong className="text-pink-200">Bio Peeling:</strong> Natuurlijke kruidenpeeling zonder huidbeschadiging. Stimuleert celvernieuwing en pakt huidproblemen aan.
             </li>
             <li>
-              <strong className="text-pink-300">OxyGeneo:</strong> Exfolieert, voedt en activeert zuurstof. Geeft direct een glow en hydratatieboost.
+              <strong className="text-pink-200">OxyGeneo:</strong> Exfolieert, voedt en activeert zuurstof. Geeft direct een glow en hydratatieboost.
             </li>
             <li>
-              <strong className="text-pink-300">Gold treatment:</strong> Luxe behandeling met gouddeeltjes. Verstevigt de huid en geeft een gezonde glow.
+              <strong className="text-pink-200">Gold treatment:</strong> Luxe behandeling met gouddeeltjes. Verstevigt de huid en geeft een gezonde glow.
             </li>
             <li>
-              <strong className="text-pink-300">Anti-aging:</strong> Gaat huidveroudering tegen en hydrateert intensief. Verbetert elasticiteit en vermindert fijne lijntjes.
+              <strong className="text-pink-200">Anti-aging:</strong> Gaat huidveroudering tegen en hydrateert intensief. Verbetert elasticiteit en vermindert fijne lijntjes.
             </li>
             <li>
-              <strong className="text-pink-300">Facial / Gezichtsbehandeling:</strong> Op maat gemaakte verzorging voor jouw huidtype. Combineert reiniging, voeding en ontspanning.
+              <strong className="text-pink-200">Facial / Gezichtsbehandeling:</strong> Op maat gemaakte verzorging voor jouw huidtype. Combineert reiniging, voeding en ontspanning.
             </li>
           </ul>
         </div>
@@ -57,10 +57,10 @@ const Huidaandoening: React.FC = () => {
           </h2>
           <ul className="text-black space-y-4">
             <li>
-              <strong className="text-pink-300">Coagulatie:</strong> Verwijdert steelwratjes en gesprongen adertjes. Effectief en snel zonder littekens.
+              <strong className="text-pink-200">Coagulatie:</strong> Verwijdert steelwratjes en gesprongen adertjes. Effectief en snel zonder littekens.
             </li>
             <li>
-              <strong className="text-pink-300">Haar behandeling:</strong> Versterkt het haar vanaf de wortel. Stimuleert groei en vermindert haaruitval.
+              <strong className="text-pink-200">Haar behandeling:</strong> Versterkt het haar vanaf de wortel. Stimuleert groei en vermindert haaruitval.
             </li>
           </ul>
         </div>
