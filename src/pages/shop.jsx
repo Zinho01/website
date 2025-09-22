@@ -1,14 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  image: string;
-}
-
-const products: Product[] = [
+const products = [
   {
     id: 1,
     name: "Hydraterende Dagcrème",
@@ -35,7 +28,7 @@ const products: Product[] = [
   },
 ];
 
-const Shop: React.FC = () => {
+export default function Shop() {
   return (
     <div className="bg-zinc-100 text-neutral-900 min-h-screen px-6 py-10">
       {/* Hero */}
@@ -78,6 +71,4 @@ const Shop: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Shop;
+}

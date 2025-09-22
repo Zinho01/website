@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import acupunctuur from "../assets/acupunctuur1.png";
 import acupunctuur2 from "../assets/acupunctuur2.jpg";
 
-const Acupunctuur: React.FC = () => {
+export default function Acupunctuur() {
   return (
     <div className="bg-zinc-100 text-black min-h-screen p-4 sm:p-6">
       <div className="max-w-4xl mx-auto text-center">
@@ -38,7 +38,9 @@ const Acupunctuur: React.FC = () => {
         <a href="https://the-beauty-clinic-3.salonized.com/widget_bookings/new" target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
           <img src={acupunctuur} alt="foto-acupunctuur" className="w-full max-w-sm mx-auto mb-5 rounded-lg" />
           <motion.button 
-            className="bg-neutral-900 hover:bg-pink-200 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition duration-300" whileHover={{ scale: 1.05 }}>
+            className="bg-neutral-900 hover:bg-pink-200 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition duration-300" 
+            whileHover={{ scale: 1.05 }}
+          >
             Boek een Gratis Consult
           </motion.button>
         </a>
@@ -71,7 +73,7 @@ const Acupunctuur: React.FC = () => {
             Tuina: Traditionele Chinese Massage voor Herstel en Balans
           </h2>
           <p className="text-black text-sm sm:text-base mb-4">
-            Tuina is een eeuwenoude Chinese massagetechniek die zich richt op het herstellen van de 
+            Tuina is een eeuwenoude Chinese massagetechniek die zich richt op het herstellen van het 
             energiebalans (Qi) in het lichaam...
           </p>
           <p className="text-black text-sm sm:text-base mb-4">
@@ -84,6 +86,4 @@ const Acupunctuur: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Acupunctuur;
+}

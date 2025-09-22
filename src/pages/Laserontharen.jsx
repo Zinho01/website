@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-interface PricingData {
-  [category: string]: {
-    [item: string]: number | { Prijs: number; Inbegrepen: string[] };
-  };
-}
-
-const Laserontharen: React.FC = () => {
-  const [pricingData, setPricingData] = useState<PricingData | null>(null);
+export default function Laserontharen() {
+  const [pricingData, setPricingData] = useState(null);
 
   useEffect(() => {
     fetch("/data.json")
@@ -102,11 +96,11 @@ const Laserontharen: React.FC = () => {
                       <li key={pakketNaam} className="mb-4">
                         <span className="font-bold text-pink-200">{pakketNaam}</span> -{" "}
                         <span className="text-green-600">
-                          €{typeof details === "object" && "Prijs" in details ? details.Prijs : details}
+                          €{typeof details === "object" && details.Prijs ? details.Prijs : details}
                         </span>
                         <ul className="ml-6 text-sm text-black list-disc mt-1">
-                          {typeof details === "object" && "Inbegrepen" in details && details.Inbegrepen.length > 0 ? (
-                            details.Inbegrepen.map((item: string, index: number) => (
+                          {typeof details === "object" && details.Inbegrepen && details.Inbegrepen.length > 0 ? (
+                            details.Inbegrepen.map((item, index) => (
                               <li key={index}>{item}</li>
                             ))
                           ) : (
@@ -147,6 +141,4 @@ const Laserontharen: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Laserontharen;
+}

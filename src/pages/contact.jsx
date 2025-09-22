@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const ContactForm: React.FC = () => {
+export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const phoneNumber = "31620801001";
@@ -89,6 +87,4 @@ const ContactForm: React.FC = () => {
       </div>
     </main>
   );
-};
-
-export default ContactForm;
+}
