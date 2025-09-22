@@ -126,29 +126,90 @@ export default function Homepage() {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-3xl mx-auto mt-10 mb-10">
-        <h2 className="text-2xl sm:text-3xl font-bold text-pink-300 text-center mb-6">Veelgestelde Vragen (FAQ)</h2>
-        <div className="space-y-4">
-          {[
-            { question: "Hoe werkt laserontharing en is het permanent?", answer: "Laserontharing gebruikt geconcentreerd licht..." },
-            { question: "Wat houdt een huidbehandeling precies in?", answer: "Onze huidbehandelingen bestaan uit reiniging..." },
-            { question: "Is waxen pijnlijk en hoe lang blijft het resultaat zichtbaar?", answer: "Waxen kan even gevoelig zijn..." },
-          ].map((faq, index) => (
-            <div key={index} className="border-b border-zinc-200 pb-2">
-              <button onClick={() => setActiveIndex(activeIndex === index ? null : index)} className="w-full text-left flex justify-between items-center text-neutral-900 font-medium focus:outline-none">
-                <span>{faq.question}</span>
-                <span className="text-pink-200">{activeIndex === index ? "−" : "+"}</span>
-              </button>
-              {activeIndex === index && (
-                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} transition={{ duration: 0.3 }} className="text-sm sm:text-base text-black mt-2">
-                  {faq.answer}
-                </motion.div>
-              )}
-            </div>
-          ))}
-        </div>
+{/* FAQ Section */}
+<div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-3xl mx-auto mt-10 mb-10">
+  <h2 className="text-2xl sm:text-3xl font-bold text-pink-300 text-center mb-6">
+    Veelgestelde Vragen (FAQ)
+  </h2>
+  <div className="space-y-4">
+    {[
+      {
+        question: "Hoe werkt laserontharing en is het permanent?",
+        answer:
+          "Laserontharing gebruikt geconcentreerd licht dat de haarzakjes verwarmt en beschadigt. Dit zorgt voor langdurige vermindering van haargroei, maar volledig permanent is het meestal niet. Onderhoudsbehandelingen zijn vaak nodig."
+      },
+      {
+        question: "Wat houdt een huidbehandeling precies in?",
+        answer:
+          "Onze huidbehandelingen bestaan uit reiniging, exfoliatie, dieptereiniging en verzorging met hoogwaardige producten. Ze verbeteren de huidstructuur en geven een frisse uitstraling."
+      },
+      {
+        question: "Is waxen pijnlijk en hoe lang blijft het resultaat zichtbaar?",
+        answer:
+          "Waxen kan even gevoelig zijn, vooral bij de eerste keer. Het resultaat blijft gemiddeld 3 tot 6 weken zichtbaar, afhankelijk van je haargroei."
+      },
+      {
+        question: "Kan ik behandelingen combineren tijdens één afspraak?",
+        answer:
+          "Ja, veel van onze behandelingen kunnen gecombineerd worden. Zo kun je bijvoorbeeld een huidbehandeling combineren met ontharing voor een compleet resultaat."
+      },
+      {
+        question: "Zijn er risico’s of bijwerkingen bij de behandelingen?",
+        answer:
+          "Onze behandelingen zijn veilig en worden uitgevoerd door professionals. Mogelijke lichte bijwerkingen, zoals roodheid of gevoeligheid, verdwijnen meestal binnen enkele uren tot dagen."
+      }
+    ].map((faq, index) => (
+      <div key={index} className="border-b border-zinc-200 pb-2">
+        <button
+          onClick={() =>
+            setActiveIndex(activeIndex === index ? null : index)
+          }
+          className="w-full text-left flex justify-between items-center text-neutral-900 font-medium focus:outline-none"
+        >
+          <span>{faq.question}</span>
+          <span className="text-pink-200">
+            {activeIndex === index ? "−" : "+"}
+          </span>
+        </button>
+        {activeIndex === index && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            transition={{ duration: 0.3 }}
+            className="text-sm sm:text-base text-black mt-2"
+          >
+            {faq.answer}
+          </motion.div>
+        )}
       </div>
+    ))}
+  </div>
+</div>
+          <div className="overflow-hidden whitespace-nowrap py-8 bg-white">
+        <div className="inline-block animate-marquee">
+              <img src={logo1} alt="logo1" className="w-16 inline mx-8" />
+              <img src={logo2} alt="logo2" className="w-16 inline mx-8" />
+              <img src={logo3} alt="logo3" className="w-16 inline mx-8" />
+              <img src={logo4} alt="logo4" className="w-16 inline mx-8" />
+              <img src={logo5} alt="logo5" className="w-20 inline mx-8" />
+              <img src={logo6} alt="logo6" className="w-20 inline mx-8" />
+              <img src={logo7} alt="logo7" className="w-20 inline mx-8" />
+              <img src={logo8} alt="logo8" className="w-20 inline mx-8" />
+              <img src={logo9} alt="logo9" className="w-20 inline mx-8" />
+        </div>
+
+          <div className="inline-block animate-marquee">
+              <img src={logo1} alt="logo1" className="w-16 inline mx-8" />
+              <img src={logo2} alt="logo2" className="w-16 inline mx-8" />
+              <img src={logo3} alt="logo3" className="w-16 inline mx-8" />
+              <img src={logo4} alt="logo4" className="w-16 inline mx-8" />
+              <img src={logo5} alt="logo5" className="w-20 inline mx-8" />
+              <img src={logo6} alt="logo6" className="w-20 inline mx-8" />
+              <img src={logo7} alt="logo7" className="w-20 inline mx-8" />
+              <img src={logo8} alt="logo8" className="w-20 inline mx-8" />
+              <img src={logo9} alt="logo9" className="w-20 inline mx-8" />
+          </div>
+    </div>
     </>
   );
 }
