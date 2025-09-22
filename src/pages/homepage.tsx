@@ -280,22 +280,36 @@ const Homepage = () => {
   </div>
 
 
-        <p className='flex items-center justify-center'>wij werken samen met:</p>
       </div>
-      <div className="flex items-center justify-center py-12 bg-white gap-8 flex-wrap">
-        <img src={logo1} alt="logo1" className="w-16" />
-        <img src={logo2} alt="logo2" className="w-16" />
-        <img src={logo3} alt="logo3" className="w-16" />
-        <img src={logo4} alt="logo4" className="w-16" />
-      </div>
+<h1 className="flex items-center justify-center text-xl font-bold mb-6">
+  wij werken samen met:
+</h1>
 
-      <div className="flex items-center justify-center py-12 bg-white gap-8 flex-wrap">
-        <img src={logo5} alt="logo5" className="w-20" />
-        <img src={logo6} alt="logo6" className="w-20" />
-        <img src={logo7} alt="logo7" className="w-20" />
-        <img src={logo8} alt="logo8" className="w-20" />
-        <img src={logo9} alt="logo9" className="w-20" />
-      </div>
+    <div className="overflow-hidden whitespace-nowrap py-8 bg-white">
+        <div className="inline-block animate-marquee">
+              <img src={logo1} alt="logo1" className="w-16 inline mx-8" />
+              <img src={logo2} alt="logo2" className="w-16 inline mx-8" />
+              <img src={logo3} alt="logo3" className="w-16 inline mx-8" />
+              <img src={logo4} alt="logo4" className="w-16 inline mx-8" />
+              <img src={logo5} alt="logo5" className="w-20 inline mx-8" />
+              <img src={logo6} alt="logo6" className="w-20 inline mx-8" />
+              <img src={logo7} alt="logo7" className="w-20 inline mx-8" />
+              <img src={logo8} alt="logo8" className="w-20 inline mx-8" />
+              <img src={logo9} alt="logo9" className="w-20 inline mx-8" />
+        </div>
+
+          <div className="inline-block animate-marquee">
+              <img src={logo1} alt="logo1" className="w-16 inline mx-8" />
+              <img src={logo2} alt="logo2" className="w-16 inline mx-8" />
+              <img src={logo3} alt="logo3" className="w-16 inline mx-8" />
+              <img src={logo4} alt="logo4" className="w-16 inline mx-8" />
+              <img src={logo5} alt="logo5" className="w-20 inline mx-8" />
+              <img src={logo6} alt="logo6" className="w-20 inline mx-8" />
+              <img src={logo7} alt="logo7" className="w-20 inline mx-8" />
+              <img src={logo8} alt="logo8" className="w-20 inline mx-8" />
+              <img src={logo9} alt="logo9" className="w-20 inline mx-8" />
+          </div>
+    </div>
     </>
   );
 };
