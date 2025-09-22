@@ -15,7 +15,7 @@ Dit is de officiële website van The Beauty Clinic, gebouwd met React (TypeScrip
 
 ## Technische specificaties
 
-- Framework: React met TypeScript
+- Framework: React met Javascript
 - Styling: Tailwind CSS
 - Componentstructuur: Overzichtelijk opgebouwd per pagina/feature
 - Navigatie: Gebaseerd op client-side routing met duidelijke route-structuur
@@ -23,3 +23,4 @@ Dit is de officiële website van The Beauty Clinic, gebouwd met React (TypeScrip
 ## Doel
 
 De website is ontworpen voor zowel nieuwe bezoekers als bestaande klanten, met focus op gebruiksvriendelijkheid, duidelijke structuur en een professioneel uiterlijk.
+
