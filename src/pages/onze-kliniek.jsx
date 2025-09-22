@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-interface ClinicInfo {
-  [key: string]: string | { [subkey: string]: string | string[] };
-}
-
-const OnzeKliniek: React.FC = () => {
-  const [clinicData, setClinicData] = useState<ClinicInfo | null>(null);
+export default function OnzeKliniek() {
+  const [clinicData, setClinicData] = useState(null);
 
   useEffect(() => {
     fetch("/clinicData.json")
@@ -42,16 +38,14 @@ const OnzeKliniek: React.FC = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-pink-200 mb-4">Onze Missie</h2>
             <p className="text-neutral-700 mb-4">
-              Ons enthousiaste en ervaren team biedt behandelingen in een veilige en hygiënische omgeving, altijd met persoonlijke aandacht. Met veel ervaring zorgen we ervoor dat u zich welkom en op uw gemak voelt, terwijl we samen werken aan het beste resultaat.
-              Ontdek wat wij voor u kunnen betekenen en ervaar zelf onze betrokkenheid en zorg.
+              Ons enthousiaste en ervaren team biedt behandelingen in een veilige en hygiënische omgeving, altijd met persoonlijke aandacht. Met veel ervaring zorgen we ervoor dat u zich welkom en op uw gemak voelt, terwijl we samen werken aan het beste resultaat. Ontdek wat wij voor u kunnen betekenen en ervaar zelf onze betrokkenheid en zorg.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold text-pink-200 mb-4">Onze Visie</h2>
             <p className="text-neutral-700 mb-4">
-              We streven ernaar om een toonaangevende kliniek te zijn die klantgerichte zorg levert. Wij geloven in een holistische benadering
-              waarbij we niet alleen de esthetische resultaten verbeteren, maar ook zorgen voor een rustgevende en comfortabele ervaring.
+              We streven ernaar om een toonaangevende kliniek te zijn die klantgerichte zorg levert. Wij geloven in een holistische benadering waarbij we niet alleen de esthetische resultaten verbeteren, maar ook zorgen voor een rustgevende en comfortabele ervaring.
             </p>
           </div>
         </div>
@@ -100,6 +94,4 @@ const OnzeKliniek: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default OnzeKliniek;
+}

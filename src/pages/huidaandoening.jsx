@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Huidaandoening: React.FC = () => {
+export default function Huidaandoening() {
   return (
     <div className="bg-zinc-100 text-black min-h-screen p-6">
       <div className="max-w-4xl mx-auto text-center">
@@ -81,6 +81,4 @@ const Huidaandoening: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Huidaandoening;
+}
