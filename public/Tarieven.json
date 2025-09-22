@@ -4,18 +4,15 @@
             "items": [
             {
                 "name": "Acne",
-                "price": "€90,00",
-                "time": "10 minuten"
+                "price": "€90,00"
             },
             {
                 "name": "Acne",
-                "price": "€125,00",
-                "time": "10 minuten"
+                "price": "€125,00"
             },
             {
                 "name": "Acne",
-                "price": "€150,00",
-                "time": "30 minuten"
+                "price": "€150,00"
             }
             ]
         },
@@ -24,33 +21,27 @@
             "items": [
             {
                 "name": "Elektrisch ontharen",
-                "price": "0,00",
-                "time": "60 minuten"
+                "price": "0,00"
             },
             {
                 "name": "Elektrisch ontharen",
-                "price": "€25,00",
-                "time": "60 minuten"
+                "price": "€25,00"
             },
             {
                 "name": "Elektrisch ontharen",
-                "price": "€30,00",
-                "time": "60 minuten"
+                "price": "€30,00"
             },
             {
                 "name": "Elektrisch ontharen",
-                "price": "€15,00",
-                "time": "60 minuten"
+                "price": "€15,00"
             },
                         {
                 "name": "Elektrisch ontharen",
-                "price": "€75,00",
-                "time": "60 minuten"
+                "price": "€75,00"
             },
                         {
                 "name": "Elektrisch ontharen",
-                "price": "€100,00",
-                "time": "60 minuten"
+                "price": "€100,00"
             }
             ]
         },
@@ -61,19 +52,15 @@
             "name": "Armen",
             "items": [
             {
-                "name": "Boven armen",
-                "price": "€100,00",
-                "time": "60 minuten"
+                "name": "Boven armen"
             },
             {
                 "name": "Onder armen",
-                "price": "€100,00",
-                "time": "60 minuten"
+                "price": "€100,00"
             },
             {
                 "name": "Hele armen",
-                "price": "€150,00",
-                "time": "60 minuten"
+                "price": "€150,00"
             }
             ]
         },
@@ -82,18 +69,15 @@
             "items": [
             {
                 "name": "Nek",
-                "price": "€100,00",
-                "time": "60 minuten"
+                "price": "€100,00"
             },
             {
                 "name": "Schouders",
-                "price": "€150,00",
-                "time": "60 minuten"
+                "price": "€150,00"
             },
             {
                 "name": "Rugtotaal",
-                "price": "€200,00",
-                "time": "60 minuten"
+                "price": "€200,00"
             }
             ]
         },
@@ -102,33 +86,27 @@
             "items": [
             {
                 "name": "Benen boven",
-                "price": "€200,00",
-                "time": "60 minuten"
+                "price": "€200,00"
             },
             {
                 "name": "Benen onder",
-                "price": "€175,00",
-                "time": "60 minuten"
+                "price": "€175,00"
             },
             {
                 "name": "Knieën",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Benen volledig",
-                "price": "€350,00",
-                "time": "60 minuten"
+                "price": "€350,00"
             },
             {
                 "name": "Handen",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Vingers",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             }
             ]
         },
@@ -137,23 +115,19 @@
             "items": [
             {
                 "name": "Bikinilijn",
-                "price": "€100,00",
-                "time": "60 minuten"
+                "price": "€100,00"
             },
             {
                 "name": "Bikini totaal",
-                "price": "€150,00",
-                "time": "60 minuten"
+                "price": "€150,00"
             },
             {
                 "name": "Bilnaad",
-                "price": "€95,00",
-                "time": "60 minuten"
+                "price": "€95,00"
             },
             {
                 "name": "Billen (incl. Bilnaad)",
-                "price": "€200,00",
-                "time": "60 minuten"
+                "price": "€200,00"
             }
             ]
         },
@@ -162,18 +136,15 @@
             "items": [
             {
                 "name": "Borst",
-                "price": "€100,00",
-                "time": "60 minuten"
+                "price": "€100,00"
             },
             {
                 "name": "Buik",
-                "price": "€200,00",
-                "time": "60 minuten"
+                "price": "€200,00"
             },
             {
                 "name": "Borst en Buik",
-                "price": "€200,00",
-                "time": "60 minuten"
+                "price": "€200,00"
             }
             ]
         },
@@ -182,68 +153,55 @@
             "items": [
             {
                 "name": "Wenkbrauw (stukje tussen in je wenkbrauwen)",
-                "price": "€25,00",
-                "time": "60 minuten"
+                "price": "€25,00"
             },
             {
                 "name": "Boven-Lip",
-                "price": "€40,00",
-                "time": "60 minuten"
+                "price": "€40,00"
             },
             {
                 "name": "Kin",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Wangen",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Bakkenbaarden",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Neus",
-                "price": "€25,00",
-                "time": "60 minuten"
+                "price": "€25,00"
             },
             {
                 "name": "Oorschelpen",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Gelaat",
-                "price": "€100,00",
-                "time": "60 minuten"
+                "price": "€100,00"
             },
             {
                 "name": "Hals",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Navel",
-                "price": "€75,00",
-                "time": "60 minuten"
+                "price": "€75,00"
             },
             {
                 "name": "Oksel",
-                "price": "€95,00",
-                "time": "60 minuten"
+                "price": "€95,00"
             },
             {
                 "name": "Tepelhof",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             },
             {
                 "name": "Tenen",
-                "price": "€50,00",
-                "time": "60 minuten"
+                "price": "€50,00"
             }
             ]
         },
@@ -252,18 +210,15 @@
             "items": [
             {
                 "name": "Pakket 1 Boven lip, Benen, Oksels en Bikinilijn",
-                "price": "€350,00",
-                "time": "60 minuten"
+                "price": "€350,00"
             },
             {
                 "name": "Pakket 2 Benen onder, Oksels en Bikinilijn",
-                "price": "€275,00",
-                "time": "60 minuten"
+                "price": "€275,00"
             },
             {
                 "name": "Pakket 3 Boven-Lip, Oksels en Bikini",
-                "price": "€175,00",
-                "time": "60 minuten"
+                "price": "€175,00"
             }
             ]
         }
@@ -274,93 +229,75 @@
         "items": [
         {
             "name": "Waxen boven lip",
-            "price": "€10,00",
-            "time": "15 minuten"
+            "price": "€10,00"
         },
         {
             "name": "Waxen neus",
-            "price": "€5,00",
-            "time": "15 minuten"
+            "price": "€5,00"
         },
         {
             "name": "Waxen bakkenbaard",
-            "price": "€10,00",
-            "time": "30 minuten"
+            "price": "€10,00"
         },
         {
             "name": "Waxen kin",
-            "price": "€7,00",
-            "time": "15 minuten"
+            "price": "€7,00"
         },
         {
             "name": "Waxen oksels",
-            "price": "€17,50",
-            "time": "30 minuten"
+            "price": "€17,50"
         },
         {
             "name": "Waxen heel been",
-            "price": "€40,00",
-            "time": "30 minuten"
+            "price": "€40,00"
         },
         {
             "name": "Waxen onder of bovenbeen",
-            "price": "€25,00",
-            "time": "30 minuten"
+            "price": "€25,00"
         },
         {
             "name": "Waxen armen",
-            "price": "€30,00",
-            "time": "30 minuten"
+            "price": "€30,00"
         },
         {
             "name": "Waxen boven of onder armen",
-            "price": "€15,00",
-            "time": "30 minuten"
+            "price": "€15,00"
         },
         {
             "name": "Waxen rug",
-            "price": "€35,00",
-            "time": "30 minuten"
+            "price": "€35,00"
         },
         {
             "name": "Waxen buik",
-            "price": "€25,00",
-            "time": "30 minuten"
+            "price": "€25,00"
         },
         {
             "name": "Waxen nek",
-            "price": "€10,00",
-            "time": "15 minuten"
+            "price": "€10,00"
         },
         {
             "name": "Waxen full brazilian",
-            "price": "€60,00",
-            "time": "60 minuten"
+            "price": "€60,00"
         },
         {
             "name": "Waxen geheel lichaam inclusief gelaat",
-            "price": "€150,00",
-            "time": "60 minuten"
+            "price": "€150,00"
         },
         {
             "name": "Diode laser hele lichaam",
-            "price": "€250,00",
-            "time": "60 minuten"
+            "price": "€250,00"
         },
         {
             "name": "Waxen gezicht",
-            "price": "€35,00",
-            "time": "30 minuten"
+            "price": "€35,00"
         },
         {
             "name": "Neus gaten waxen",
-            "price": "€10,00",
-            "time": "15 minuten"
+            "price": "€10,00"
         },
         {
             "name": "Oor waxen",
-            "price": "€10,00",
-            "time": "15 minuten"
+            "price": "€10,00"
         },
         {
             "name": "Nek waxen",
@@ -369,23 +306,19 @@
         },
         {
             "name": "Mannen waxen Rug",
-            "price": "€35,00",
-            "time": "30 minuten"
+            "price": "€35,00"
         },
         {
             "name": "Mannen waxen borst",
-            "price": "€25,00",
-            "time": "30 minuten"
+            "price": "€25,00"
         },
         {
             "name": "Wax bikini lijn",
-            "price": "€30,00",
-            "time": "30 minuten"
+            "price": "€30,00"
         },
         {
             "name": "Waxen hele lichaam",
-            "price": "€110,00",
-            "time": "60 minuten"
+            "price": "€110,00"
         }
         ]
     },
@@ -394,23 +327,19 @@
         "items": [
         {
             "name": "Touw epileren wenkbrauwen",
-            "price": "€15,00",
-            "time": "20 minuten"
+            "price": "€15,00"
         },
         {
             "name": "Touw epileren boven lip",
-            "price": "€10,00",
-            "time": "10 minuten"
+            "price": "€10,00"
         },
         {
             "name": "Touw epileren kin",
-            "price": "€7,00",
-            "time": "10 minuten"
+            "price": "€7,00"
         },
         {
             "name": "Touw epileren heel gezicht",
-            "price": "€40,00",
-            "time": "30 minuten"
+            "price": "€40,00"
         }
         ]
     },
@@ -419,93 +348,75 @@
         "items": [
         {
             "name": "Oxygeren",
-            "price": "€0,00",
-            "time": "60 minuten"
+            "price": "€0,00"
         },
         {
             "name": "Dermamappen",
-            "price": "€0,00",
-            "time": "60 minuten"
+            "price": "€0,00"
         },
         {
             "name": "Anti-Age Treatment",
-            "price": "€0,00",
-            "time": "60 minuten"
+            "price": "€0,00"
         },
         {
             "name": "Neoderma bio-lift",
-            "price": "€70,00",
-            "time": "60 minuten"
+            "price": "€70,00"
         },
         {
             "name": "Neoderma Bio-peeling Earth edition",
-            "price": "€90,00",
-            "time": "60 minuten"
+            "price": "€90,00"
         },
         {
             "name": "Neoderma Bio-peeling Floret edition",
-            "price": "€70,00",
-            "time": "60 minuten"
+            "price": "€70,00"
         },
         {
             "name": "Neoderma Marine-enzyme",
-            "price": "€70,00",
-            "time": "60 minuten"
+            "price": "€70,00"
         },
         {
             "name": "Neoderma Balance",
-            "price": "€120,00",
-            "time": "60 minuten"
+            "price": "€120,00"
         },
         {
             "name": "Neoderma Hydro",
-            "price": "€90,00",
-            "time": "60 minuten"
+            "price": "€90,00"
         },
         {
             "name": "Neoderma Marine",
-            "price": "€110,00",
-            "time": "60 minuten"
+            "price": "€110,00"
         },
         {
             "name": "Neoderma Sense",
-            "price": "€90,00",
-            "time": "60 minuten"
+            "price": "€90,00"
         },
         {
             "name": "Bio peeling floret & Bio-lift",
-            "price": "€115,00",
-            "time": "60 minuten"
+            "price": "€115,00"
         },
         {
             "name": "Bio peeling floret & Neo-balance",
-            "price": "€190,00",
-            "time": "60 minuten"
+            "price": "€190,00"
         },
         {
             "name": "Bio peeling floret & Neo-hydro",
-            "price": "€140,00",
-            "time": "60 minuten"
+            "price": "€140,00"
         },
         {
             "name": "Bio peeling floret & Neo-marine",
-            "price": "€175,00",
-            "time": "60 minuten"
+            "price": "€175,00"
         },
         {
             "name": "Marine enzyme & Bio-lift",
-            "price": "€110,00",
-            "time": "60 minuten"
+            "price": "€110,00"
         },
         {
             "name": "Neo-marine & Bio-lift",
-            "price": "€150,00",
-            "time": "60 minuten"
+            "price": "€150,00"
         },
         {
             "name": "Neo-sense & Bio-lift",
-            "price": "€135,00",
-            "time": "60 minuten"
+            "price": "€135,00"
         }
         ]
     },
@@ -514,13 +425,11 @@
         "items": [
         {
             "name": "Massage",
-            "price": "€60,00",
-            "time": "30 minuten"
+            "price": "€60,00"
         },
         {
             "name": "Massage hele lichaam",
-            "price": "€90,00",
-            "time": "60 minuten"
+            "price": "€90,00"
         }
         ]
     },
@@ -529,13 +438,11 @@
         "items": [
         {
             "name": "Detox Treatment kind",
-            "price": "€30,00",
-            "time": "15 minuten"
+            "price": "€30,00"
         },
         {
             "name": "Detox treatment volwassene",
-            "price": "€60,00",
-            "time": "30 minuten"
+            "price": "€60,00"
         }
         ]
     },
@@ -544,58 +451,47 @@
         "items": [
         {
             "name": "Acupunctuur",
-            "price": "€50,00",
-            "time": "30 minuten"
+            "price": "€50,00"
         },
         {
             "name": "Acupunctuur",
-            "price": "€100,00",
-            "time": "60 minuten"
+            "price": "€100,00"
         },
         {
             "name": "Acupunctuur",
-            "price": "€0,00",
-            "time": "60 minuten"
+            "price": "€0,00"
         },
         {
             "name": "Acupunctuur",
-            "price": "€50,00",
-            "time": "30 minuten"
+            "price": "€50,00"
         },
         {
         "name": "Oor acupunctuur",
-        "price": "€50,00",
-        "time": "30 minuten"
+        "price": "€50,00"
     },
     {
         "name": "Massage - Tui NA",
-        "price": "€50,00",
-        "time": "30 minuten"
+        "price": "€50,00"
     },
     {
         "name": "Laser therapie",
-        "price": "€50,00",
-        "time": "30 minuten"
+        "price": "€50,00"
     },
     {
         "name": "Cupping (dry)",
-        "price": "€50,00",
-        "time": "30 minuten"
+        "price": "€50,00"
     },
     {
         "name": "Cupping (wet)",
-        "price": "€50,00",
-        "time": "30 minuten"
+        "price": "€50,00"
     },
     {
         "name": "Electrostimulatie",
-        "price": "€50,00",
-        "time": "30 minuten"
+        "price": "€50,00"
     },
     {
         "name": "Kruidenbehandeling",
-        "price": "€50,00",
-        "time": "30 minuten"
+        "price": "€50,00"
     }
     ]
     },
@@ -604,38 +500,31 @@
     "items": [
     {
     "name": "Intake acupunctuur",
-    "price": "€0,00",
-    "time": "60 minuten"
+    "price": "€0,00"
     },
     {
     "name": "Intake acnebehandeling",
-    "price": "€0,00",
-    "time": "60 minuten"
+    "price": "€0,00"
     },
     {
     "name": "Intake elektrisch epileren",
-    "price": "€0,00",
-    "time": "60 minuten"
+    "price": "€0,00"
     },
     {
     "name": "Intake huidbehandeling",
-    "price": "€0,00",
-    "time": "60 minuten"
+    "price": "€0,00"
     },
     {
     "name": "Intake laser ontharing",
-    "price": "€0,00",
-    "time": "60 minuten"
+    "price": "€0,00"
     },
     {
     "name": "Intake camouflage therapie",
-    "price": "€0,00",
-    "time": "60 minuten"
+    "price": "€0,00"
     },
     {
     "name": "Intake xl-hair treatment",
-    "price": "€0,00",
-    "time": "60 minuten"
+    "price": "€0,00"
     }
     ]
     },
@@ -644,18 +533,15 @@
     "items": [
     {
     "name": "Camouflagetherapie",
-    "price": "€100,00",
-    "time": "60 minuten"
+    "price": "€100,00"
     },
     {
     "name": "Camouflagetherapie",
-    "price": "€125,00",
-    "time": "60 minuten"
+    "price": "€125,00"
     },
     {
     "name": "Camouflagetherapie",
-    "price": "€75,00",
-    "time": "60 minuten"
+    "price": "€75,00"
     }
     ]
     }
