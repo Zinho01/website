@@ -2,6 +2,8 @@ import React from "react";
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+import CookieConsent from './components/cookieconsent';
+
 
 // Pages
 import Homepage from './pages/homepage';
@@ -17,6 +19,7 @@ const App = () => {
   return (
     <div className="bg-zinc-100 min-h-screen">
       <Navbar />
+      <CookieConsent />
       <main>
         <Routes>
           <Route path="/" element={<Homepage />} />
