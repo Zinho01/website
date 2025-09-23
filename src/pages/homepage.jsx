@@ -125,6 +125,28 @@ export default function Homepage() {
           </button>
         </div>
       </div>
+      
+            <p className="text-white flex justify-center font-bold text-xl mt-12">Reviews</p>
+      <div className="flex flex-wrap justify-center gap-6 p-8 bg-zinc-200">
+        <ReviewCard
+          name="Sarah"
+          rating={5}
+          review="Zorgzame en vriendelijke hulp! Je hebt een eindresultaat bereikt. Goed advies en kennis is super! Top!"
+          date="een jaar geleden"
+        />
+        <ReviewCard
+          name="Serhat Pehlivan"
+          rating={5}
+          review="Ik ben op de plaatsen in Zaandam geweest, de plaatsen in Amsterdam zijn ook erg schoon en mooi. Medewerkers hebben altijd willen doen wat het beste voor mij is, tegen de meest betaalbare prijs. Ik ben dankbaar."
+          date="2 jaar geleden"
+        />
+        <ReviewCard
+          name="Melike Al-Zeh Şahin"
+          rating={5}
+          review="Hele fijne kliniek! Personeel is heel vriendelijk, erg behulpzaam en professioneel! Een aanrader!"
+          date="3 jaar geleden"
+        />
+      </div>
 
 {/* FAQ Section */}
 <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 max-w-3xl mx-auto mt-10 mb-10">
