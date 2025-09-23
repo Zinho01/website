@@ -207,31 +207,35 @@ export default function Homepage() {
     ))}
   </div>
 </div>
-          <div className="overflow-hidden whitespace-nowrap py-8 bg-white">
-        <div className="inline-block animate-marquee">
-              <img src={logo1} alt="logo1" className="w-16 inline mx-8" />
-              <img src={logo2} alt="logo2" className="w-16 inline mx-8" />
-              <img src={logo3} alt="logo3" className="w-16 inline mx-8" />
-              <img src={logo4} alt="logo4" className="w-16 inline mx-8" />
-              <img src={logo5} alt="logo5" className="w-20 inline mx-8" />
-              <img src={logo6} alt="logo6" className="w-20 inline mx-8" />
-              <img src={logo7} alt="logo7" className="w-20 inline mx-8" />
-              <img src={logo8} alt="logo8" className="w-20 inline mx-8" />
-              <img src={logo9} alt="logo9" className="w-20 inline mx-8" />
-        </div>
-
-          <div className="inline-block animate-marquee">
-              <img src={logo1} alt="logo1" className="w-16 inline mx-8" />
-              <img src={logo2} alt="logo2" className="w-16 inline mx-8" />
-              <img src={logo3} alt="logo3" className="w-16 inline mx-8" />
-              <img src={logo4} alt="logo4" className="w-16 inline mx-8" />
-              <img src={logo5} alt="logo5" className="w-20 inline mx-8" />
-              <img src={logo6} alt="logo6" className="w-20 inline mx-8" />
-              <img src={logo7} alt="logo7" className="w-20 inline mx-8" />
-              <img src={logo8} alt="logo8" className="w-20 inline mx-8" />
-              <img src={logo9} alt="logo9" className="w-20 inline mx-8" />
-          </div>
+<div className="overflow-hidden whitespace-nowrap py-6 bg-white">
+  <div className="flex animate-marquee">
+    {/* First Loop */}
+    <div className="flex shrink-0">
+      <img src={logo1} alt="logo1" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo2} alt="logo2" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo3} alt="logo3" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo4} alt="logo4" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo5} alt="logo5" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo6} alt="logo6" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo7} alt="logo7" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo8} alt="logo8" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo9} alt="logo9" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
     </div>
+
+    {/* Duplicate for seamless scroll */}
+    <div className="flex shrink-0">
+      <img src={logo1} alt="logo1" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo2} alt="logo2" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo3} alt="logo3" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo4} alt="logo4" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo5} alt="logo5" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo6} alt="logo6" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo7} alt="logo7" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo8} alt="logo8" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo9} alt="logo9" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+    </div>
+  </div>
+</div>
     </>
   );
 }
