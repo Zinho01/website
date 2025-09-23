@@ -8,6 +8,6 @@
 }
 
 .animate-marquee {
-  display: inline-block;
-  animation: marquee 20s linear infinite;
+  display: flex;
+  animation: marquee 25s linear infinite;
 }
