@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { useCookies } from "react-cookie";
+import { CookiesProvider, useCookies } from "react-cookie";
 import { FaInstagram } from "react-icons/fa";
 
+// CookieConsent component
 const CookieConsent = () => {
   const [cookies, setCookie] = useCookies(["cookieconsent"]);
   const [visible, setVisible] = useState(!cookies.cookieconsent);
 
   const giveCookieConsent = () => {
-    setCookie("cookieconsent", true, { path: "/", maxAge: 60 * 60 * 24 * 365 }); // 1 year
+    setCookie("cookieconsent", true, { path: "/", maxAge: 60 * 60 * 24 * 7 });
     setVisible(false);
   };
 
@@ -29,15 +30,21 @@ const CookieConsent = () => {
   );
 };
 
+// Footer component
 const Footer = () => {
   return (
     <>
-      <CookieConsent />
-      <footer className="bg-zinc-200 text-black py-4 text-sm">
+      {/* Wrap CookieConsent in CookiesProvider to avoid errors */}
+      <CookiesProvider>
+        <CookieConsent />
+      </CookiesProvider>
+
+      <footer className="bg-zinc-200 text-black py-6 text-sm">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-left">
+            
             {/* Column 1 */}
-            <div className="flex-1 min-w-[200px]">
+            <div>
               <h2 className="text-base font-semibold text-neutral-900">The Beauty Clinic</h2>
               <ul className="mt-1 space-y-1">
                 <li><a href="/" className="hover:text-pink-300">home</a></li>
@@ -52,7 +59,7 @@ const Footer = () => {
             </div>
 
             {/* Column 2 */}
-            <div className="flex-1 min-w-[200px]">
+            <div>
               <h2 className="text-base font-semibold text-neutral-900">Contact</h2>
               <ul className="mt-1 space-y-1">
                 <li>📞 <a href="tel:06 20801001" className="hover:text-pink-300">06 20801001</a></li>
@@ -62,7 +69,7 @@ const Footer = () => {
             </div>
 
             {/* Column 3 */}
-            <div className="flex-1 min-w-[200px]">
+            <div>
               <h2 className="text-base font-semibold text-neutral-900">Openingstijden</h2>
               <ul className="mt-1 space-y-1">
                 <li>🕒 Dinsdag - Zaterdag: <span className="font-semibold">10:00 - 18:00</span></li>
@@ -71,7 +78,18 @@ const Footer = () => {
             </div>
 
             {/* Column 4 */}
-            <div className="flex-1 min-w-[200px]">
+            <div>
+              <h2 className="text-base font-semibold text-neutral-900">Juridisch</h2>
+              <ul className="mt-1 space-y-1">
+                <li><a href="/algemenevoorwaarden" className="hover:text-pink-300">Algemene Voorwaarden</a></li>
+                <li><a href="/privacy" className="hover:text-pink-300">Privacy Verklaring</a></li>
+                <li><a href="/klachten" className="hover:text-pink-300">Klachten Reglement</a></li>
+              </ul>
+            </div>
+            
+
+            {/* Column 5 */}
+            <div>
               <h3 className="text-base font-semibold text-neutral-900">Volg ons op:</h3>
               <div className="flex space-x-4 mt-2">
                 <a
@@ -86,7 +104,7 @@ const Footer = () => {
               <div className="mt-2">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.547570205918!2d4.847961576183594!3d52.37862324668761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e366256123a1%3A0x73bef98d38d17bab!2sThe%20Beauty%20Clinic!5e0!3m2!1snl!2snl!4v1742824306408!5m2!1snl!2snl"
-                  className="w-65 h-40 border-0"
+                  className="w-full h-40 border-0"
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -101,10 +119,11 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
 
-          <div className="text-center mt-6 text-neutral-900">
-            <p>&copy; 2025 The Beauty Clinic. All Rights Reserved.</p>
+            {/* Copyright */}
+            <div className="text-center mt-6 text-neutral-900 col-span-full">
+              <p>&copy; 2025 The Beauty Clinic. All Rights Reserved.</p>
+            </div>
           </div>
         </div>
       </footer>

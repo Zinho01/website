@@ -4,13 +4,11 @@ import { Link } from "react-router-dom";
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
 
-  // Helper to get cookie
   const getCookie = (name) => {
     const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
     return match ? match[2] : null;
   };
 
-  // Helper to set cookie (short-lived)
   const setCookie = (name, value, seconds) => {
     const expires = new Date();
     expires.setTime(expires.getTime() + seconds * 1000);
@@ -23,7 +21,6 @@ const CookieConsent = () => {
     const consent = getCookie("cookieConsent");
     if (!consent) setVisible(true);
 
-    // Optional: auto-hide banner after 20 seconds
     const timer = setTimeout(() => setVisible(false), 20000);
     return () => clearTimeout(timer);
   }, []);
