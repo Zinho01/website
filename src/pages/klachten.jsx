@@ -6,7 +6,7 @@ const KlachtenReglement = () => {
       <h1 className="text-3xl font-bold mb-6">Klachtenreglement</h1>
 
       <p className="mb-4">
-        Bij Dimamed Beauty streven we ernaar om onze klanten de beste service en behandelingen te bieden. 
+        Bij TheBeautyClinic streven we ernaar om onze klanten de beste service en behandelingen te bieden. 
         Toch kan het voorkomen dat je niet helemaal tevreden bent. Hieronder lees je hoe je een klacht kunt indienen en hoe wij deze behandelen.
       </p>
 
