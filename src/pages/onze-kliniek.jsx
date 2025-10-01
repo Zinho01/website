@@ -71,10 +71,10 @@ export default function OnzeKliniek() {
         <div className="mt-10 border border-neutral-400 rounded-xl p-6 bg-white shadow-lg text-left">
           <h2 className="text-3xl font-bold mb-4 text-pink-200">Waarom Kiezen voor Onze Kliniek?</h2>
           <ul className="list-disc text-neutral-700 space-y-2 pl-5">
-            <li>✔️ Professionele zorg met gecertificeerde specialisten</li>
-            <li>✔️ De nieuwste technologieën en behandelingsmethoden</li>
-            <li>✔️ Aandacht voor jouw comfort en welzijn</li>
-            <li>✔️ Resultaatgerichte benadering voor langdurige tevredenheid</li>
+            <li> Professionele zorg met gecertificeerde specialisten</li>
+            <li> De nieuwste technologieën en behandelingsmethoden</li>
+            <li> Aandacht voor jouw comfort en welzijn</li>
+            <li> Resultaatgerichte benadering voor langdurige tevredenheid</li>
           </ul>
         </div>
 
