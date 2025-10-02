@@ -47,14 +47,14 @@ const Footer = () => {
             <div>
               <h2 className="text-base font-semibold text-neutral-900">The Beauty Clinic</h2>
               <ul className="mt-1 space-y-1">
-                <li><a href="/" className="hover:text-pink-300">home</a></li>
+                <li><a href="/" className="hover:text-pink-300">Home</a></li>
                 <li><a href="/huidaandoening" className="hover:text-pink-300">Huidaandoening</a></li>
                 <li><a href="/Laserontharen" className="hover:text-pink-300">Laserontharen</a></li>
-                <li><a href="/acupunctuur" className="hover:text-pink-300">acupunctuur</a></li>
-                <li><a href="/tarieven" className="hover:text-pink-300">tarieven</a></li>
-                <li><a href="/onze-kliniek" className="hover:text-pink-300">onze kliniek</a></li>
-                <li><a href="/contact" className="hover:text-pink-300">contact</a></li>
-                <li><a href="/shop" className="hover:text-pink-300">shop</a></li>
+                <li><a href="/acupunctuur" className="hover:text-pink-300">Acupunctuur</a></li>
+                <li><a href="/tarieven" className="hover:text-pink-300">Tarieven</a></li>
+                <li><a href="/onze-kliniek" className="hover:text-pink-300">Onze kliniek</a></li>
+                <li><a href="/contact" className="hover:text-pink-300">Contact</a></li>
+                <li><a href="/shop" className="hover:text-pink-300">Shop</a></li>
               </ul>
             </div>
 
@@ -72,8 +72,13 @@ const Footer = () => {
             <div>
               <h2 className="text-base font-semibold text-neutral-900">Openingstijden</h2>
               <ul className="mt-1 space-y-1">
-                <li>🕒 Dinsdag - Zaterdag: <span className="font-semibold">10:00 - 18:00</span></li>
-                <li>🕒 Maandag - Zondag: <span className="font-semibold">Gesloten</span></li>
+                <li>🕒 Maandag: <span className="font-semibold">Gesloten</span></li>
+                <li>🕒 Dinsdag: <span className="font-semibold">10:00 - 18:00</span></li>
+                <li>🕒 Woensdag: <span className="font-semibold">10:00 - 18:00</span></li>
+                <li>🕒 Donderdag: <span className="font-semibold">10:00 - 18:00</span></li>
+                <li>🕒 Vrijdag: <span className="font-semibold">10:00 - 18:00</span></li>
+                <li>🕒 Zaterdag: <span className="font-semibold">10:00 - 18:00</span></li>
+                <li>🕒 Zondag: <span className="font-semibold">Gesloten</span></li>
               </ul>
             </div>
 
