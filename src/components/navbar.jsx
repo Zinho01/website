@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import lotusImage from '../assets/lotus.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,11 +16,6 @@ const Navbar = () => {
     <nav className="relative bg-white p-4">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
         <div>
-          <img 
-            src={lotusImage} 
-            alt="lotus-foto" 
-            className="w-12 h-12 hover:bg-zinc-200 rounded-full transition-all duration-300" 
-          />
         </div>
         <div className="hidden lg:flex space-x-4">
           <Link to="/" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Home</Link>

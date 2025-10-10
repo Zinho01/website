@@ -13,15 +13,11 @@
     "Benen boven": 200,
     "Benen onder": 175,
     "Knieën": 50,
-    "Benen volledig": 350,
-    "Handen": 50,
-    "Vingers": 50
+    "Benen volledig": 350
   },
   "Bikini": {
     "Bikinilijn": 100,
-    "Bikini totaal": 150,
-    "Bilnaad": 95,
-    "Billen (incl. Bilnaad)": 200
+    "Bikini totaal": 150
   },
   "Bovenlichaam": {
     "Borst": 100,
@@ -37,11 +33,7 @@
     "Neus": 25,
     "Oorschelpen": 50,
     "Gelaat": 100,
-    "Hals": 50,
-    "Navel": 75,
-    "Oksel": 95,
-    "Tepelhof": 50,
-    "Tenen": 50
+    "Hals": 50
   },
   "Pakketten": {
     "Pakket 1": {
