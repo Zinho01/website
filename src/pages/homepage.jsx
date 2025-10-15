@@ -59,20 +59,15 @@ export default function Homepage() {
   return (
     <>
       <div className="flex items-center justify-between">
-        <div className="max-w-md mx-auto">
-          <h1 className="text-neutral-900 text-2xl font-bold mb-2">The Beauty Clinic</h1>
-          <p className="text-black mb-4">
-            Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen
-          </p>
-          <a href="../onze-kliniek" className="text-red-200 hover:underline font-medium">
-            Lees meer over ons
-          </a>
-          <p className="text-black mt-4">
-            Onze missie is om jouw natuurlijke schoonheid te versterken.
-          </p>
-        </div>
-        <img src={foto1} alt="woman" className="w-1/3 h-auto" />
-      </div>
+      <motion.div
+        className="max-w-md mx-auto" initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94], type: "spring", stiffness: 80,}}>
+        <h1 className="text-neutral-900 text-2xl font-bold mb-2">The Beauty Clinic</h1>
+        <p className="text-black mb-4">Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen</p>
+        <a href="../onze-kliniek" className="text-red-200 hover:underline font-medium">Lees meer over ons</a>
+        <p className="text-black mt-4">Onze missie is om jouw natuurlijke schoonheid te versterken.</p>
+      </motion.div>
+      <img src={foto1} alt="woman" className="w-1/3 h-auto" />
+    </div>
 
       <div className="text-white bg-white p-8">
         <p>e</p>
