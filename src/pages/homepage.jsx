@@ -155,31 +155,31 @@ export default function Homepage() {
   </h2>
   <div className="space-y-4">
     {[
-      {
-        question: "Hoe werkt laserontharing en is het permanent?",
-        answer:
-          "Laserontharing gebruikt geconcentreerd licht dat de haarzakjes verwarmt en beschadigt. Dit zorgt voor langdurige vermindering van haargroei, maar volledig permanent is het meestal niet. Onderhoudsbehandelingen zijn vaak nodig."
-      },
-      {
-        question: "Wat houdt een huidbehandeling precies in?",
-        answer:
-          "Onze huidbehandelingen bestaan uit reiniging, exfoliatie, dieptereiniging en verzorging met hoogwaardige producten. Ze verbeteren de huidstructuur en geven een frisse uitstraling."
-      },
-      {
-        question: "Is waxen pijnlijk en hoe lang blijft het resultaat zichtbaar?",
-        answer:
-          "Waxen kan even gevoelig zijn, vooral bij de eerste keer. Het resultaat blijft gemiddeld 3 tot 6 weken zichtbaar, afhankelijk van je haargroei."
-      },
-      {
-        question: "Kan ik behandelingen combineren tijdens één afspraak?",
-        answer:
-          "Ja, veel van onze behandelingen kunnen gecombineerd worden. Zo kun je bijvoorbeeld een huidbehandeling combineren met ontharing voor een compleet resultaat."
-      },
-      {
-        question: "Zijn er risico’s of bijwerkingen bij de behandelingen?",
-        answer:
-          "Onze behandelingen zijn veilig en worden uitgevoerd door professionals. Mogelijke lichte bijwerkingen, zoals roodheid of gevoeligheid, verdwijnen meestal binnen enkele uren tot dagen."
-      }
+ {
+    question: "Hoe werkt laserontharing en blijft het resultaat lang zichtbaar?",
+    answer:
+      "Laserontharing vermindert haargroei langdurig. Onderhoudsbehandelingen zorgen dat je huid langdurig glad blijft."
+  },
+  {
+    question: "Wat gebeurt er tijdens een huidbehandeling?",
+    answer:
+      "We reinigen, exfoliëren en verzorgen je huid met hoogwaardige producten voor een frisse en stralende uitstraling."
+  },
+  {
+    question: "Doet waxen pijn en hoe lang blijft het resultaat?",
+    answer:
+      "Het kan kort gevoelig zijn, vooral de eerste keer. Resultaat blijft meestal 3 tot 6 weken zichtbaar."
+  },
+  {
+    question: "Hoe kan ik mijn afspraak het beste plannen?",
+    answer:
+      "Plan eenvoudig online of telefonisch, zodat we de behandeling perfect op jouw agenda kunnen afstemmen."
+  },
+  {
+    question: "Wat kan ik doen voor de beste resultaten thuis?",
+    answer:
+      "Volg de adviezen van onze specialisten op, zoals hydrateren en huidverzorging, voor een langdurige stralende huid."
+  }
     ].map((faq, index) => (
       <div key={index} className="border-b border-zinc-200 pb-2">
         <button

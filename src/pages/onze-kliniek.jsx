@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -30,9 +31,6 @@ export default function OnzeKliniek() {
         >
           Welkom bij Onze Kliniek
         </motion.h1>
-        <p className="text-lg text-neutral-700 mb-6">
-          Bij Onze Kliniek bieden we professionele zorg en behandelingen op maat, zodat je je op je best voelt.
-        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -77,20 +75,6 @@ export default function OnzeKliniek() {
             <li> Resultaatgerichte benadering voor langdurige tevredenheid</li>
           </ul>
         </div>
-
-        <a
-          href="https://the-beauty-clinic-3.salonized.com/widget_bookings/new"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-6"
-        >
-          <motion.button
-            className="bg-neutral-900 hover:bg-pink-200 text-white px-6 py-3 rounded-lg transition duration-300"
-            whileHover={{ scale: 1.05 }}
-          >
-            Maak een Afspraak
-          </motion.button>
-        </a>
       </div>
     </div>
   );

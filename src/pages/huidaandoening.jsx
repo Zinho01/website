@@ -1,83 +1,93 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 
 export default function Huidaandoening() {
   return (
-    <div className="bg-zinc-100 text-black min-h-screen p-6">
+    <div className="bg-zinc-100 text-black min-h-screen p-8">
       <div className="max-w-4xl mx-auto text-center">
+        {/* Titel */}
         <motion.h1
-          className="text-4xl font-bold mb-4 text-pink-200"
+          className="text-4xl font-bold mb-8 text-pink-300"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           Huidaandoeningen
         </motion.h1>
 
         {/* Behandelingen */}
-        <div className="bg-white p-6 rounded-lg shadow-lg mb-8 text-left">
-          <h2 className="text-2xl font-semibold text-neutral-900 mb-4 text-center">
+        <div className="bg-white p-8 rounded-2xl shadow-xl mb-10 text-left">
+          <h2 className="text-2xl font-semibold text-neutral-900 mb-6 text-center">
             Behandelingen
           </h2>
-          <ul className="text-black space-y-4">
+
+          <ul className="space-y-6 leading-relaxed">
             <li>
-              <strong className="text-pink-200">Acne behandeling:</strong> Intensieve reiniging die ontstekingen vermindert en de huid herstelt. Voorkomt toekomstige uitbraken.
+              <strong className="text-pink-300">Acne Behandeling:</strong><br />
+              Diep reinigende behandeling die ontstekingen vermindert, poriën zuivert en nieuwe uitbraken voorkomt.
             </li>
+
             <li>
-              <strong className="text-pink-200">Pigment behandeling:</strong> Vervaagt pigmentvlekken en egaliseert de tint. Geschikt bij zonneschade en melasma.
+              <strong className="text-pink-300">Pigment Behandeling:</strong><br />
+              Egaliseert de teint en vervaagt pigmentvlekken veroorzaakt door zon, hormonen of huidveroudering.
             </li>
+
             <li>
-              <strong className="text-pink-200">Micro dermabrasie:</strong> Mechanische peeling die dode huidcellen verwijdert. Verbetert structuur en laat de huid stralen.
+              <strong className="text-pink-300">Microdermabrasie:</strong><br />
+              Zachte, mechanische peeling die dode huidcellen verwijdert en de huid een frisse, gladde uitstraling geeft.
             </li>
+
             <li>
-              <strong className="text-pink-200">Dermapen:</strong> Microneedling stimuleert collageen en elastine. Vermindert littekens, lijntjes en poriën.
+              <strong className="text-pink-300">Dermapen (Microneedling):</strong><br />
+              Stimuleert collageen en elastine voor een stevigere huid. Vermindert littekens, fijne lijntjes en grove poriën.
             </li>
+
             <li>
-              <strong className="text-pink-200">Bio Peeling:</strong> Natuurlijke kruidenpeeling zonder huidbeschadiging. Stimuleert celvernieuwing en pakt huidproblemen aan.
+              <strong className="text-pink-300">Bio Peeling:</strong><br />
+              Natuurlijke kruidenpeeling die celvernieuwing activeert zonder de huid te beschadigen. Zorgt voor een gezonde, egale huid.
             </li>
+
             <li>
-              <strong className="text-pink-200">OxyGeneo:</strong> Exfolieert, voedt en activeert zuurstof. Geeft direct een glow en hydratatieboost.
+              <strong className="text-pink-300">OxyGeneo:</strong><br />
+              Drievoudige werking – exfoliëren, voeden en zuurstof activeren – voor een directe glow en hydratatieboost.
             </li>
+
             <li>
-              <strong className="text-pink-200">Gold treatment:</strong> Luxe behandeling met gouddeeltjes. Verstevigt de huid en geeft een gezonde glow.
+              <strong className="text-pink-300">Gold Treatment:</strong><br />
+              Luxe verzorging met gouddeeltjes die de huid verstevigt, voedt en laat stralen met een jeugdige glans.
             </li>
+
             <li>
-              <strong className="text-pink-200">Anti-aging:</strong> Gaat huidveroudering tegen en hydrateert intensief. Verbetert elasticiteit en vermindert fijne lijntjes.
+              <strong className="text-pink-300">Anti-Aging Behandeling:</strong><br />
+              Hydraterend en verstevigend. Verbetert elasticiteit en vermindert fijne lijntjes voor een jeugdige uitstraling.
             </li>
+
             <li>
-              <strong className="text-pink-200">Facial / Gezichtsbehandeling:</strong> Op maat gemaakte verzorging voor jouw huidtype. Combineert reiniging, voeding en ontspanning.
+              <strong className="text-pink-300">Facial / Gezichtsbehandeling:</strong><br />
+              Op maat gemaakte verzorging afgestemd op jouw huidtype – combineert reiniging, voeding en pure ontspanning.
             </li>
           </ul>
         </div>
 
-        {/* Coagulatie & Haar behandeling */}
-        <div className="bg-white p-6 rounded-lg shadow-lg text-left">
-          <h2 className="text-2xl font-semibold text-neutral-900 mb-4 text-center">
-            Overige behandelingen
+        {/* Overige Behandelingen */}
+        <div className="bg-white p-8 rounded-2xl shadow-xl text-left">
+          <h2 className="text-2xl font-semibold text-neutral-900 mb-6 text-center">
+            Overige Behandelingen
           </h2>
-          <ul className="text-black space-y-4">
+
+          <ul className="space-y-6 leading-relaxed">
             <li>
-              <strong className="text-pink-200">Coagulatie:</strong> Verwijdert steelwratjes en gesprongen adertjes. Effectief en snel zonder littekens.
+              <strong className="text-pink-300">Coagulatie:</strong><br />
+              Effectieve methode om steelwratjes, pigmentvlekjes en gesprongen adertjes veilig te verwijderen.
             </li>
+
             <li>
-              <strong className="text-pink-200">Haar behandeling:</strong> Versterkt het haar vanaf de wortel. Stimuleert groei en vermindert haaruitval.
+              <strong className="text-pink-300">Haarbehandeling:</strong><br />
+              Versterkt het haar vanaf de wortel, vermindert haaruitval en stimuleert natuurlijke haargroei.
             </li>
           </ul>
         </div>
-
-        <a
-          href="https://the-beauty-clinic-3.salonized.com/widget_bookings/new"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-6"
-        >
-          <motion.button
-            className="bg-neutral-900 hover:bg-pink-300 text-white px-6 py-3 rounded-lg transition duration-300"
-            whileHover={{ scale: 1.05 }}
-          >
-            Boek een Gratis Consult
-          </motion.button>
-        </a>
       </div>
     </div>
   );

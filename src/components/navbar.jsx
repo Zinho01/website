@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -19,15 +20,15 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:flex space-x-4">
           <Link to="/" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Home</Link>
-          <Link to="/huidaandoening" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">huidaandoening</Link>
-          <Link to="/laserontharen" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">laserontharen</Link>
-          <Link to="/acupunctuur" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">acupunctuur</Link>
-          <Link to="/tarieven" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">tarieven</Link>
-          <Link to="/onze-kliniek" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">onze kliniek</Link>
-          <Link to="/contact" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">contact</Link>
-          <Link to="/shop" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">shop</Link>
+          <Link to="/huidaandoening" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Huidaandoening</Link>
+          <Link to="/laserontharen" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Laserontharen</Link>
+          <Link to="/acupunctuur" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Acupunctuur</Link>
+          <Link to="/tarieven" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Tarieven</Link>
+          <Link to="/onze-kliniek" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Onze kliniek</Link>
+          <Link to="/contact" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Contact</Link>
+          <Link to="/shop" className="text-black hover:text-neutral-500 px-3 py-2 rounded-md">Shop</Link>
           <Link to="/contact">
-            <button className="bg-red-100 hover:bg-pink-200 text-white px-4 py-2 rounded-md transition-colors duration-300">
+            <button className="bg-pink-200 hover:bg-pink-300 text-white px-4 py-2 rounded-md transition-colors duration-300">
               Gratis consult
             </button>
           </Link>
