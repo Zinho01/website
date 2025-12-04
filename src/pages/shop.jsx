@@ -1,38 +1,48 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ShoppingCart, X } from "lucide-react";
-
-const products = [
-  {
-    id: 1,
-    name: "Hydraterende Dagcrème",
-    price: 24.95,
-    image: "https://via.placeholder.com/400x300?text=Dagcrème",
-  },
-  {
-    id: 2,
-    name: "Anti-Aging Serum",
-    price: 39.99,
-    image: "https://via.placeholder.com/400x300?text=Serum",
-  },
-  {
-    id: 3,
-    name: "Lippenbalsem met Shea Butter",
-    price: 9.5,
-    image: "https://via.placeholder.com/400x300?text=Lippenbalsem",
-  },
-  {
-    id: 4,
-    name: "Verzorgende Handcrème",
-    price: 12.0,
-    image: "https://via.placeholder.com/400x300?text=Handcrème",
-  },
-];
+import { fetchProducts } from "../api/products";
 
 export default function Shop() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [orders, setOrders] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  // Haal producten op van de API
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        setLoading(true);
+        const data = await fetchProducts();
+        // Map API response to shop format and filter only active products
+        const formattedProducts = data
+          .filter((product) => product.is_active) // Only show active products
+          .map((product) => ({
+            id: product.id,
+            name: product.name,
+            price: parseFloat(product.base_price) || 0,
+            description: product.description,
+            image: product.image ? `http://localhost:8000/storage/${product.image}` : null,
+            is_active: product.is_active,
+          }));
+        setProducts(formattedProducts);
+        setError(null);
+      } catch (err) {
+        console.error("Failed to load products:", err);
+        setError("Failed to load products. Please try again later.");
+        // Fallback to empty products
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, []);
 
   // Haal eerdere bestellingen uit localStorage
   useEffect(() => {
@@ -104,9 +114,9 @@ export default function Shop() {
 
   return (
     <div className="bg-zinc-100 text-neutral-900 min-h-screen px-6 py-10">
-      <div className="flex justify-between items-center max-w-6xl mx-auto mb-10">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 max-w-7xl mx-auto mb-10">
         <motion.h1
-          className="text-4xl sm:text-5xl font-extrabold text-pink-300"
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-pink-300"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -127,35 +137,123 @@ export default function Shop() {
       </div>
 
       {/* Producten */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {products.map((product) => (
+      {loading && (
+        <div className="max-w-6xl mx-auto text-center py-10">
+          <p className="text-lg text-neutral-600">Producten laden...</p>
+        </div>
+      )}
+
+      {error && (
+        <div className="max-w-6xl mx-auto bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
+          {error}
+        </div>
+      )}
+
+      {!loading && products.length === 0 && !error && (
+        <div className="max-w-6xl mx-auto text-center py-10">
+          <p className="text-lg text-neutral-600">Geen producten beschikbaar.</p>
+        </div>
+      )}
+
+      {!loading && products.length > 0 && (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <motion.div
+              key={product.id}
+              className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col"
+              whileHover={{ scale: 1.02 }}
+            >
+              {product.image && (
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full aspect-square object-contain rounded-t-2xl bg-white p-2"
+                />
+              )}
+              <div className="p-5 flex flex-col h-full">
+                <h2 className="text-lg font-semibold mb-2 line-clamp-2">{product.name}</h2>
+                {product.description && (
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-3 flex-grow">
+                    {product.description}
+                  </p>
+                )}
+                <div>
+                  <p className="text-pink-300 font-bold text-lg mb-2">
+                    €{product.price.toFixed(2)}
+                  </p>
+                  {product.description && (
+                    <button
+                      onClick={() => setSelectedProduct(product)}
+                      className="w-full text-center text-pink-300 hover:text-pink-400 text-sm underline mb-3 transition-colors"
+                    >
+                      Lees meer
+                    </button>
+                  )}
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="w-full bg-pink-300 hover:bg-pink-400 text-white font-medium py-2 rounded-xl transition-all"
+                  >
+                    Voeg toe aan winkelwagen
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      )}      {/* Modal for full description */}
+      {selectedProduct && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
           <motion.div
-            key={product.id}
-            className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300"
-            whileHover={{ scale: 1.02 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
           >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-56 object-cover rounded-t-2xl"
-            />
-            <div className="p-5">
-              <h2 className="text-lg font-semibold mb-1">{product.name}</h2>
-              <p className="text-pink-300 font-bold text-lg">
-                €{product.price.toFixed(2)}
-              </p>
+            <div className="p-6 sm:p-8">
+              <div className="flex justify-between items-start mb-4">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">{selectedProduct.name}</h2>
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              {selectedProduct.image && (
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  className="w-full aspect-square object-contain rounded-lg bg-gray-100 p-4 mb-6"
+                />
+              )}
+
+              <div className="mb-6">
+                <p className="text-2xl font-semibold text-pink-300 mb-4">
+                  €{selectedProduct.price.toFixed(2)}
+                </p>
+                {selectedProduct.description && (
+                  <div className="prose prose-sm sm:prose max-w-none">
+                    <p className="text-gray-700 whitespace-pre-wrap leading-relaxed">
+                      {selectedProduct.description}
+                    </p>
+                  </div>
+                )}
+              </div>
+
               <button
-                onClick={() => addToCart(product)}
-                className="mt-4 w-full bg-pink-300 hover:bg-pink-400 text-white font-medium py-2 rounded-xl transition-all"
+                onClick={() => {
+                  addToCart(selectedProduct);
+                  setSelectedProduct(null);
+                }}
+                className="w-full bg-pink-300 hover:bg-pink-400 text-white font-medium py-3 rounded-xl transition-all"
               >
                 Voeg toe aan winkelwagen
               </button>
             </div>
           </motion.div>
-        ))}
-      </div>
-
-      {/* Cart*/}
+        </div>
+      )}{/* Cart*/}
       {isCartOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50">
           <motion.div
