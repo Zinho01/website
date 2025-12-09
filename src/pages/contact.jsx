@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -6,6 +5,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    intake: "Geen intake",
     message: "",
   });
 
@@ -17,7 +17,20 @@ export default function ContactForm() {
     e.preventDefault();
 
     const phoneNumber = "31620801001";
-    const prefilledMessage = `Hallo! Mijn naam is ${formData.name}. Mijn e-mailadres is ${formData.email}. Bericht: ${formData.message}`;
+
+    // 💬 Mooier WhatsApp-bericht met regelafstanden en vetgedrukte labels
+    const prefilledMessage = `👋 Hallo!
+
+Mijn naam is *${formData.name}*  
+📧 E-mailadres: *${formData.email}*
+
+🗓️ Gekozen intake: *${formData.intake}*
+
+💬 Bericht:
+${formData.message}
+
+———
+Verzonden via het contactformulier op de website.`;
 
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const baseUrl = isMobile
@@ -34,7 +47,7 @@ export default function ContactForm() {
 
     window.open(whatsappUrl, "_blank");
 
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", intake: "Geen intake", message: "" });
   };
 
   return (
@@ -68,6 +81,38 @@ export default function ContactForm() {
             className="w-full p-3 rounded-lg bg-white text-neutral-900 placeholder-neutral-500 border border-neutral-400 focus:outline-none focus:ring-2 focus:ring-pink-300"
             required
           />
+
+          {/* Intake-selectie */}
+          <select
+            name="intake"
+            value={formData.intake}
+            onChange={handleChange}
+            className="w-full p-3 rounded-lg bg-white text-neutral-900 border border-neutral-400 focus:outline-none focus:ring-2 focus:ring-pink-300"
+          >
+            <option value="Geen intake">Geen intake</option>
+            <option value="Intake acupunctuur (€0,00)">
+              Intake acupunctuur (€0,00)
+            </option>
+            <option value="Intake acnebehandeling (€0,00)">
+              Intake acnebehandeling (€0,00)
+            </option>
+            <option value="Intake elektrisch epileren (€0,00)">
+              Intake elektrisch epileren (€0,00)
+            </option>
+            <option value="Intake huidbehandeling (€0,00)">
+              Intake huidbehandeling (€0,00)
+            </option>
+            <option value="Intake laser ontharing (€0,00)">
+              Intake laser ontharing (€0,00)
+            </option>
+            <option value="Intake camouflage therapie (€0,00)">
+              Intake camouflage therapie (€0,00)
+            </option>
+            <option value="Intake XL-hair treatment (€0,00)">
+              Intake XL-hair treatment (€0,00)
+            </option>
+          </select>
+
           <textarea
             name="message"
             placeholder="Je bericht..."

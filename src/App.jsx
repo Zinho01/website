@@ -11,13 +11,13 @@ import Laserontharen from './pages/Laserontharen';
 import Acupunctuur from './pages/acupunctuur';
 import Tarieven from './pages/tarieven';
 import Shop from './pages/shop';
-import Dashboard from './pages/dashboard';
 import Contact from './pages/contact';
 import OnzeKliniek from './pages/onze-kliniek';
 import Huidaandoening from './pages/huidaandoening';
 import Privacy from './pages/privacy';
 import AlgemeneVoorwaarden from './pages/algemenevoorwaarden';
 import KlachtenReglement from './pages/klachten';
+import Retour from './pages/retourbeleid';
 
 const App = () => {
   return (
@@ -33,12 +33,12 @@ const App = () => {
           <Route path="/acupunctuur" element={<Acupunctuur />} />
           <Route path="/tarieven" element={<Tarieven />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/onze-kliniek" element={<OnzeKliniek />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/algemenevoorwaarden" element={<AlgemeneVoorwaarden />} />
           <Route path="/klachten" element={<KlachtenReglement />} />
+          <Route path="/retourbeleid" element={<Retour />} />
         </Routes>
       </main>
       <Footer />

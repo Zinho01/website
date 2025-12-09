@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Tarievenlijst() {
   const [behandelingen, setBehandelingen] = useState([]);
@@ -113,19 +114,16 @@ export default function Tarievenlijst() {
           ))
         )}
 
-        <div className="text-center mt-8">
-          <a
-            href="/contact"
-
-          >
-            <motion.button
-              className="bg-neutral-900 hover:bg-pink-300 text-white px-6 py-3 rounded-lg transition duration-300 text-sm sm:text-base"
-              whileHover={{ scale: 1.05 }}
-            >
-              Boek een Afspraak
-            </motion.button>
-          </a>
-        </div>
+<div className="text-center mt-8">
+  <Link to="/contact">
+    <motion.button
+      className="bg-neutral-900 hover:bg-pink-300 text-white px-6 py-3 rounded-lg transition duration-300 text-sm sm:text-base"
+      whileHover={{ scale: 1.05 }}
+    >
+      Boek een Afspraak
+    </motion.button>
+  </Link>
+</div>
       </div>
     </div>
   );

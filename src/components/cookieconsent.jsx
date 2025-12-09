@@ -38,7 +38,7 @@ const CookieConsent = () => {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center z-50">
+    <div className="fixed bottom-0 left-0 w-full bg-white text-black p-4 flex justify-between items-center z-50">
       <span className="text-sm">
         We use cookies to improve your experience. By using our site, you accept our{" "}
         <Link to="/privacy" className="underline text-pink-300">

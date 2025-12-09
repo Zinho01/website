@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -36,43 +35,66 @@ export default function Laserontharen() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-left">
-            <h2 className="text-2xl font-semibold text-pink-200 mb-4">
-              Laser Ontharing: Efficiënte en Langdurige Oplossing
-            </h2>
-            <p className="text-black mb-4">
-              Laserontharing – Voor een zijdezachte huid, blijvend glad.
-              Ben je klaar met scheren, waxen of epileren? Kies voor laserontharing! Met geavanceerde technologie verwijderen we ongewenste haartjes veilig, snel en langdurig. Geschikt voor alle huidtypes en vrijwel elk lichaamsdeel.
-              Effectief en duurzaam resultaat. Boek een vrijblijvende intake en ervaar het zelf met een gratis testbehandeling!
-            </p>
-            <ul className="text-black space-y-2 list-disc ml-6">
-              <li> Geschikt voor gezicht en lichaam</li>
-              <li> Voor de meeste huid- en haartypes</li>
-              <li> Veilig</li>
-            </ul>
-            <p className="text-black mt-4">
-              Kies voor laserontharing en geniet van een gladde, haarvrije huid zonder terugkerende haargroei!
-            </p>
-          </div>
+  {/* Laser Ontharing */}
+  <div className="bg-white p-6 rounded-lg shadow-lg text-left">
+    <h2 className="text-2xl font-semibold text-pink-200 mb-4">
+      Laser Ontharing: Efficiënte en Langdurige Oplossing
+    </h2>
+    <p className="text-black mb-4">
+      Ben je het zat om steeds te moeten scheren, waxen of epileren? Met onze geavanceerde 
+      diode laser bieden we een veilige en doeltreffende manier om ongewenste haargroei 
+      blijvend te verminderen. De laser zendt een geconcentreerde lichtbundel uit die het pigment 
+      in de haarwortel verwarmt en vernietigt, waardoor het haar niet meer terugkomt.
+    </p>
+    <p className="text-black mb-4">
+      De behandeling is vrijwel pijnloos, geschikt voor zowel lichte als donkere huidtypes, 
+      en kan toegepast worden op vrijwel elk lichaamsgebied. Na enkele sessies geniet je van een 
+      zachte, gladde en egale huid – zonder stoppels of ingegroeide haartjes.
+    </p>
+    <ul className="text-black space-y-2 list-disc ml-6">
+      <li>Tijdbesparend en langdurig resultaat</li>
+      <li>Geschikt voor zowel mannen als vrouwen</li>
+      <li>Geen irritatie of ingegroeide haren</li>
+      <li>Veilig en comfortabel dankzij moderne technologie</li>
+    </ul>
+    <p className="text-black mt-4">
+      Wil je weten of laserontharing geschikt is voor jouw huid en haartype? 
+      Tijdens een persoonlijk intakegesprek beoordelen we je huid, bespreken we het behandelplan 
+      en geven we een eerlijk advies op maat.
+    </p>
+  </div>
 
-          {/* Elektrische Epilatie */}
-          <div className="bg-white p-6 rounded-lg shadow-lg text-left">
-            <h2 className="text-2xl font-semibold text-pink-300 mb-4">
-              Elektrische Epilatie: Jouw Gladde Huid, Voor Altijd
-            </h2>
-            <p className="text-black mb-4">
-              Elektrische epilatie biedt een langdurige oplossing voor ongewenst haar. Door middel van een fijne naald wordt een stroompuls toegediend die het haarzakje permanent vernietigt. Deze techniek is geschikt voor alle huidtypes en haarkleuren, en zorgt voor een gladde huid zonder terugkerende haargroei. Veilig, effectief en langdurig resultaat!
-            </p>
-            <ul className="text-black space-y-2 list-disc ml-6">
-              <li> Permanente haarverwijdering</li>
-              <li> Voor alle huid- en haartypes</li>
-              <li> Veilig en professioneel uitgevoerd</li>
-            </ul>
-            <p className="text-black mt-4">
-              Ervaar de voordelen van elektrische epilatie en zeg voorgoed vaarwel tegen haargroei!
-            </p>
-          </div>
-        </div>
+  {/* Elektrische Epilatie */}
+  <div className="bg-white p-6 rounded-lg shadow-lg text-left">
+    <h2 className="text-2xl font-semibold text-pink-300 mb-4">
+      Elektrische Epilatie: Definitieve Verwijdering van Elk Haartje
+    </h2>
+    <p className="text-black mb-4">
+      Elektrische epilatie is de enige methode waarmee werkelijk alle haartypes 
+      permanent verwijderd kunnen worden – ongeacht kleur of structuur. Hierbij wordt met 
+      een fijn naaldje een zwakke elektrische stroom naar het haarzakje geleid, waardoor 
+      het haarworteltje definitief wordt uitgeschakeld.
+    </p>
+    <p className="text-black mb-4">
+      Deze methode is bijzonder geschikt voor kleine zones zoals kin, bovenlip, oksels of bikinilijn, 
+      en voor mensen met lichte, grijze of rossige haren die niet reageren op laserontharing. 
+      Onze specialisten werken uiterst nauwkeurig en stemmen de stroomsterkte en behandeltijd 
+      zorgvuldig af op jouw huidtype.
+    </p>
+    <ul className="text-black space-y-2 list-disc ml-6">
+      <li>Effectief bij alle haarkleuren en huidtypes</li>
+      <li>Ideaal voor kleine of gevoelige zones</li>
+      <li>Precisiebehandeling: haartje voor haartje</li>
+      <li>Definitieve oplossing, ook na laser</li>
+    </ul>
+    <p className="text-black mt-4">
+      Twijfel je tussen laserontharing of elektrische epilatie? 
+      Tijdens een vrijblijvende intake kijken we samen naar de beste behandeling 
+      voor jouw huid en wensen.
+    </p>
+  </div>
+</div>
+
 
         <div className="mt-10">
           <h2 className="text-3xl font-bold mb-4 text-pink-200">Prijslijst</h2>

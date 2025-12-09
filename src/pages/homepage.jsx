@@ -1,10 +1,8 @@
 import React from 'react';
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import foto1 from '../assets/foto1.png';
-import Skincare1 from '../assets/skincare.jpg';
-import skincare2 from '../assets/skincare2.jpg';
 import banner1 from '../assets/acupunctuur1.png';
 import banner2 from '../assets/Laser-ontharen.jpg';
 import banner3 from '../assets/huidbehandeling.jpg';
@@ -17,10 +15,7 @@ import banner9 from '../assets/acne.jpg';
 import banner10 from '../assets/massage.jpg';
 import banner11 from '../assets/detox.jpg';
 
-import logo1 from '../assets/anbos-logo.jpg';
-import logo2 from '../assets/KAB.png';
-import logo3 from '../assets/Skin-logo.jpg';
-import logo4 from '../assets/zhong.jpg';
+
 import logo5 from '../assets/mediotopics.jpg';
 import logo6 from '../assets/mesoestetic-logo.png';
 import logo7 from '../assets/NeodermaLogo .png';
@@ -58,43 +53,77 @@ export default function Homepage() {
 
   return (
     <>
-      <div className="flex items-center justify-between">
-      <motion.div
-        className="max-w-md mx-auto" initial={{ y: -80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94], type: "spring", stiffness: 80,}}>
-        <h1 className="text-neutral-900 text-2xl font-bold mb-2">The Beauty Clinic</h1>
-        <p className="text-black mb-4">Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen</p>
-        <a href="../onze-kliniek" className="text-red-200 hover:underline font-medium">Lees meer over ons</a>
-        <p className="text-black mt-4">Onze missie is om jouw natuurlijke schoonheid te versterken.</p>
-      </motion.div>
-      <img src={foto1} alt="woman" className="w-1/3 h-auto" />
+<div className="flex justify-start items-center px-20 py-16 mt-5">
+  <motion.div
+    className="w-[600px] text-left space-y-4"
+    initial={{ y: -80, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{
+      duration: 0.9,
+      ease: [0.25, 0.46, 0.45, 0.94],
+      type: "spring",
+      stiffness: 80,
+    }}
+  >
+    <h1 className="text-neutral-900 text-4xl font-bold mb-4">
+      The Beauty Clinic
+    </h1>
+    <p className="text-black text-lg leading-relaxed">
+      Welkom bij The Beauty Clinic – dé plek voor huidverbetering, ontspanning en zelfvertrouwen.
+    </p>
+    <Link to="/contact">
+      <button className="bg-pink-200 hover:bg-pink-300 rounded-xl px-6 py-3 text-black font-semibold mt-6 shadow-md hover:shadow-lg transition-all duration-300">
+        Plan een afspraak
+      </button>
+    </Link>
+  </motion.div>
+</div>
+
+      <div className="w-full my-8" style={{ height: '100px', backgroundColor: '#e2e1e1ff' }}></div>
+
+
+<div className="flex flex-col items-center justify-center min-h-screen gap-8 px-4 sm:px-8">
+  {/* Skincare Section */}
+  <div className="flex flex-col sm:flex-row gap-6 w-full max-w-5xl">
+
+    {/* Block 1 */}
+    <div className="bg-white p-6 rounded-lg shadow-md flex-1 text-center sm:text-left">
+      <h1 className="font-bold text-lg sm:text-xl text-neutral-900 mb-4">
+        Ontdek de kracht van professionele skincare behandelingen
+      </h1>
+      <p className="mb-2">
+        Bij The Beauty Clinic staat huidverbetering centraal. Onze behandelingen zijn
+        ontworpen om je huid gezond, stralend en sterk te houden.
+      </p>
+      <p>
+        Of je nu last hebt van acne, een doffe huid of beginnende tekenen van
+        huidveroudering, onze specialisten helpen je op een persoonlijke en professionele manier.
+      </p>
     </div>
 
-      <div className="text-white bg-white p-8">
-        <p>e</p>
-      </div>
+    {/* Block 2 */}
+    <div className="bg-white p-6 rounded-lg shadow-md flex-1 text-center sm:text-left">
+      <p className="mb-2">
+        Tijdens een intake bekijken we jouw huid grondig en stellen we een behandelplan
+        op dat volledig is afgestemd op jouw wensen en huidtype.
+      </p>
+      <p className="mb-2">
+        Skincare bij The Beauty Clinic betekent investeren in een gezonde, stralende
+        huid die er op haar best uitziet, zowel nu als in de toekomst.
+      </p>
+      <p className="mb-4">
+        Onze behandelingen combineren de nieuwste technologieën met natuurlijke
+        producten van hoge kwaliteit, zodat je huid optimaal kan herstellen en stralen.
+      </p>
+    </div>
+  </div>
 
-      <div className="flex flex-col items-center justify-center min-h-screen gap-6 px-4 sm:px-8">
-        {/* Skincare Section */}
-        <div className="flex flex-col sm:flex-row items-center gap-6">
-          <img src={Skincare1} alt="skincare foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5" />
-          <div className="text-black space-y-4 text-center sm:text-left">
-            <h1 className="font-bold text-lg sm:text-xl text-neutral-900">Ontdek de kracht van professionele skincare behandelingen</h1>
-            <p>Bij The Beauty Clinic staat huidverbetering centraal...</p>
-            <p>Of je nu last hebt van acne, een doffe huid of beginnende tekenen van huidveroudering...</p>
-            <a href="../contact">
-              <button className="bg-pink-200 hover:bg-pink-300 rounded px-4 py-2 text-black font-semibold mt-5">Plan een afspraak</button>
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-3/3">
-          <div className="text-black w-full sm:w-1/3 text-center sm:text-left">
-            <p>Tijdens een intake bekijken we jouw huid grondig...</p>
-            <p>Skincare bij The Beauty Clinic betekent investeren in een gezonde, stralende huid...</p>
-          </div>
-          <img src={skincare2} alt="skincare foto" className="w-full sm:w-2/3 h-auto rounded-lg mt-5 mb-5" />
-        </div>
-      </div>
+  <Link to="/onze-kliniek">
+  <button className="bg-pink-200 hover:bg-pink-300 rounded px-4 py-2 text-black font-semibold mt-5">
+    over ons
+  </button>
+  </Link>
+</div>
 
       {/* Banners Carousel */}
       <div className="text-orange-200 bg-white p-8 relative">
@@ -204,12 +233,7 @@ export default function Homepage() {
 </div>
 <div className="overflow-hidden whitespace-nowrap py-6 bg-white">
   <div className="flex animate-marquee">
-    {/* First Loop */}
     <div className="flex shrink-0">
-      <img src={logo1} alt="logo1" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
-      <img src={logo2} alt="logo2" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
-      <img src={logo3} alt="logo3" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
-      <img src={logo4} alt="logo4" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
       <img src={logo5} alt="logo5" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
       <img src={logo6} alt="logo6" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
       <img src={logo7} alt="logo7" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
@@ -217,12 +241,23 @@ export default function Homepage() {
       <img src={logo9} alt="logo9" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
     </div>
 
-    {/* Duplicate for seamless scroll */}
     <div className="flex shrink-0">
-      <img src={logo1} alt="logo1" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
-      <img src={logo2} alt="logo2" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
-      <img src={logo3} alt="logo3" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
-      <img src={logo4} alt="logo4" className="w-12 sm:w-14 md:w-16 lg:w-20 mx-6 sm:mx-8" />
+      <img src={logo5} alt="logo5" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo6} alt="logo6" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo7} alt="logo7" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo8} alt="logo8" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo9} alt="logo9" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+    </div>
+
+        <div className="flex shrink-0">
+      <img src={logo5} alt="logo5" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo6} alt="logo6" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo7} alt="logo7" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo8} alt="logo8" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+      <img src={logo9} alt="logo9" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
+    </div>
+
+        <div className="flex shrink-0">
       <img src={logo5} alt="logo5" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
       <img src={logo6} alt="logo6" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />
       <img src={logo7} alt="logo7" className="w-14 sm:w-16 md:w-20 lg:w-24 mx-6 sm:mx-8" />

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -8,7 +7,7 @@ export default function Huidaandoening() {
       <div className="max-w-4xl mx-auto text-center">
         {/* Titel */}
         <motion.h1
-          className="text-4xl font-bold mb-8 text-pink-300"
+          className="text-4xl font-bold mb-8 text-pink-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -16,77 +15,63 @@ export default function Huidaandoening() {
           Huidaandoeningen
         </motion.h1>
 
-        {/* Behandelingen */}
+        {/* Acne Behandeling */}
         <div className="bg-white p-8 rounded-2xl shadow-xl mb-10 text-left">
           <h2 className="text-2xl font-semibold text-neutral-900 mb-6 text-center">
-            Behandelingen
+            Acne Behandeling
           </h2>
 
-          <ul className="space-y-6 leading-relaxed">
-            <li>
-              <strong className="text-pink-300">Acne Behandeling:</strong><br />
-              Diep reinigende behandeling die ontstekingen vermindert, poriën zuivert en nieuwe uitbraken voorkomt.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">Pigment Behandeling:</strong><br />
-              Egaliseert de teint en vervaagt pigmentvlekken veroorzaakt door zon, hormonen of huidveroudering.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">Microdermabrasie:</strong><br />
-              Zachte, mechanische peeling die dode huidcellen verwijdert en de huid een frisse, gladde uitstraling geeft.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">Dermapen (Microneedling):</strong><br />
-              Stimuleert collageen en elastine voor een stevigere huid. Vermindert littekens, fijne lijntjes en grove poriën.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">Bio Peeling:</strong><br />
-              Natuurlijke kruidenpeeling die celvernieuwing activeert zonder de huid te beschadigen. Zorgt voor een gezonde, egale huid.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">OxyGeneo:</strong><br />
-              Drievoudige werking – exfoliëren, voeden en zuurstof activeren – voor een directe glow en hydratatieboost.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">Gold Treatment:</strong><br />
-              Luxe verzorging met gouddeeltjes die de huid verstevigt, voedt en laat stralen met een jeugdige glans.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">Anti-Aging Behandeling:</strong><br />
-              Hydraterend en verstevigend. Verbetert elasticiteit en vermindert fijne lijntjes voor een jeugdige uitstraling.
-            </li>
-
-            <li>
-              <strong className="text-pink-300">Facial / Gezichtsbehandeling:</strong><br />
-              Op maat gemaakte verzorging afgestemd op jouw huidtype – combineert reiniging, voeding en pure ontspanning.
-            </li>
-          </ul>
+          <div className="text-black text-sm sm:text-base space-y-4">
+            <p>
+              Een huid met acne vraagt om de juiste aanpak. In onze behandelingen werken we
+              doelgericht aan het zuiveren, kalmeren en herstellen van de huid. Alles wordt
+              afgestemd op wat jouw huid op dat moment nodig heeft.
+            </p>
+            <p>
+              Acne is een veelvoorkomende huidaandoening die ontstaat door een combinatie van
+              factoren zoals verstopte poriën, overtollige talgproductie en bacteriën. Het komt
+              voor in verschillende vormen en gradaties, en vraagt om een gerichte, persoonlijke
+              aanpak. Tijdens onze acnebehandelingen focussen we op het intensief reinigen en
+              kalmeren van de huid, het verminderen van onzuiverheden en het verbeteren van de
+              algehele huidconditie. Afhankelijk van wat jouw huid nodig heeft, zetten we
+              specifieke producten en behandelmethodes in die gericht zijn op het ondersteunen
+              van het natuurlijke herstelproces. Onze aanpak is erop gericht om de huid weer in
+              balans te brengen en nieuwe uitbraken te helpen voorkomen.
+            </p>
+          </div>
         </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-xl shadow-lg text-left">
+            <h3 className="text-xl font-semibold text-pink-200 mb-3">Pigment & Microdermabrasie</h3>
+            <p className="text-black text-sm sm:text-base">
+              Pigmentbehandelingen egaliseren de tint en vervagen pigmentvlekken. Microdermabrasie
+              verwijdert dode huidcellen voor een frisse, gladde uitstraling.
+            </p>
+          </div>
 
-        {/* Overige Behandelingen */}
-        <div className="bg-white p-8 rounded-2xl shadow-xl text-left">
-          <h2 className="text-2xl font-semibold text-neutral-900 mb-6 text-center">
-            Overige Behandelingen
-          </h2>
+          <div className="bg-white p-6 rounded-xl shadow-lg text-left">
+            <h3 className="text-xl font-semibold text-pink-200 mb-3">Dermapen & Bio Peeling</h3>
+            <p className="text-black text-sm sm:text-base">
+              Dermapen stimuleert collageen en elastine voor een stevigere huid. Bio Peeling
+              activeert celvernieuwing zonder de huid te beschadigen.
+            </p>
+          </div>
 
-          <ul className="space-y-6 leading-relaxed">
-            <li>
-              <strong className="text-pink-300">Coagulatie:</strong><br />
-              Effectieve methode om steelwratjes, pigmentvlekjes en gesprongen adertjes veilig te verwijderen.
-            </li>
+          <div className="bg-white p-6 rounded-xl shadow-lg text-left">
+            <h3 className="text-xl font-semibold text-pink-200 mb-3">OxyGeneo & Gold Treatment</h3>
+            <p className="text-black text-sm sm:text-base">
+              OxyGeneo exfolieert, voedt en activeert zuurstof. Gold Treatment verstevigt, voedt en
+              laat de huid stralen met een jeugdige glans.
+            </p>
+          </div>
 
-            <li>
-              <strong className="text-pink-300">Haarbehandeling:</strong><br />
-              Versterkt het haar vanaf de wortel, vermindert haaruitval en stimuleert natuurlijke haargroei.
-            </li>
-          </ul>
+          <div className="bg-white p-6 rounded-xl shadow-lg text-left">
+            <h3 className="text-xl font-semibold text-pink-200 mb-3">Anti-Aging & Facial</h3>
+            <p className="text-black text-sm sm:text-base">
+              Hydraterende en verstevigende behandelingen verbeteren elasticiteit en verminderen
+              fijne lijntjes. Gezichtsbehandelingen zijn op maat voor jouw huidtype en ontspanning.
+            </p>
+          </div>
         </div>
       </div>
     </div>
