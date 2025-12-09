@@ -11,6 +11,8 @@ export default function Shop() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [orders, setOrders] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 12;
 
   // Haal producten op van de API
   useEffect(() => {
@@ -156,8 +158,21 @@ export default function Shop() {
       )}
 
       {!loading && products.length > 0 && (
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {products.map((product) => (
+        <>
+          <div className="max-w-7xl mx-auto">
+            {/* Pagination Info */}
+            <div className="mb-6 text-center text-sm text-gray-600">
+              Getoond: {((currentPage - 1) * productsPerPage) + 1} - {Math.min(currentPage * productsPerPage, products.length)} van {products.length} producten
+            </div>
+
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {products
+                .slice(
+                  (currentPage - 1) * productsPerPage,
+                  currentPage * productsPerPage
+                )
+                .map((product) => (
             <motion.div
               key={product.id}
               className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col"
@@ -198,8 +213,45 @@ export default function Shop() {
                 </div>
               </div>
             </motion.div>
-          ))}
-        </div>
+            ))}
+            </div>
+
+            {/* Pagination Controls */}
+            <div className="mt-12 flex justify-center items-center gap-2">
+              <button
+                onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 bg-pink-300 hover:bg-pink-400 disabled:bg-gray-300 text-white rounded-lg transition-colors"
+              >
+                Vorige
+              </button>
+
+              {Array.from({ length: Math.ceil(products.length / productsPerPage) }).map(
+                (_, index) => (
+                  <button
+                    key={index + 1}
+                    onClick={() => setCurrentPage(index + 1)}
+                    className={`px-3 py-2 rounded-lg transition-colors ${
+                      currentPage === index + 1
+                        ? 'bg-pink-300 text-white'
+                        : 'bg-gray-200 hover:bg-gray-300'
+                    }`}
+                  >
+                    {index + 1}
+                  </button>
+                )
+              )}
+
+              <button
+                onClick={() => setCurrentPage(prev => Math.min(prev + 1, Math.ceil(products.length / productsPerPage)))}
+                disabled={currentPage === Math.ceil(products.length / productsPerPage)}
+                className="px-4 py-2 bg-pink-300 hover:bg-pink-400 disabled:bg-gray-300 text-white rounded-lg transition-colors"
+              >
+                Volgende
+              </button>
+            </div>
+          </div>
+        </>
       )}      {/* Modal for full description */}
       {selectedProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">

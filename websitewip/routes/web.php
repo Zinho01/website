@@ -8,9 +8,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// DASHBOARD – now loads products
+// DASHBOARD – now loads products with pagination
 Route::get('/dashboard', function () {
-    $products = \App\Models\Product::all();
+    $products = \App\Models\Product::paginate(12);
     return view('dashboard', compact('products'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 

@@ -75,6 +75,48 @@
                     @endforelse
 
                 </div>
+
+                <!-- Responsive Pagination -->
+                <div class="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <!-- Products Info -->
+                    <div class="text-sm text-gray-600">
+                        Getoond: <span class="font-semibold">{{ ($products->currentPage() - 1) * $products->perPage() + 1 }}</span> - 
+                        <span class="font-semibold">{{ min($products->currentPage() * $products->perPage(), $products->total()) }}</span> 
+                        van <span class="font-semibold">{{ $products->total() }}</span> producten
+                    </div>
+
+                    <!-- Pagination Links -->
+                    <div class="flex flex-wrap justify-center gap-1 sm:gap-2">
+                        {{-- Previous Page Link --}}
+                        @if ($products->onFirstPage())
+                            <span class="px-2 sm:px-3 py-2 text-xs sm:text-sm text-gray-400 bg-gray-100 rounded-md">← Vorige</span>
+                        @else
+                            <a href="{{ $products->previousPageUrl() }}" class="px-2 sm:px-3 py-2 text-xs sm:text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-150">← Vorige</a>
+                        @endif
+
+                        {{-- Pagination Elements --}}
+                        @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
+                            @if ($page == $products->currentPage())
+                                <span class="px-2 sm:px-3 py-2 text-xs sm:text-sm text-white bg-blue-600 rounded-md font-semibold">{{ $page }}</span>
+                            @else
+                                <a href="{{ $url }}" class="px-2 sm:px-3 py-2 text-xs sm:text-sm text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 transition duration-150">{{ $page }}</a>
+                            @endif
+                        @endforeach
+
+                        {{-- Next Page Link --}}
+                        @if ($products->hasMorePages())
+                            <a href="{{ $products->nextPageUrl() }}" class="px-2 sm:px-3 py-2 text-xs sm:text-sm text-white bg-blue-600 rounded-md hover:bg-blue-700 transition duration-150">Volgende →</a>
+                        @else
+                            <span class="px-2 sm:px-3 py-2 text-xs sm:text-sm text-gray-400 bg-gray-100 rounded-md">Volgende →</span>
+                        @endif
+                    </div>
+
+                    <!-- Jump to Page (Mobile friendly) -->
+                    <form action="{{ route('dashboard') }}" method="GET" class="flex gap-2">
+                        <input type="number" name="page" min="1" max="{{ $products->lastPage() }}" placeholder="Ga naar..." class="w-16 sm:w-20 px-2 py-2 text-xs sm:text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button type="submit" class="px-3 py-2 text-xs sm:text-sm text-white bg-green-600 rounded-md hover:bg-green-700 transition duration-150">Ga</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
